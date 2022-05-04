@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.24.4
-Release  : 83
-URL      : https://download.kde.org/stable/plasma/5.24.4/plasma-workspace-5.24.4.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.24.4/plasma-workspace-5.24.4.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.24.4/plasma-workspace-5.24.4.tar.xz.sig
+Version  : 5.24.5
+Release  : 84
+URL      : https://download.kde.org/stable/plasma/5.24.5/plasma-workspace-5.24.5.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.24.5/plasma-workspace-5.24.5.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.24.5/plasma-workspace-5.24.5.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -199,15 +199,15 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.24.4
-cd %{_builddir}/plasma-workspace-5.24.4
+%setup -q -n plasma-workspace-5.24.5
+cd %{_builddir}/plasma-workspace-5.24.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648660893
+export SOURCE_DATE_EPOCH=1651624232
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -223,51 +223,51 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1648660893
+export SOURCE_DATE_EPOCH=1651624232
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
-cp %{_builddir}/'plasma-workspace-5.24.4/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/3e8971c6c5f16674958913a94a36b1ea7a00ac46
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/3e8971c6c5f16674958913a94a36b1ea7a00ac46
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/2123756e0b1fc8243547235a33c0fcabfe3b9a51
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/a4c60b3fefda228cd7439d3565df043192fef137
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/a4c60b3fefda228cd7439d3565df043192fef137
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/19d98e1b6f8ef12849ea4012a052d3907f336c91
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LGPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/49e61f7864169f2e356c11a17422d7d20d74b40f
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/plasma-workspace-5.24.4/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81e12d0c07782abcf558af7aa19846e3e2606a70
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/kfontinst/viewpart/COPYING.UNICODE %{buildroot}/usr/share/package-licenses/plasma-workspace/ae855f68ab20f57b2cc7e9b03f54a87563424eb9
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Astronaut.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/cf03e23da9870281180ea4163b13a7bcf38a7a82
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Books.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/cfbb9bcb7e1389c251a0ba3df2b0880cb6620ffb
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Brushes.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/72d8e0f71a54fd570e1e5264d6e5fb7b29406ad4
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Bulb.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/be0b3c0900b90dd09df479fad56b1229ad516d3a
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Car.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/0a9b728823a71ad489b7e1f072590fa00f3aa5bc
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Cat.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/129c1e09a68be9de6cef412b2a6e93559a87ea26
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Chamelon.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/c1d70c75552ee593940f393a518534e72587338f
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Cocktail.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/25b13534deaa992a714f25f14efeaa5eae4de592
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Dog.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/6220b049f6ae68dbc5a495f05afca9adead61ff6
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Fish.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/53c07475f67932feacd6188d906188a8dbd6991a
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Gamepad.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/32946f0e0836c590cc36b8b3206eef0349aa13dd
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Owl.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/f1bbe3025f15ecddbed6d4510fc2a1794ebf6009
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Pancakes.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/7cd170c61cf35ee527ce0ffa4abf416bf29038a7
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Parrot.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a8b6c38c66a63e54df39a7a2394a61c386dcc323
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Pencils.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/545c254aaacc416b6d7d7881d4ad9fe94c1cbf1e
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Shuttle.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/3846b0d0a1072ef0698c1383f6aa5fa88e617a0d
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Soccer.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/2363d6a59f5770f0340ae0e616d48b000ed85041
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Sunflower.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a8a48fc3a258971b868e37643efbabf5ca42ae95
-cp %{_builddir}/plasma-workspace-5.24.4/kcms/users/avatars/photos/Sushi.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/e6059edbfaf63e2ad3822f2c09b7ee4c9b6f2aad
-cp %{_builddir}/plasma-workspace-5.24.4/ksmserver/Copyright.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/d53ea4b152ed3d9d8a96650bd70f5fbb9e9a3ef9
-cp %{_builddir}/plasma-workspace-5.24.4/ksmserver/LICENSE %{buildroot}/usr/share/package-licenses/plasma-workspace/67218f86a21c5afe177def300337c7ff8ccf40f9
-cp %{_builddir}/plasma-workspace-5.24.4/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/favicons.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f
-cp %{_builddir}/plasma-workspace-5.24.4/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/places.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f
+cp %{_builddir}/'plasma-workspace-5.24.5/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/2123756e0b1fc8243547235a33c0fcabfe3b9a51
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/a4c60b3fefda228cd7439d3565df043192fef137
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/a4c60b3fefda228cd7439d3565df043192fef137
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/19d98e1b6f8ef12849ea4012a052d3907f336c91
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LGPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/49e61f7864169f2e356c11a17422d7d20d74b40f
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/plasma-workspace-5.24.5/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/81e12d0c07782abcf558af7aa19846e3e2606a70
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/kfontinst/viewpart/COPYING.UNICODE %{buildroot}/usr/share/package-licenses/plasma-workspace/ae855f68ab20f57b2cc7e9b03f54a87563424eb9
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Astronaut.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/cf03e23da9870281180ea4163b13a7bcf38a7a82
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Books.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/cfbb9bcb7e1389c251a0ba3df2b0880cb6620ffb
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Brushes.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/72d8e0f71a54fd570e1e5264d6e5fb7b29406ad4
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Bulb.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/be0b3c0900b90dd09df479fad56b1229ad516d3a
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Car.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/0a9b728823a71ad489b7e1f072590fa00f3aa5bc
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Cat.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/129c1e09a68be9de6cef412b2a6e93559a87ea26
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Chamelon.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/c1d70c75552ee593940f393a518534e72587338f
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Cocktail.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/25b13534deaa992a714f25f14efeaa5eae4de592
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Dog.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/6220b049f6ae68dbc5a495f05afca9adead61ff6
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Fish.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/53c07475f67932feacd6188d906188a8dbd6991a
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Gamepad.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/32946f0e0836c590cc36b8b3206eef0349aa13dd
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Owl.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/f1bbe3025f15ecddbed6d4510fc2a1794ebf6009
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Pancakes.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/7cd170c61cf35ee527ce0ffa4abf416bf29038a7
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Parrot.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a8b6c38c66a63e54df39a7a2394a61c386dcc323
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Pencils.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/545c254aaacc416b6d7d7881d4ad9fe94c1cbf1e
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Shuttle.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/3846b0d0a1072ef0698c1383f6aa5fa88e617a0d
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Soccer.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/2363d6a59f5770f0340ae0e616d48b000ed85041
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Sunflower.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a8a48fc3a258971b868e37643efbabf5ca42ae95
+cp %{_builddir}/plasma-workspace-5.24.5/kcms/users/avatars/photos/Sushi.png.license %{buildroot}/usr/share/package-licenses/plasma-workspace/e6059edbfaf63e2ad3822f2c09b7ee4c9b6f2aad
+cp %{_builddir}/plasma-workspace-5.24.5/ksmserver/Copyright.txt %{buildroot}/usr/share/package-licenses/plasma-workspace/d53ea4b152ed3d9d8a96650bd70f5fbb9e9a3ef9
+cp %{_builddir}/plasma-workspace-5.24.5/ksmserver/LICENSE %{buildroot}/usr/share/package-licenses/plasma-workspace/67218f86a21c5afe177def300337c7ff8ccf40f9
+cp %{_builddir}/plasma-workspace-5.24.5/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/favicons.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f
+cp %{_builddir}/plasma-workspace-5.24.5/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/places.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f
 pushd clr-build
 %make_install
 popd
@@ -1368,18 +1368,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.24.4
+/usr/lib64/libcolorcorrect.so.5.24.5
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.24.4
+/usr/lib64/libkfontinst.so.5.24.5
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.24.4
+/usr/lib64/libkfontinstui.so.5.24.5
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.24.4
+/usr/lib64/libkworkspace5.so.5.24.5
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.24.4
+/usr/lib64/libnotificationmanager.so.5.24.5
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.24.4
-/usr/lib64/libtaskmanager.so.5.24.4
+/usr/lib64/libplasma-geolocation-interface.so.5.24.5
+/usr/lib64/libtaskmanager.so.5.24.5
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
