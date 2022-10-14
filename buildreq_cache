@@ -1,4 +1,4 @@
-5.25.5
+5.26.0
 gmp-dev
 kactivities-dev
 kactivities-stats-dev
@@ -15,5 +15,6 @@ mpfr-dev
 phonon-dev
 pkgconfig(iso-codes)
 pkgconfig(wayland-protocols)
+polkit-qt-dev
 prison-dev
 syntax-highlighting-dev
