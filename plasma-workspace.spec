@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.26.2
-Release  : 95
-URL      : https://download.kde.org/stable/plasma/5.26.2/plasma-workspace-5.26.2.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.26.2/plasma-workspace-5.26.2.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.26.2/plasma-workspace-5.26.2.tar.xz.sig
+Version  : 5.26.3
+Release  : 96
+URL      : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -123,8 +123,9 @@ BuildRequires : xcb-util-xrm-dev
 BuildRequires : zlib-dev
 
 %description
-Contains a patched version of the import path of libdbusmenu-qt
-Remove when next version of libdbusmenu-qt is released.
+This library can be used for configuring the color correction on compositor level. This includes:
+- [TODO] Adjusting gamma levels per screen
+- Setting night time color temperature (Night Color)
 
 %package bin
 Summary: bin components for the plasma-workspace package.
@@ -201,15 +202,15 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.26.2
-cd %{_builddir}/plasma-workspace-5.26.2
+%setup -q -n plasma-workspace-5.26.3
+cd %{_builddir}/plasma-workspace-5.26.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667245827
+export SOURCE_DATE_EPOCH=1667926889
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -225,7 +226,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1667245827
+export SOURCE_DATE_EPOCH=1667926889
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1350,18 +1351,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.26.2
+/usr/lib64/libcolorcorrect.so.5.26.3
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.26.2
+/usr/lib64/libkfontinst.so.5.26.3
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.26.2
+/usr/lib64/libkfontinstui.so.5.26.3
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.26.2
+/usr/lib64/libkworkspace5.so.5.26.3
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.26.2
+/usr/lib64/libnotificationmanager.so.5.26.3
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.26.2
-/usr/lib64/libtaskmanager.so.5.26.2
+/usr/lib64/libplasma-geolocation-interface.so.5.26.3
+/usr/lib64/libtaskmanager.so.5.26.3
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
