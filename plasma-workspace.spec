@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.26.3
-Release  : 96
-URL      : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.26.3/plasma-workspace-5.26.3.tar.xz.sig
+Version  : 5.26.4.1
+Release  : 97
+URL      : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -47,7 +47,6 @@ BuildRequires : kdbusaddons-dev
 BuildRequires : kded-dev
 BuildRequires : kdelibs4support-dev
 BuildRequires : kdesignerplugin-dev
-BuildRequires : kdoctools-dev
 BuildRequires : kemoticons-dev
 BuildRequires : kfilemetadata-dev
 BuildRequires : kglobalaccel-dev
@@ -74,6 +73,7 @@ BuildRequires : kscreenlocker-dev
 BuildRequires : ksysguard
 BuildRequires : ktexteditor-dev
 BuildRequires : kunitconversion-dev
+BuildRequires : kuserfeedback-dev
 BuildRequires : kwayland-dev
 BuildRequires : kwidgetsaddons-dev
 BuildRequires : kwin-dev
@@ -202,15 +202,15 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.26.3
-cd %{_builddir}/plasma-workspace-5.26.3
+%setup -q -n plasma-workspace-5.26.4.1
+cd %{_builddir}/plasma-workspace-5.26.4.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667926889
+export SOURCE_DATE_EPOCH=1669822128
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -226,7 +226,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1667926889
+export SOURCE_DATE_EPOCH=1669822128
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -409,6 +409,7 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/share/applications/kcm_autostart.desktop
 /usr/share/applications/kcm_colors.desktop
 /usr/share/applications/kcm_cursortheme.desktop
+/usr/share/applications/kcm_feedback.desktop
 /usr/share/applications/kcm_fontinst.desktop
 /usr/share/applications/kcm_fonts.desktop
 /usr/share/applications/kcm_icons.desktop
@@ -426,6 +427,7 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/share/applications/org.kde.systemmonitor.desktop
 /usr/share/config.kcfg/colorssettings.kcfg
 /usr/share/config.kcfg/cursorthemesettings.kcfg
+/usr/share/config.kcfg/feedbacksettings.kcfg
 /usr/share/config.kcfg/fontssettings.kcfg
 /usr/share/config.kcfg/freespacenotifier.kcfg
 /usr/share/config.kcfg/iconssettingsbase.kcfg
@@ -540,6 +542,7 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/Hand.qml
 /usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/ThemePreview.qml
 /usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_feedback/contents/ui/main.qml
 /usr/share/kpackage/kcms/kcm_fonts/contents/ui/FontWidget.qml
 /usr/share/kpackage/kcms/kcm_fonts/contents/ui/main.qml
 /usr/share/kpackage/kcms/kcm_icons/contents/ui/IconSizePopup.qml
@@ -1351,18 +1354,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.26.3
+/usr/lib64/libcolorcorrect.so.5.26.4
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.26.3
+/usr/lib64/libkfontinst.so.5.26.4
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.26.3
+/usr/lib64/libkfontinstui.so.5.26.4
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.26.3
+/usr/lib64/libkworkspace5.so.5.26.4
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.26.3
+/usr/lib64/libnotificationmanager.so.5.26.4
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.26.3
-/usr/lib64/libtaskmanager.so.5.26.3
+/usr/lib64/libplasma-geolocation-interface.so.5.26.4
+/usr/lib64/libtaskmanager.so.5.26.4
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
@@ -1450,6 +1453,7 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_colors.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_cursortheme.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_desktoptheme.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_feedback.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_fonts.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_icons.so
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_lookandfeel.so
