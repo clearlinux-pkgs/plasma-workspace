@@ -6,7 +6,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.26.4.1
-Release  : 97
+Release  : 98
 URL      : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.26.4/plasma-workspace-5.26.4.1.tar.xz.sig
