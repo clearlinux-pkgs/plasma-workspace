@@ -6,7 +6,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.26.5
-Release  : 99
+Release  : 100
 URL      : https://download.kde.org/stable/plasma/5.26.5/plasma-workspace-5.26.5.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.26.5/plasma-workspace-5.26.5.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.26.5/plasma-workspace-5.26.5.tar.xz.sig
@@ -122,9 +122,6 @@ BuildRequires : xcb-util-renderutil-dev
 BuildRequires : xcb-util-wm-dev
 BuildRequires : xcb-util-xrm-dev
 BuildRequires : zlib-dev
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 Contains a patched version of the import path of libdbusmenu-qt
@@ -213,23 +210,23 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673312328
+export SOURCE_DATE_EPOCH=1673365840
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1673312328
+export SOURCE_DATE_EPOCH=1673365840
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
