@@ -6,7 +6,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.0
-Release  : 102
+Release  : 103
 URL      : https://download.kde.org/stable/plasma/5.27.0/plasma-workspace-5.27.0.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.0/plasma-workspace-5.27.0.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.0/plasma-workspace-5.27.0.tar.xz.sig
@@ -16,6 +16,12 @@ Source4  : kscreensaver.pam
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause CC0-1.0 GPL-2.0 GPL-3.0 ICU LGPL-2.0 LGPL-2.1 LGPL-3.0 MIT
+Requires: plasma-workspace-bin = %{version}-%{release}
+Requires: plasma-workspace-data = %{version}-%{release}
+Requires: plasma-workspace-lib = %{version}-%{release}
+Requires: plasma-workspace-license = %{version}-%{release}
+Requires: plasma-workspace-locales = %{version}-%{release}
+Requires: plasma-workspace-services = %{version}-%{release}
 BuildRequires : NetworkManager-dev
 BuildRequires : appstream-dev
 BuildRequires : appstream-extras
@@ -31,7 +37,10 @@ BuildRequires : extra-cmake-modules pkgconfig(xcb) xcb-util-cursor-dev xcb-util-
 BuildRequires : extra-cmake-modules qtwayland-dev
 BuildRequires : extra-cmake-modules-data
 BuildRequires : glibc-dev
+BuildRequires : gmp-dev
 BuildRequires : icu4c-dev
+BuildRequires : kactivities-dev
+BuildRequires : kactivities-stats-dev
 BuildRequires : kcodecs-dev
 BuildRequires : kcompletion-dev
 BuildRequires : kdbusaddons-dev
@@ -39,9 +48,12 @@ BuildRequires : kded-dev
 BuildRequires : kdelibs4support-dev
 BuildRequires : kdesignerplugin-dev
 BuildRequires : kemoticons-dev
+BuildRequires : kfilemetadata-dev
+BuildRequires : kglobalaccel-dev
 BuildRequires : kguiaddons-dev
 BuildRequires : kholidays-dev
 BuildRequires : kiconthemes-dev
+BuildRequires : kidletime-dev
 BuildRequires : kinit-dev
 BuildRequires : kirigami2-dev
 BuildRequires : kitemmodels-dev
@@ -50,14 +62,19 @@ BuildRequires : kjobwidgets-dev
 BuildRequires : kjs-dev
 BuildRequires : kjsembed-dev
 BuildRequires : knotifications-dev
+BuildRequires : knotifyconfig-dev
 BuildRequires : kpackage-dev
 BuildRequires : kparts-dev
+BuildRequires : kpeople-dev
 BuildRequires : kpty-dev
 BuildRequires : kquickcharts-dev
+BuildRequires : krunner-dev
 BuildRequires : kscreenlocker-dev
 BuildRequires : ksysguard
+BuildRequires : ktexteditor-dev
 BuildRequires : kunitconversion-dev
 BuildRequires : kuserfeedback-dev
+BuildRequires : kwayland-dev
 BuildRequires : kwidgetsaddons-dev
 BuildRequires : kwin-dev
 BuildRequires : kwindowsystem-dev
@@ -71,15 +88,22 @@ BuildRequires : libXtst-dev
 BuildRequires : libkexiv2-dev
 BuildRequires : libkscreen-dev
 BuildRequires : libksysguard-dev
+BuildRequires : libqalculate-dev
 BuildRequires : libxcb-dev
+BuildRequires : mpfr-dev
 BuildRequires : networkmanager-qt-dev
+BuildRequires : phonon-dev
 BuildRequires : pkg-config
+BuildRequires : pkgconfig(iso-codes)
 BuildRequires : pkgconfig(libdrm)
 BuildRequires : pkgconfig(libpipewire-0.3)
+BuildRequires : pkgconfig(wayland-protocols)
 BuildRequires : pkgconfig(xkbcommon)
 BuildRequires : plasma-framework-dev
 BuildRequires : plasma-wayland-protocols-dev
 BuildRequires : plasma-workspace-wallpapers
+BuildRequires : polkit-qt-dev
+BuildRequires : prison-dev
 BuildRequires : qt6base-dev
 BuildRequires : qtbase-dev
 BuildRequires : qtbase-dev mesa-dev
@@ -87,6 +111,7 @@ BuildRequires : qtbase-staticdev
 BuildRequires : qttools-dev
 BuildRequires : solid-dev
 BuildRequires : sonnet-dev
+BuildRequires : syntax-highlighting-dev
 BuildRequires : valgrind-dev
 BuildRequires : xcb-util-cursor-dev
 BuildRequires : xcb-util-dev
@@ -101,6 +126,80 @@ BuildRequires : zlib-dev
 Contains a patched version of the import path of libdbusmenu-qt
 Remove when next version of libdbusmenu-qt is released.
 
+%package bin
+Summary: bin components for the plasma-workspace package.
+Group: Binaries
+Requires: plasma-workspace-data = %{version}-%{release}
+Requires: plasma-workspace-license = %{version}-%{release}
+Requires: plasma-workspace-services = %{version}-%{release}
+
+%description bin
+bin components for the plasma-workspace package.
+
+
+%package data
+Summary: data components for the plasma-workspace package.
+Group: Data
+
+%description data
+data components for the plasma-workspace package.
+
+
+%package dev
+Summary: dev components for the plasma-workspace package.
+Group: Development
+Requires: plasma-workspace-lib = %{version}-%{release}
+Requires: plasma-workspace-bin = %{version}-%{release}
+Requires: plasma-workspace-data = %{version}-%{release}
+Provides: plasma-workspace-devel = %{version}-%{release}
+Requires: plasma-workspace = %{version}-%{release}
+
+%description dev
+dev components for the plasma-workspace package.
+
+
+%package doc
+Summary: doc components for the plasma-workspace package.
+Group: Documentation
+
+%description doc
+doc components for the plasma-workspace package.
+
+
+%package lib
+Summary: lib components for the plasma-workspace package.
+Group: Libraries
+Requires: plasma-workspace-data = %{version}-%{release}
+Requires: plasma-workspace-license = %{version}-%{release}
+
+%description lib
+lib components for the plasma-workspace package.
+
+
+%package license
+Summary: license components for the plasma-workspace package.
+Group: Default
+
+%description license
+license components for the plasma-workspace package.
+
+
+%package locales
+Summary: locales components for the plasma-workspace package.
+Group: Default
+
+%description locales
+locales components for the plasma-workspace package.
+
+
+%package services
+Summary: services components for the plasma-workspace package.
+Group: Systemd services
+
+%description services
+services components for the plasma-workspace package.
+
+
 %prep
 %setup -q -n plasma-workspace-5.27.0
 cd %{_builddir}/plasma-workspace-5.27.0
@@ -110,7 +209,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676676562
+export SOURCE_DATE_EPOCH=1676749431
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -126,7 +225,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676676562
+export SOURCE_DATE_EPOCH=1676749431
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -173,6 +272,85 @@ cp %{_builddir}/plasma-workspace-%{version}/runners/bookmarks/autotests/firefox/
 pushd clr-build
 %make_install
 popd
+%find_lang kcm_colors
+%find_lang kcm_cursortheme
+%find_lang kcm_fonts
+%find_lang kcm_icons
+%find_lang kcm_style
+%find_lang kfontinst
+%find_lang kio5_applications
+%find_lang klipper
+%find_lang krdb
+%find_lang ksmserver
+%find_lang freespacenotifier
+%find_lang kcm_autostart
+%find_lang kcm_desktoptheme
+%find_lang kcm_feedback
+%find_lang kcm_lookandfeel
+%find_lang kcm_nightcolor
+%find_lang kcm_notifications
+%find_lang kcm_regionandlang
+%find_lang kcm_users
+%find_lang kcminit
+%find_lang kholidays_calendar_plugin
+%find_lang kio_desktop
+%find_lang krunner
+%find_lang libkicker
+%find_lang libkworkspace
+%find_lang libnotificationmanager
+%find_lang phonon_kde_plugin
+%find_lang plasma_applet_org.kde.plasma.activitybar
+%find_lang plasma_applet_org.kde.plasma.analogclock
+%find_lang plasma_applet_org.kde.plasma.appmenu
+%find_lang plasma_applet_org.kde.plasma.battery
+%find_lang plasma_applet_org.kde.plasma.calendar
+%find_lang plasma_applet_org.kde.plasma.clipboard
+%find_lang plasma_applet_org.kde.plasma.devicenotifier
+%find_lang plasma_applet_org.kde.plasma.digitalclock
+%find_lang plasma_applet_org.kde.plasma.icon
+%find_lang plasma_applet_org.kde.plasma.lock_logout
+%find_lang plasma_applet_org.kde.plasma.manageinputmethod
+%find_lang plasma_applet_org.kde.plasma.mediacontroller
+%find_lang plasma_applet_org.kde.plasma.notifications
+%find_lang plasma_applet_org.kde.plasma.panelspacer
+%find_lang plasma_applet_org.kde.plasma.private.systemtray
+%find_lang plasma_applet_org.kde.plasma.systemmonitor
+%find_lang plasma_containmentactions_applauncher
+%find_lang plasma_containmentactions_contextmenu
+%find_lang plasma_containmentactions_switchwindow
+%find_lang plasma_engine_applicationjobs
+%find_lang plasma_engine_devicenotifications
+%find_lang plasma_engine_dict
+%find_lang plasma_engine_hotplug
+%find_lang plasma_engine_keystate
+%find_lang plasma_engine_mpris2
+%find_lang plasma_engine_notifications
+%find_lang plasma_engine_powermanagement
+%find_lang plasma_engine_soliddevice
+%find_lang plasma_engine_time
+%find_lang plasma_engine_weather
+%find_lang plasma_lookandfeel_org.kde.lookandfeel
+%find_lang plasma_package_plasmashell
+%find_lang plasma_runner_appstream
+%find_lang plasma_runner_baloosearch5
+%find_lang plasma_runner_bookmarksrunner
+%find_lang plasma_runner_calculatorrunner
+%find_lang plasma_runner_kill
+%find_lang plasma_runner_locations
+%find_lang plasma_runner_placesrunner
+%find_lang plasma_runner_powerdevil
+%find_lang plasma_runner_recentdocuments
+%find_lang plasma_runner_services
+%find_lang plasma_runner_sessions
+%find_lang plasma_runner_shell
+%find_lang plasma_runner_webshortcuts
+%find_lang plasma_runner_windowedwidgets
+%find_lang plasma_wallpaper_org.kde.color
+%find_lang plasma_wallpaper_org.kde.image
+%find_lang plasmashell
+%find_lang plasmashellprivateplugin
+%find_lang soliduiserver5
+%find_lang systemmonitor
 mkdir -p %{buildroot}/usr/share/pam.d
 install -m644 %{_sourcedir}/kde.pam %{buildroot}/usr/share/pam.d/kde
 mkdir -p %{buildroot}/usr/share/pam.d
@@ -182,3 +360,1314 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/kconf_update_bin/krunnerglobalshortcuts
+/usr/lib64/kconf_update_bin/krunnerhistory
+/usr/lib64/kconf_update_bin/plasmashell-5.27-use-panel-thickness-in-default-group
+/usr/lib64/libexec/baloorunner
+/usr/lib64/libexec/kauth/fontinst
+/usr/lib64/libexec/kauth/fontinst_helper
+/usr/lib64/libexec/kauth/fontinst_x11
+/usr/lib64/libexec/kfontprint
+/usr/lib64/libexec/ksmserver-logout-greeter
+/usr/lib64/libexec/plasma-changeicons
+/usr/lib64/libexec/plasma-dbus-run-session-if-needed
+/usr/lib64/libexec/plasma-sourceenv.sh
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/gmenudbusmenuproxy
+/usr/bin/kcminit
+/usr/bin/kcminit_startup
+/usr/bin/kcolorschemeeditor
+/usr/bin/kde-systemd-start-condition
+/usr/bin/kfontinst
+/usr/bin/kfontview
+/usr/bin/klipper
+/usr/bin/krunner
+/usr/bin/ksmserver
+/usr/bin/ksplashqml
+/usr/bin/lookandfeeltool
+/usr/bin/plasma-apply-colorscheme
+/usr/bin/plasma-apply-cursortheme
+/usr/bin/plasma-apply-desktoptheme
+/usr/bin/plasma-apply-lookandfeel
+/usr/bin/plasma-apply-wallpaperimage
+/usr/bin/plasma-interactiveconsole
+/usr/bin/plasma-localegen-helper
+/usr/bin/plasma-shutdown
+/usr/bin/plasma_session
+/usr/bin/plasma_waitforname
+/usr/bin/plasmashell
+/usr/bin/plasmawindowed
+/usr/bin/startplasma-wayland
+/usr/bin/startplasma-x11
+/usr/bin/systemmonitor
+/usr/bin/xembedsniproxy
+
+%files data
+%defattr(-,root,root,-)
+/usr/share/applications/kcm_autostart.desktop
+/usr/share/applications/kcm_colors.desktop
+/usr/share/applications/kcm_cursortheme.desktop
+/usr/share/applications/kcm_feedback.desktop
+/usr/share/applications/kcm_fontinst.desktop
+/usr/share/applications/kcm_fonts.desktop
+/usr/share/applications/kcm_icons.desktop
+/usr/share/applications/kcm_lookandfeel.desktop
+/usr/share/applications/kcm_nightcolor.desktop
+/usr/share/applications/kcm_notifications.desktop
+/usr/share/applications/kcm_regionandlang.desktop
+/usr/share/applications/kcm_style.desktop
+/usr/share/applications/kcm_users.desktop
+/usr/share/applications/org.kde.kcolorschemeeditor.desktop
+/usr/share/applications/org.kde.kfontview.desktop
+/usr/share/applications/org.kde.klipper.desktop
+/usr/share/applications/org.kde.plasmashell.desktop
+/usr/share/applications/org.kde.plasmawindowed.desktop
+/usr/share/applications/org.kde.systemmonitor.desktop
+/usr/share/config.kcfg/colorssettings.kcfg
+/usr/share/config.kcfg/cursorthemesettings.kcfg
+/usr/share/config.kcfg/feedbacksettings.kcfg
+/usr/share/config.kcfg/fontssettings.kcfg
+/usr/share/config.kcfg/freespacenotifier.kcfg
+/usr/share/config.kcfg/iconssettingsbase.kcfg
+/usr/share/config.kcfg/launchfeedbacksettings.kcfg
+/usr/share/config.kcfg/lookandfeelsettings.kcfg
+/usr/share/config.kcfg/stylesettings.kcfg
+/usr/share/dbus-1/interfaces/com.canonical.AppMenu.Registrar.xml
+/usr/share/dbus-1/interfaces/org.kde.KSMServerInterface.xml
+/usr/share/dbus-1/interfaces/org.kde.KSplash.xml
+/usr/share/dbus-1/interfaces/org.kde.PlasmaShell.xml
+/usr/share/dbus-1/interfaces/org.kde.kappmenu.xml
+/usr/share/dbus-1/interfaces/org.kde.krunner.App.xml
+/usr/share/dbus-1/services/org.kde.KSplash.service
+/usr/share/dbus-1/services/org.kde.LogoutPrompt.service
+/usr/share/dbus-1/services/org.kde.Shutdown.service
+/usr/share/dbus-1/services/org.kde.fontinst.service
+/usr/share/dbus-1/services/org.kde.krunner.service
+/usr/share/dbus-1/services/org.kde.plasma.Notifications.service
+/usr/share/dbus-1/services/org.kde.runners.baloo.service
+/usr/share/dbus-1/system-services/org.kde.fontinst.service
+/usr/share/dbus-1/system-services/org.kde.localegenhelper.service
+/usr/share/dbus-1/system.d/org.kde.fontinst.conf
+/usr/share/dbus-1/system.d/org.kde.localegenhelper.conf
+/usr/share/desktop-directories/kf5-development-translation.directory
+/usr/share/desktop-directories/kf5-development-webdevelopment.directory
+/usr/share/desktop-directories/kf5-development.directory
+/usr/share/desktop-directories/kf5-editors.directory
+/usr/share/desktop-directories/kf5-edu-languages.directory
+/usr/share/desktop-directories/kf5-edu-mathematics.directory
+/usr/share/desktop-directories/kf5-edu-miscellaneous.directory
+/usr/share/desktop-directories/kf5-edu-science.directory
+/usr/share/desktop-directories/kf5-edu-tools.directory
+/usr/share/desktop-directories/kf5-education.directory
+/usr/share/desktop-directories/kf5-games-arcade.directory
+/usr/share/desktop-directories/kf5-games-board.directory
+/usr/share/desktop-directories/kf5-games-card.directory
+/usr/share/desktop-directories/kf5-games-kids.directory
+/usr/share/desktop-directories/kf5-games-logic.directory
+/usr/share/desktop-directories/kf5-games-roguelikes.directory
+/usr/share/desktop-directories/kf5-games-strategy.directory
+/usr/share/desktop-directories/kf5-games.directory
+/usr/share/desktop-directories/kf5-graphics.directory
+/usr/share/desktop-directories/kf5-internet-terminal.directory
+/usr/share/desktop-directories/kf5-internet.directory
+/usr/share/desktop-directories/kf5-main.directory
+/usr/share/desktop-directories/kf5-more.directory
+/usr/share/desktop-directories/kf5-multimedia.directory
+/usr/share/desktop-directories/kf5-network.directory
+/usr/share/desktop-directories/kf5-office.directory
+/usr/share/desktop-directories/kf5-science.directory
+/usr/share/desktop-directories/kf5-settingsmenu.directory
+/usr/share/desktop-directories/kf5-system-terminal.directory
+/usr/share/desktop-directories/kf5-system.directory
+/usr/share/desktop-directories/kf5-toys.directory
+/usr/share/desktop-directories/kf5-unknown.directory
+/usr/share/desktop-directories/kf5-utilities-accessibility.directory
+/usr/share/desktop-directories/kf5-utilities-desktop.directory
+/usr/share/desktop-directories/kf5-utilities-file.directory
+/usr/share/desktop-directories/kf5-utilities-peripherals.directory
+/usr/share/desktop-directories/kf5-utilities-pim.directory
+/usr/share/desktop-directories/kf5-utilities-xutils.directory
+/usr/share/desktop-directories/kf5-utilities.directory
+/usr/share/icons/hicolor/128x128/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/16x16/apps/kfontview.png
+/usr/share/icons/hicolor/16x16/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/22x22/apps/kfontview.png
+/usr/share/icons/hicolor/22x22/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/32x32/apps/kfontview.png
+/usr/share/icons/hicolor/32x32/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/48x48/apps/kfontview.png
+/usr/share/icons/hicolor/48x48/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/64x64/apps/kfontview.png
+/usr/share/icons/hicolor/64x64/mimetypes/fonts-package.png
+/usr/share/icons/hicolor/scalable/apps/preferences-desktop-font-installer.svgz
+/usr/share/kconf_update/delete_cursor_old_default_size.pl
+/usr/share/kconf_update/delete_cursor_old_default_size.upd
+/usr/share/kconf_update/icons_remove_effects.upd
+/usr/share/kconf_update/krunnerglobalshortcuts2.upd
+/usr/share/kconf_update/krunnerhistory.upd
+/usr/share/kconf_update/plasmashell-5.27-use-panel-thickness-in-default-group.upd
+/usr/share/kconf_update/style_widgetstyle_default_breeze.pl
+/usr/share/kconf_update/style_widgetstyle_default_breeze.upd
+/usr/share/kfontinst/icons/hicolor/16x16/actions/addfont.png
+/usr/share/kfontinst/icons/hicolor/16x16/actions/font-disable.png
+/usr/share/kfontinst/icons/hicolor/16x16/actions/font-enable.png
+/usr/share/kfontinst/icons/hicolor/16x16/actions/fontstatus.png
+/usr/share/kfontinst/icons/hicolor/22x22/actions/addfont.png
+/usr/share/kfontinst/icons/hicolor/22x22/actions/font-disable.png
+/usr/share/kfontinst/icons/hicolor/22x22/actions/font-enable.png
+/usr/share/kfontinst/icons/hicolor/22x22/actions/fontstatus.png
+/usr/share/kglobalaccel/org.kde.krunner.desktop
+/usr/share/kio/servicemenus/setaswallpaper.desktop
+/usr/share/kio_desktop/directory.desktop
+/usr/share/kio_desktop/directory.trash
+/usr/share/knotifications5/devicenotifications.notifyrc
+/usr/share/knotifications5/freespacenotifier.notifyrc
+/usr/share/knotifications5/phonon.notifyrc
+/usr/share/knsrcfiles/colorschemes.knsrc
+/usr/share/knsrcfiles/gtk_themes.knsrc
+/usr/share/knsrcfiles/icons.knsrc
+/usr/share/knsrcfiles/kfontinst.knsrc
+/usr/share/knsrcfiles/lookandfeel.knsrc
+/usr/share/knsrcfiles/plasma-themes.knsrc
+/usr/share/knsrcfiles/plasmoids.knsrc
+/usr/share/knsrcfiles/wallpaper-mobile.knsrc
+/usr/share/knsrcfiles/wallpaper.knsrc
+/usr/share/knsrcfiles/wallpaperplugin.knsrc
+/usr/share/knsrcfiles/xcursor.knsrc
+/usr/share/konqsidebartng/virtual_folders/services/fonts.desktop
+/usr/share/kpackage/kcms/kcm_autostart/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_colors/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_cursortheme/contents/ui/Delegate.qml
+/usr/share/kpackage/kcms/kcm_cursortheme/contents/ui/LaunchFeedbackDialog.qml
+/usr/share/kpackage/kcms/kcm_cursortheme/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/Hand.qml
+/usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/ThemePreview.qml
+/usr/share/kpackage/kcms/kcm_desktoptheme/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_feedback/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_fonts/contents/ui/FontWidget.qml
+/usr/share/kpackage/kcms/kcm_fonts/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_icons/contents/ui/IconSizePopup.qml
+/usr/share/kpackage/kcms/kcm_icons/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_lookandfeel/contents/ui/MoreOptions.qml
+/usr/share/kpackage/kcms/kcm_lookandfeel/contents/ui/SimpleOptions.qml
+/usr/share/kpackage/kcms/kcm_lookandfeel/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_nightcolor/contents/ui/LocationsFixedView.qml
+/usr/share/kpackage/kcms/kcm_nightcolor/contents/ui/NumberField.qml
+/usr/share/kpackage/kcms/kcm_nightcolor/contents/ui/TimeField.qml
+/usr/share/kpackage/kcms/kcm_nightcolor/contents/ui/TimingsView.qml
+/usr/share/kpackage/kcms/kcm_nightcolor/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_notifications/contents/ui/ApplicationConfiguration.qml
+/usr/share/kpackage/kcms/kcm_notifications/contents/ui/PopupPositionPage.qml
+/usr/share/kpackage/kcms/kcm_notifications/contents/ui/ScreenPositionSelector.qml
+/usr/share/kpackage/kcms/kcm_notifications/contents/ui/SourcesPage.qml
+/usr/share/kpackage/kcms/kcm_notifications/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_regionandlang/contents/ui/AdvancedLanguageSelectPage.qml
+/usr/share/kpackage/kcms/kcm_regionandlang/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_style/contents/ui/EffectSettingsPopup.qml
+/usr/share/kpackage/kcms/kcm_style/contents/ui/GtkStylePage.qml
+/usr/share/kpackage/kcms/kcm_style/contents/ui/main.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/ChangePassword.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/ChangeWalletPassword.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/CreateUser.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/Debouncer.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/FingerprintDialog.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/FingerprintProgressCircle.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/PicturesSheet.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/UserDetailsPage.qml
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/base.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/base.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-index-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-index-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-little-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-little-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-middle-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-middle-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-ring-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-ring-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-thumb.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/left-thumb.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/palm.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/palm.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-index-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-index-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-little-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-little-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-middle-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-middle-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-ring-finger.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-ring-finger.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-thumb.svg
+/usr/share/kpackage/kcms/kcm_users/contents/ui/hand-images/right-thumb.svg.license
+/usr/share/kpackage/kcms/kcm_users/contents/ui/main.qml
+/usr/share/krunner/dbusplugins/plasma-runner-baloosearch.desktop
+/usr/share/kservices5/ServiceMenus/installfont.desktop
+/usr/share/kservicetypes5/plasma-layouttemplate.desktop
+/usr/share/kstyle/themes/qtcde.themerc
+/usr/share/kstyle/themes/qtcleanlooks.themerc
+/usr/share/kstyle/themes/qtgtk.themerc
+/usr/share/kstyle/themes/qtmotif.themerc
+/usr/share/kstyle/themes/qtplastique.themerc
+/usr/share/kstyle/themes/qtwindows.themerc
+/usr/share/kxmlgui5/kfontview/kfontviewpart.rc
+/usr/share/kxmlgui5/kfontview/kfontviewui.rc
+/usr/share/metainfo/org.kde.breeze.desktop.appdata.xml
+/usr/share/metainfo/org.kde.breezedark.desktop.appdata.xml
+/usr/share/metainfo/org.kde.breezetwilight.desktop.appdata.xml
+/usr/share/metainfo/org.kde.color.appdata.xml
+/usr/share/metainfo/org.kde.image.appdata.xml
+/usr/share/metainfo/org.kde.plasma.activitybar.appdata.xml
+/usr/share/metainfo/org.kde.plasma.analogclock.appdata.xml
+/usr/share/metainfo/org.kde.plasma.appmenu.appdata.xml
+/usr/share/metainfo/org.kde.plasma.battery.appdata.xml
+/usr/share/metainfo/org.kde.plasma.calendar.appdata.xml
+/usr/share/metainfo/org.kde.plasma.clipboard.appdata.xml
+/usr/share/metainfo/org.kde.plasma.devicenotifier.appdata.xml
+/usr/share/metainfo/org.kde.plasma.digitalclock.appdata.xml
+/usr/share/metainfo/org.kde.plasma.lock_logout.appdata.xml
+/usr/share/metainfo/org.kde.plasma.manage-inputmethod.appdata.xml
+/usr/share/metainfo/org.kde.plasma.mediacontroller.appdata.xml
+/usr/share/metainfo/org.kde.plasma.notifications.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.cpu.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.cpucore.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.diskactivity.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.diskusage.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.memory.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemmonitor.net.appdata.xml
+/usr/share/metainfo/org.kde.plasma.systemtray.appdata.xml
+/usr/share/metainfo/org.kde.slideshow.appdata.xml
+/usr/share/pam.d/kde
+/usr/share/pam.d/kde-np
+/usr/share/pam.d/kscreensaver
+"/usr/share/plasma/avatars/Artist Konqi.png"
+"/usr/share/plasma/avatars/Bookworm Konqi.png"
+"/usr/share/plasma/avatars/Boss Konqi.png"
+"/usr/share/plasma/avatars/Bug Catcher Konqi.png"
+"/usr/share/plasma/avatars/Card Shark Konqi.png"
+"/usr/share/plasma/avatars/Hacker Konqi.png"
+"/usr/share/plasma/avatars/Journalist Konqi.png"
+/usr/share/plasma/avatars/Katie.png
+/usr/share/plasma/avatars/Konqi.png
+"/usr/share/plasma/avatars/Mechanic Konqi.png"
+"/usr/share/plasma/avatars/Messenger Konqi.png"
+"/usr/share/plasma/avatars/Musician Konqi.png"
+"/usr/share/plasma/avatars/Office Worker Konqi.png"
+"/usr/share/plasma/avatars/PC Builder Konqi.png"
+"/usr/share/plasma/avatars/Scientist Konqi.png"
+"/usr/share/plasma/avatars/Teacher Konqi.png"
+"/usr/share/plasma/avatars/Virtual Reality Konqi.png"
+"/usr/share/plasma/avatars/photos/Air Balloon.png"
+"/usr/share/plasma/avatars/photos/Air Balloon.png.license"
+/usr/share/plasma/avatars/photos/Astronaut.png
+/usr/share/plasma/avatars/photos/Astronaut.png.license
+/usr/share/plasma/avatars/photos/Books.png
+/usr/share/plasma/avatars/photos/Books.png.license
+/usr/share/plasma/avatars/photos/Brushes.png
+/usr/share/plasma/avatars/photos/Brushes.png.license
+/usr/share/plasma/avatars/photos/Bulb.png
+/usr/share/plasma/avatars/photos/Bulb.png.license
+/usr/share/plasma/avatars/photos/Car.png
+/usr/share/plasma/avatars/photos/Car.png.license
+/usr/share/plasma/avatars/photos/Cat.png
+/usr/share/plasma/avatars/photos/Cat.png.license
+/usr/share/plasma/avatars/photos/Chameleon.png
+/usr/share/plasma/avatars/photos/Chameleon.png.license
+/usr/share/plasma/avatars/photos/Cocktail.png
+/usr/share/plasma/avatars/photos/Cocktail.png.license
+/usr/share/plasma/avatars/photos/Dog.png
+/usr/share/plasma/avatars/photos/Dog.png.license
+/usr/share/plasma/avatars/photos/Fish.png
+/usr/share/plasma/avatars/photos/Fish.png.license
+/usr/share/plasma/avatars/photos/Gamepad.png
+/usr/share/plasma/avatars/photos/Gamepad.png.license
+/usr/share/plasma/avatars/photos/Owl.png
+/usr/share/plasma/avatars/photos/Owl.png.license
+/usr/share/plasma/avatars/photos/Pancakes.png
+/usr/share/plasma/avatars/photos/Pancakes.png.license
+/usr/share/plasma/avatars/photos/Parrot.png
+/usr/share/plasma/avatars/photos/Parrot.png.license
+/usr/share/plasma/avatars/photos/Pencils.png
+/usr/share/plasma/avatars/photos/Pencils.png.license
+/usr/share/plasma/avatars/photos/Shuttle.png
+/usr/share/plasma/avatars/photos/Shuttle.png.license
+/usr/share/plasma/avatars/photos/Soccer.png
+/usr/share/plasma/avatars/photos/Soccer.png.license
+/usr/share/plasma/avatars/photos/Sunflower.png
+/usr/share/plasma/avatars/photos/Sunflower.png.license
+/usr/share/plasma/avatars/photos/Sushi.png
+/usr/share/plasma/avatars/photos/Sushi.png.license
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/ActionButton.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/Battery.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/Clock.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/SessionManagementScreen.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/UserDelegate.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/UserList.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/VirtualKeyboard.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/VirtualKeyboard_wayland.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/WallpaperFader.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/animation/RejectPasswordAnimation.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/animation/RejectPasswordPathAnimation.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/artwork/README.txt
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/artwork/logout_primary.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/artwork/restart_primary.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/components/artwork/shutdown_primary.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/defaults
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/desktopswitcher/DesktopSwitcher.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/LockOsd.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/LockScreen.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/LockScreenUi.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/MainBlock.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/MediaControls.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/NoPasswordUnlock.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/config.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/lockscreen/config.xml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/logout/Logout.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/logout/LogoutButton.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/logout/timer.js
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/osd/Osd.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/osd/OsdItem.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/desktopswitcher.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/fullscreenpreview.jpg
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/lockscreen.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/loginmanager.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/preview.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/runcommand.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/splash.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/userswitcher.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/windowdecoration.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/previews/windowswitcher.png
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/Splash.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/busywidget.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/kde.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/plasma.svgz
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/systemdialog/SystemDialog.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/windowswitcher/WindowSwitcher.qml
+/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/metadata.json
+/usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/defaults
+/usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+/usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/previews/fullscreenpreview.jpg
+/usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/previews/preview.png
+/usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/metadata.json
+/usr/share/plasma/look-and-feel/org.kde.breezetwilight.desktop/contents/defaults
+/usr/share/plasma/look-and-feel/org.kde.breezetwilight.desktop/contents/layouts/org.kde.plasma.desktop-layout.js
+/usr/share/plasma/look-and-feel/org.kde.breezetwilight.desktop/contents/previews/fullscreenpreview.jpg
+/usr/share/plasma/look-and-feel/org.kde.breezetwilight.desktop/contents/previews/preview.png
+/usr/share/plasma/look-and-feel/org.kde.breezetwilight.desktop/metadata.json
+/usr/share/plasma/nightcolor/worldmap.png
+/usr/share/plasma/plasmoids/org.kde.plasma.activitybar/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.activitybar/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/contents/ui/Hand.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/contents/ui/analogclock.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/contents/ui/configGeneral.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.analogclock/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/contents/ui/MenuDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/contents/ui/configGeneral.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.appmenu/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/BatteryItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/BrightnessItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/CompactRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/InhibitionHint.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/PopupDialog.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/PowerManagementItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/PowerProfileItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/logic.js
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.battery/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/contents/images/mini-calendar.svgz
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/contents/ui/configGeneral.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.calendar/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/BarcodePage.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/ClipboardItemDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/ClipboardPage.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/DelegateToolButtons.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/EditPage.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/ImageItemDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/Menu.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/TextItemDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/UrlItemDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/contents/ui/clipboard.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.clipboard/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.devicenotifier/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.devicenotifier/contents/ui/DeviceItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.devicenotifier/contents/ui/FullRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.devicenotifier/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.devicenotifier/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/CalendarView.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/MonthMenu.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/Tooltip.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/configAppearance.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/configCalendar.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/configTimeZones.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.icon/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.icon/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.icon/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/ConfigGeneral.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/lockout.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.manage-inputmethod/contents/ui/manage-inputmethod.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.manage-inputmethod/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.mediacontroller/contents/ui/AlbumArtStackView.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.mediacontroller/contents/ui/CompactRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.mediacontroller/contents/ui/ExpandedRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.mediacontroller/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.mediacontroller/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/CompactRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/DraggableDelegate.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/DraggableFileArea.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/EditContextMenu.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/FullRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/JobDetails.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/JobItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationHeader.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationPopup.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationReplyField.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/SelectableLabel.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/ThumbnailStrip.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/Globals.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/PulseAudio.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/qmldir
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.notifications/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.panelspacer/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.panelspacer/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.panelspacer/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/applet/CompactApplet.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/ConfigEntries.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/ConfigGeneral.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/CurrentItemHighLight.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/ExpandedRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/ExpanderArrow.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/HiddenItemsView.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/PlasmoidPopupsContainer.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/SystemTrayState.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/items/AbstractItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/items/ItemLoader.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/items/PlasmoidItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/items/PulseAnimation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/items/StatusNotifierItem.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.cpu/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.cpu/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.cpucore/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.cpucore/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.diskactivity/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.diskactivity/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.diskusage/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.diskusage/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.memory/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.memory/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.net/contents/config/faceproperties
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor.net/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/config/config.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/config/main.xml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/CompactRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/FullRepresentation.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/config/ConfigAppearance.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/config/ConfigSensors.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/config/FaceDetails.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemmonitor/metadata.json
+/usr/share/plasma/plasmoids/org.kde.plasma.systemtray/contents/ui/main.qml
+/usr/share/plasma/plasmoids/org.kde.plasma.systemtray/metadata.json
+/usr/share/plasma/services/activities.operations
+/usr/share/plasma/services/applicationjobs.operations
+/usr/share/plasma/services/apps.operations
+/usr/share/plasma/services/hotplug.operations
+/usr/share/plasma/services/modifierkeystate.operations
+/usr/share/plasma/services/mpris2.operations
+/usr/share/plasma/services/notifications.operations
+/usr/share/plasma/services/org.kde.places.operations
+/usr/share/plasma/services/org.kde.plasma.clipboard.operations
+/usr/share/plasma/services/packagekit.operations
+/usr/share/plasma/services/powermanagementservice.operations
+/usr/share/plasma/services/soliddevice.operations
+/usr/share/plasma/services/statusnotifieritem.operations
+/usr/share/plasma/wallpapers/org.kde.color/contents/config/main.xml
+/usr/share/plasma/wallpapers/org.kde.color/contents/ui/config.qml
+/usr/share/plasma/wallpapers/org.kde.color/contents/ui/main.qml
+/usr/share/plasma/wallpapers/org.kde.color/metadata.json
+/usr/share/plasma/wallpapers/org.kde.image/contents/config/main.xml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/ImageStackView.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/ThumbnailsComponent.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/WallpaperDelegate.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/config.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/main.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/mediacomponent/AnimatedImageComponent.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/mediacomponent/BaseMediaComponent.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/mediacomponent/BlurComponent.qml
+/usr/share/plasma/wallpapers/org.kde.image/contents/ui/mediacomponent/StaticImageComponent.qml
+/usr/share/plasma/wallpapers/org.kde.image/metadata.json
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/config/main.xml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/ImageStackView.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/SlideshowComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/ThumbnailsComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/WallpaperDelegate.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/config.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/main.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/mediacomponent/AnimatedImageComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/mediacomponent/BaseMediaComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/mediacomponent/BlurComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/contents/ui/mediacomponent/StaticImageComponent.qml
+/usr/share/plasma/wallpapers/org.kde.slideshow/metadata.json
+/usr/share/polkit-1/actions/org.kde.fontinst.policy
+/usr/share/polkit-1/actions/org.kde.localegenhelper.policy
+/usr/share/qlogging-categories5/kcm_regionandlang.categories
+/usr/share/qlogging-categories5/kcmusers.categories
+/usr/share/qlogging-categories5/klipper.categories
+/usr/share/qlogging-categories5/libnotificationmanager.categories
+/usr/share/qlogging-categories5/myproject.categories
+/usr/share/qlogging-categories5/plasma-workspace.categories
+/usr/share/sddm/themes/breeze/Background.qml
+/usr/share/sddm/themes/breeze/KeyboardButton.qml
+/usr/share/sddm/themes/breeze/Login.qml
+/usr/share/sddm/themes/breeze/Main.qml
+/usr/share/sddm/themes/breeze/SessionButton.qml
+/usr/share/sddm/themes/breeze/components/ActionButton.qml
+/usr/share/sddm/themes/breeze/components/Battery.qml
+/usr/share/sddm/themes/breeze/components/Clock.qml
+/usr/share/sddm/themes/breeze/components/SessionManagementScreen.qml
+/usr/share/sddm/themes/breeze/components/UserDelegate.qml
+/usr/share/sddm/themes/breeze/components/UserList.qml
+/usr/share/sddm/themes/breeze/components/VirtualKeyboard.qml
+/usr/share/sddm/themes/breeze/components/VirtualKeyboard_wayland.qml
+/usr/share/sddm/themes/breeze/components/WallpaperFader.qml
+/usr/share/sddm/themes/breeze/components/animation/RejectPasswordAnimation.qml
+/usr/share/sddm/themes/breeze/components/animation/RejectPasswordPathAnimation.qml
+/usr/share/sddm/themes/breeze/components/artwork/logout_primary.svgz
+/usr/share/sddm/themes/breeze/components/artwork/restart_primary.svgz
+/usr/share/sddm/themes/breeze/components/artwork/shutdown_primary.svgz
+/usr/share/sddm/themes/breeze/default-logo.svg
+/usr/share/sddm/themes/breeze/faces/.face.icon
+/usr/share/sddm/themes/breeze/metadata.desktop
+/usr/share/sddm/themes/breeze/preview.png
+/usr/share/sddm/themes/breeze/theme.conf
+/usr/share/solid/actions/test-predicate-openinwindow.desktop
+/usr/share/wayland-sessions/plasmawayland.desktop
+/usr/share/xdg/autostart/gmenudbusmenuproxy.desktop
+/usr/share/xdg/autostart/klipper.desktop
+/usr/share/xdg/autostart/org.kde.plasmashell.desktop
+/usr/share/xdg/autostart/xembedsniproxy.desktop
+/usr/share/xdg/plasmanotifyrc
+/usr/share/xdg/taskmanagerrulesrc
+/usr/share/xsessions/plasma.desktop
+/usr/share/zsh/site-functions/_plasmashell
+
+%files dev
+%defattr(-,root,root,-)
+/usr/include/colorcorrect/colorcorrect_export.h
+/usr/include/colorcorrect/colorcorrectconstants.h
+/usr/include/colorcorrect/compositorcoloradaptor.h
+/usr/include/colorcorrect/geolocator.h
+/usr/include/kworkspace5/autostartscriptdesktopfile.h
+/usr/include/kworkspace5/config-libkworkspace.h
+/usr/include/kworkspace5/kdisplaymanager.h
+/usr/include/kworkspace5/kworkspace.h
+/usr/include/kworkspace5/kworkspace_export.h
+/usr/include/kworkspace5/sessionmanagement.h
+/usr/include/kworkspace5/updatelaunchenvjob.h
+/usr/include/notificationmanager/badgesettings.h
+/usr/include/notificationmanager/behaviorsettings.h
+/usr/include/notificationmanager/donotdisturbsettings.h
+/usr/include/notificationmanager/job.h
+/usr/include/notificationmanager/jobsettings.h
+/usr/include/notificationmanager/jobsmodel.h
+/usr/include/notificationmanager/notification.h
+/usr/include/notificationmanager/notificationmanager_export.h
+/usr/include/notificationmanager/notifications.h
+/usr/include/notificationmanager/notificationsettings.h
+/usr/include/notificationmanager/server.h
+/usr/include/notificationmanager/settings.h
+/usr/include/plasma/geolocation/geolocation_export.h
+/usr/include/plasma/geolocation/geolocationprovider.h
+/usr/include/plasma/weather/ion.h
+/usr/include/plasma/weather/ion_export.h
+/usr/include/taskmanager/abstracttasksmodel.h
+/usr/include/taskmanager/abstracttasksmodeliface.h
+/usr/include/taskmanager/abstracttasksproxymodeliface.h
+/usr/include/taskmanager/abstractwindowtasksmodel.h
+/usr/include/taskmanager/activityinfo.h
+/usr/include/taskmanager/concatenatetasksproxymodel.h
+/usr/include/taskmanager/flattentaskgroupsproxymodel.h
+/usr/include/taskmanager/launchertasksmodel.h
+/usr/include/taskmanager/startuptasksmodel.h
+/usr/include/taskmanager/taskfilterproxymodel.h
+/usr/include/taskmanager/taskgroupingproxymodel.h
+/usr/include/taskmanager/taskmanager_export.h
+/usr/include/taskmanager/tasksmodel.h
+/usr/include/taskmanager/tasktools.h
+/usr/include/taskmanager/virtualdesktopinfo.h
+/usr/include/taskmanager/waylandstartuptasksmodel.h
+/usr/include/taskmanager/waylandtasksmodel.h
+/usr/include/taskmanager/windowtasksmodel.h
+/usr/include/taskmanager/xstartuptasksmodel.h
+/usr/include/taskmanager/xwindowtasksmodel.h
+/usr/lib64/cmake/KRunnerAppDBusInterface/KRunnerAppDBusInterfaceConfig.cmake
+/usr/lib64/cmake/KSMServerDBusInterface/KSMServerDBusInterfaceConfig.cmake
+/usr/lib64/cmake/LibColorCorrect/LibColorCorrectConfig.cmake
+/usr/lib64/cmake/LibColorCorrect/LibColorCorrectConfigVersion.cmake
+/usr/lib64/cmake/LibColorCorrect/LibColorCorrectLibraryTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/LibColorCorrect/LibColorCorrectLibraryTargets.cmake
+/usr/lib64/cmake/LibKWorkspace/LibKWorkspaceConfig.cmake
+/usr/lib64/cmake/LibKWorkspace/LibKWorkspaceConfigVersion.cmake
+/usr/lib64/cmake/LibKWorkspace/LibKWorkspaceLibraryTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/LibKWorkspace/LibKWorkspaceLibraryTargets.cmake
+/usr/lib64/cmake/LibNotificationManager/LibNotificationManagerConfig.cmake
+/usr/lib64/cmake/LibNotificationManager/LibNotificationManagerConfigVersion.cmake
+/usr/lib64/cmake/LibNotificationManager/LibNotificationManagerLibraryTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/LibNotificationManager/LibNotificationManagerLibraryTargets.cmake
+/usr/lib64/cmake/LibTaskManager/LibTaskManagerConfig.cmake
+/usr/lib64/cmake/LibTaskManager/LibTaskManagerConfigVersion.cmake
+/usr/lib64/cmake/LibTaskManager/LibTaskManagerLibraryTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/LibTaskManager/LibTaskManagerLibraryTargets.cmake
+/usr/lib64/libcolorcorrect.so
+/usr/lib64/libkfontinst.so
+/usr/lib64/libkfontinstui.so
+/usr/lib64/libkrdb.so
+/usr/lib64/libkworkspace5.so
+/usr/lib64/libnotificationmanager.so
+/usr/lib64/libplasma-geolocation-interface.so
+/usr/lib64/libtaskmanager.so
+/usr/lib64/libweather_ion.so
+
+%files doc
+%defattr(0644,root,root,0755)
+/usr/share/doc/HTML/ca/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/desktopthemedetails/get-new-theme.png
+/usr/share/doc/HTML/ca/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/desktopthemedetails/main.png
+/usr/share/doc/HTML/ca/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/fonts/adjust-all.png
+/usr/share/doc/HTML/ca/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/fonts/main.png
+/usr/share/doc/HTML/ca/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/icons/get-new-theme.png
+/usr/share/doc/HTML/ca/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/icons/main.png
+/usr/share/doc/HTML/ca/kcontrol/icons/use-of-icons.png
+/usr/share/doc/HTML/ca/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/ca/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/ca/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/ca/klipper/index.cache.bz2
+/usr/share/doc/HTML/ca/klipper/index.docbook
+/usr/share/doc/HTML/ca/klipper/klipper-widget.png
+/usr/share/doc/HTML/ca/klipper/screenshot.png
+/usr/share/doc/HTML/de/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/de/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/de/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/de/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/de/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/de/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/de/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/de/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/de/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/de/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/de/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/de/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/de/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/de/klipper/index.cache.bz2
+/usr/share/doc/HTML/de/klipper/index.docbook
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_1.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_2.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_3.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_4.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_5.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authdialog_6.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authorization.docbook
+/usr/share/doc/HTML/en/PolicyKit-kde/authorization_1.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authorization_2.png
+/usr/share/doc/HTML/en/PolicyKit-kde/authorizationagent.docbook
+/usr/share/doc/HTML/en/PolicyKit-kde/howitworks.docbook
+/usr/share/doc/HTML/en/PolicyKit-kde/index.cache.bz2
+/usr/share/doc/HTML/en/PolicyKit-kde/index.docbook
+/usr/share/doc/HTML/en/PolicyKit-kde/introduction.docbook
+/usr/share/doc/HTML/en/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/en/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/en/kcontrol/cursortheme/cursor-size.png
+/usr/share/doc/HTML/en/kcontrol/cursortheme/get-new-stuff.png
+/usr/share/doc/HTML/en/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/en/kcontrol/cursortheme/launch-feedback.png
+/usr/share/doc/HTML/en/kcontrol/cursortheme/main.png
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/edit-delete.png
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/edit-undo.png
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/get-new-theme.png
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/en/kcontrol/desktopthemedetails/main.png
+/usr/share/doc/HTML/en/kcontrol/fontinst/edit-delete.png
+/usr/share/doc/HTML/en/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/en/kcontrol/fonts/adjust-all.png
+/usr/share/doc/HTML/en/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/en/kcontrol/fonts/main.png
+/usr/share/doc/HTML/en/kcontrol/icons/edit-delete.png
+/usr/share/doc/HTML/en/kcontrol/icons/edit-undo.png
+/usr/share/doc/HTML/en/kcontrol/icons/get-new-theme.png
+/usr/share/doc/HTML/en/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/en/kcontrol/icons/main.png
+/usr/share/doc/HTML/en/kcontrol/icons/use-of-icons.png
+/usr/share/doc/HTML/en/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/component-chooser_1.png
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/component-chooser_2.png
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/get-new-stuff.png
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/en/kcontrol/lookandfeel/main.png
+/usr/share/doc/HTML/en/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/en/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/en/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/en/klipper/index.cache.bz2
+/usr/share/doc/HTML/en/klipper/index.docbook
+/usr/share/doc/HTML/en/klipper/klipper-widget.png
+/usr/share/doc/HTML/en/klipper/screenshot.png
+/usr/share/doc/HTML/es/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/es/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/es/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/es/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/es/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/es/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/es/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/es/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/es/klipper/index.cache.bz2
+/usr/share/doc/HTML/es/klipper/index.docbook
+/usr/share/doc/HTML/fr/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/fr/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/id/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/id/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/id/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/id/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/id/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/id/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/id/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/id/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/id/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/id/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/id/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/id/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/id/klipper/index.cache.bz2
+/usr/share/doc/HTML/id/klipper/index.docbook
+/usr/share/doc/HTML/it/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/it/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/it/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/it/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/it/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/it/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/it/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/it/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/it/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/it/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/it/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/it/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/it/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/it/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/it/klipper/index.cache.bz2
+/usr/share/doc/HTML/it/klipper/index.docbook
+/usr/share/doc/HTML/it/klipper/klipper-widget.png
+/usr/share/doc/HTML/it/klipper/screenshot.png
+/usr/share/doc/HTML/ko/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/ko/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/ko/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/ko/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/nl/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/nl/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/nl/klipper/index.cache.bz2
+/usr/share/doc/HTML/nl/klipper/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/pt/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/pt/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/pt/klipper/index.cache.bz2
+/usr/share/doc/HTML/pt/klipper/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/desktopthemedetails/customizing.png
+/usr/share/doc/HTML/pt_BR/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/fonts/adjust-all.png
+/usr/share/doc/HTML/pt_BR/kcontrol/fonts/anti-aliasing.png
+/usr/share/doc/HTML/pt_BR/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/fonts/main.png
+/usr/share/doc/HTML/pt_BR/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/effects.png
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/install-theme.png
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/main.png
+/usr/share/doc/HTML/pt_BR/kcontrol/icons/use-of-icons.png
+/usr/share/doc/HTML/pt_BR/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/pt_BR/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/pt_BR/klipper/index.cache.bz2
+/usr/share/doc/HTML/pt_BR/klipper/index.docbook
+/usr/share/doc/HTML/pt_BR/klipper/klipper-application.png
+/usr/share/doc/HTML/pt_BR/klipper/klipper-widget.png
+/usr/share/doc/HTML/pt_BR/klipper/screenshot.png
+/usr/share/doc/HTML/ru/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/fonts/adjust-all.png
+/usr/share/doc/HTML/ru/kcontrol/fonts/anti-aliasing.png
+/usr/share/doc/HTML/ru/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/fonts/main.png
+/usr/share/doc/HTML/ru/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/icons/delete-theme.png
+/usr/share/doc/HTML/ru/kcontrol/icons/effects.png
+/usr/share/doc/HTML/ru/kcontrol/icons/get-new-theme.png
+/usr/share/doc/HTML/ru/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/icons/install-theme.png
+/usr/share/doc/HTML/ru/kcontrol/icons/main.png
+/usr/share/doc/HTML/ru/kcontrol/icons/size.png
+/usr/share/doc/HTML/ru/kcontrol/icons/use-of-icons.png
+/usr/share/doc/HTML/ru/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/ru/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/ru/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/ru/klipper/index.cache.bz2
+/usr/share/doc/HTML/ru/klipper/index.docbook
+/usr/share/doc/HTML/sr/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/sr/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/sr/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/sr/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/sr@latin/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/sr@latin/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/sr@latin/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/sr@latin/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/sv/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/sv/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/sv/klipper/index.cache.bz2
+/usr/share/doc/HTML/sv/klipper/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/fonts/adjust-all.png
+/usr/share/doc/HTML/uk/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/formats/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/formats/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/icons/get-new-theme.png
+/usr/share/doc/HTML/uk/kcontrol/icons/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/icons/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/icons/main.png
+/usr/share/doc/HTML/uk/kcontrol/icons/use-of-icons.png
+/usr/share/doc/HTML/uk/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/uk/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/uk/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/uk/klipper/index.cache.bz2
+/usr/share/doc/HTML/uk/klipper/index.docbook
+/usr/share/doc/HTML/uk/klipper/klipper-widget.png
+/usr/share/doc/HTML/uk/klipper/screenshot.png
+
+%files lib
+%defattr(-,root,root,-)
+/usr/lib64/libcolorcorrect.so.5
+/usr/lib64/libcolorcorrect.so.5.27.0
+/usr/lib64/libkfontinst.so.5
+/usr/lib64/libkfontinst.so.5.27.0
+/usr/lib64/libkfontinstui.so.5
+/usr/lib64/libkfontinstui.so.5.27.0
+/usr/lib64/libkworkspace5.so.5
+/usr/lib64/libkworkspace5.so.5.27.0
+/usr/lib64/libnotificationmanager.so.1
+/usr/lib64/libnotificationmanager.so.5.27.0
+/usr/lib64/libplasma-geolocation-interface.so.5
+/usr/lib64/libplasma-geolocation-interface.so.5.27.0
+/usr/lib64/libtaskmanager.so.5.27.0
+/usr/lib64/libtaskmanager.so.6
+/usr/lib64/libweather_ion.so.7
+/usr/lib64/libweather_ion.so.7.0.0
+/usr/lib64/qt5/plugins/kf5/kded/appmenu.so
+/usr/lib64/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
+/usr/lib64/qt5/plugins/kf5/kded/desktopnotifier.so
+/usr/lib64/qt5/plugins/kf5/kded/freespacenotifier.so
+/usr/lib64/qt5/plugins/kf5/kded/ksysguard.so
+/usr/lib64/qt5/plugins/kf5/kded/ktimezoned.so
+/usr/lib64/qt5/plugins/kf5/kded/plasma_accentcolor_service.so
+/usr/lib64/qt5/plugins/kf5/kded/soliduiserver.so
+/usr/lib64/qt5/plugins/kf5/kded/statusnotifierwatcher.so
+/usr/lib64/qt5/plugins/kf5/kio/applications.so
+/usr/lib64/qt5/plugins/kf5/kio/desktop.so
+/usr/lib64/qt5/plugins/kf5/kio/kio_fonts.so
+/usr/lib64/qt5/plugins/kf5/krunner/calculator.so
+/usr/lib64/qt5/plugins/kf5/krunner/helprunner.so
+/usr/lib64/qt5/plugins/kf5/krunner/kcms/kcm_krunner_kill.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_appstream.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_bookmarksrunner.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_kill.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_placesrunner.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_powerdevil.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_recentdocuments.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_services.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_sessions.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_shell.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_webshortcuts.so
+/usr/lib64/qt5/plugins/kf5/krunner/krunner_windowedwidgets.so
+/usr/lib64/qt5/plugins/kf5/krunner/locations.so
+/usr/lib64/qt5/plugins/kf5/parts/kfontviewpart.so
+/usr/lib64/qt5/plugins/kf5/thumbcreator/fontthumbnail.so
+/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_layouttemplate.so
+/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_lookandfeel.so
+/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_shell.so
+/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_wallpaper.so
+/usr/lib64/qt5/plugins/kpackage/packagestructure/wallpaper_images.so
+/usr/lib64/qt5/plugins/phonon_platform/kde.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.appmenu.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.calendar.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.icon.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.notifications.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.panelspacer.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.private.systemtray.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.systemmonitor.so
+/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.systemtray.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_applauncher.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_contextmenu.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_paste.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchactivity.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchdesktop.so
+/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchwindow.so
+/usr/lib64/qt5/plugins/plasma/dataengine/ion_bbcukmet.so
+/usr/lib64/qt5/plugins/plasma/dataengine/ion_dwd.so
+/usr/lib64/qt5/plugins/plasma/dataengine/ion_envcan.so
+/usr/lib64/qt5/plugins/plasma/dataengine/ion_noaa.so
+/usr/lib64/qt5/plugins/plasma/dataengine/ion_wettercom.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_activities.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_applicationjobs.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_apps.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_clipboard.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_devicenotifications.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_dict.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_executable.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_favicons.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_filebrowser.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_geolocation.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_hotplug.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_keystate.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_mouse.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_mpris2.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_notifications.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_packagekit.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_places.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_powermanagement.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_soliddevice.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_statusnotifieritem.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_systemmonitor.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_time.so
+/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_weather.so
+/usr/lib64/qt5/plugins/plasma/geolocationprovider/plasma-geolocation-ip.so
+/usr/lib64/qt5/plugins/plasma/kcminit/kcm_fonts_init.so
+/usr/lib64/qt5/plugins/plasma/kcminit/kcm_style_init.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_autostart.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_colors.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_cursortheme.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_desktoptheme.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_feedback.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_fonts.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_icons.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_lookandfeel.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_nightcolor.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_notifications.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_regionandlang.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_style.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_users.so
+/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_fontinst.so
+/usr/lib64/qt5/plugins/plasmacalendarplugins/holidays/HolidaysConfig.qml
+/usr/lib64/qt5/plugins/plasmacalendarplugins/holidaysevents.so
+/usr/lib64/qt5/qml/org/kde/colorcorrect/libcolorcorrectplugin.so
+/usr/lib64/qt5/qml/org/kde/colorcorrect/qmldir
+/usr/lib64/qt5/qml/org/kde/holidayeventshelperplugin/libholidayeventshelperplugin.so
+/usr/lib64/qt5/qml/org/kde/holidayeventshelperplugin/qmldir
+/usr/lib64/qt5/qml/org/kde/notificationmanager/libnotificationmanagerplugin.so
+/usr/lib64/qt5/qml/org/kde/notificationmanager/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/lookandfeel/liblookandfeelqmlplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/lookandfeel/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/appmenu/libappmenuplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/appmenu/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/BasicAppletContainer.qml
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/ConfigOverlayWithHandles.qml
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/PlaceHolder.qml
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/libcontainmentlayoutmanagerplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/private/BasicResizeHandle.qml
+/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/digitalclock/libdigitalclockplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/digitalclock/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/kicker/libkickerplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/kicker/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/mediacontroller/libmediacontrollerplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/mediacontroller/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/sessions/libsessionsprivateplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/sessions/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/private/shell/libplasmashellprivateplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/private/shell/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/wallpapers/image/libplasma_wallpaper_imageplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/wallpapers/image/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/CalendarToolbar.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/DayDelegate.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/DaysCalendar.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/InfiniteList.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/MonthMenu.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/MonthView.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/MonthViewHeader.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/libcalendarplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/components/BadgeOverlay.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/components/BatteryIcon.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/components/KeyboardLayoutSwitcher.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/components/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/dialogs/SystemDialog.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/dialogs/examples/test.qml
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/dialogs/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/keyboardlayout/libkeyboardlayoutplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/keyboardlayout/qmldir
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
+/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/qmldir
+/usr/lib64/qt5/qml/org/kde/taskmanager/libtaskmanagerplugin.so
+/usr/lib64/qt5/qml/org/kde/taskmanager/qmldir
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/plasma-workspace/0a9b728823a71ad489b7e1f072590fa00f3aa5bc
+/usr/share/package-licenses/plasma-workspace/129c1e09a68be9de6cef412b2a6e93559a87ea26
+/usr/share/package-licenses/plasma-workspace/19d98e1b6f8ef12849ea4012a052d3907f336c91
+/usr/share/package-licenses/plasma-workspace/2123756e0b1fc8243547235a33c0fcabfe3b9a51
+/usr/share/package-licenses/plasma-workspace/2363d6a59f5770f0340ae0e616d48b000ed85041
+/usr/share/package-licenses/plasma-workspace/25b13534deaa992a714f25f14efeaa5eae4de592
+/usr/share/package-licenses/plasma-workspace/32946f0e0836c590cc36b8b3206eef0349aa13dd
+/usr/share/package-licenses/plasma-workspace/3846b0d0a1072ef0698c1383f6aa5fa88e617a0d
+/usr/share/package-licenses/plasma-workspace/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+/usr/share/package-licenses/plasma-workspace/49e61f7864169f2e356c11a17422d7d20d74b40f
+/usr/share/package-licenses/plasma-workspace/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee
+/usr/share/package-licenses/plasma-workspace/53c07475f67932feacd6188d906188a8dbd6991a
+/usr/share/package-licenses/plasma-workspace/545c254aaacc416b6d7d7881d4ad9fe94c1cbf1e
+/usr/share/package-licenses/plasma-workspace/6220b049f6ae68dbc5a495f05afca9adead61ff6
+/usr/share/package-licenses/plasma-workspace/67218f86a21c5afe177def300337c7ff8ccf40f9
+/usr/share/package-licenses/plasma-workspace/72d8e0f71a54fd570e1e5264d6e5fb7b29406ad4
+/usr/share/package-licenses/plasma-workspace/7cd170c61cf35ee527ce0ffa4abf416bf29038a7
+/usr/share/package-licenses/plasma-workspace/7d9831e05094ce723947d729c2a46a09d6e90275
+/usr/share/package-licenses/plasma-workspace/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
+/usr/share/package-licenses/plasma-workspace/81e12d0c07782abcf558af7aa19846e3e2606a70
+/usr/share/package-licenses/plasma-workspace/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+/usr/share/package-licenses/plasma-workspace/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f
+/usr/share/package-licenses/plasma-workspace/a4c60b3fefda228cd7439d3565df043192fef137
+/usr/share/package-licenses/plasma-workspace/a8a48fc3a258971b868e37643efbabf5ca42ae95
+/usr/share/package-licenses/plasma-workspace/a8b6c38c66a63e54df39a7a2394a61c386dcc323
+/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955
+/usr/share/package-licenses/plasma-workspace/ae855f68ab20f57b2cc7e9b03f54a87563424eb9
+/usr/share/package-licenses/plasma-workspace/be0b3c0900b90dd09df479fad56b1229ad516d3a
+/usr/share/package-licenses/plasma-workspace/c1d70c75552ee593940f393a518534e72587338f
+/usr/share/package-licenses/plasma-workspace/cf03e23da9870281180ea4163b13a7bcf38a7a82
+/usr/share/package-licenses/plasma-workspace/cfbb9bcb7e1389c251a0ba3df2b0880cb6620ffb
+/usr/share/package-licenses/plasma-workspace/e458941548e0864907e654fa2e192844ae90fc32
+/usr/share/package-licenses/plasma-workspace/e6059edbfaf63e2ad3822f2c09b7ee4c9b6f2aad
+/usr/share/package-licenses/plasma-workspace/f1bbe3025f15ecddbed6d4510fc2a1794ebf6009
+
+%files services
+%defattr(-,root,root,-)
+/usr/lib/systemd/user/plasma-baloorunner.service
+/usr/lib/systemd/user/plasma-core.target
+/usr/lib/systemd/user/plasma-gmenudbusmenuproxy.service
+/usr/lib/systemd/user/plasma-kcminit-phase1.service
+/usr/lib/systemd/user/plasma-kcminit.service
+/usr/lib/systemd/user/plasma-krunner.service
+/usr/lib/systemd/user/plasma-ksmserver.service
+/usr/lib/systemd/user/plasma-ksplash-ready.service
+/usr/lib/systemd/user/plasma-ksplash.service
+/usr/lib/systemd/user/plasma-plasmashell.service
+/usr/lib/systemd/user/plasma-restoresession.service
+/usr/lib/systemd/user/plasma-workspace-wayland.target
+/usr/lib/systemd/user/plasma-workspace-x11.target
+/usr/lib/systemd/user/plasma-workspace.target
+/usr/lib/systemd/user/plasma-xembedsniproxy.service
+
+%files locales -f kcm_colors.lang -f kcm_cursortheme.lang -f kcm_fonts.lang -f kcm_icons.lang -f kcm_style.lang -f kfontinst.lang -f kio5_applications.lang -f klipper.lang -f krdb.lang -f ksmserver.lang -f freespacenotifier.lang -f kcm_autostart.lang -f kcm_desktoptheme.lang -f kcm_feedback.lang -f kcm_lookandfeel.lang -f kcm_nightcolor.lang -f kcm_notifications.lang -f kcm_regionandlang.lang -f kcm_users.lang -f kcminit.lang -f kholidays_calendar_plugin.lang -f kio_desktop.lang -f krunner.lang -f libkicker.lang -f libkworkspace.lang -f libnotificationmanager.lang -f phonon_kde_plugin.lang -f plasma_applet_org.kde.plasma.activitybar.lang -f plasma_applet_org.kde.plasma.analogclock.lang -f plasma_applet_org.kde.plasma.appmenu.lang -f plasma_applet_org.kde.plasma.battery.lang -f plasma_applet_org.kde.plasma.calendar.lang -f plasma_applet_org.kde.plasma.clipboard.lang -f plasma_applet_org.kde.plasma.devicenotifier.lang -f plasma_applet_org.kde.plasma.digitalclock.lang -f plasma_applet_org.kde.plasma.icon.lang -f plasma_applet_org.kde.plasma.lock_logout.lang -f plasma_applet_org.kde.plasma.manageinputmethod.lang -f plasma_applet_org.kde.plasma.mediacontroller.lang -f plasma_applet_org.kde.plasma.notifications.lang -f plasma_applet_org.kde.plasma.panelspacer.lang -f plasma_applet_org.kde.plasma.private.systemtray.lang -f plasma_applet_org.kde.plasma.systemmonitor.lang -f plasma_containmentactions_applauncher.lang -f plasma_containmentactions_contextmenu.lang -f plasma_containmentactions_switchwindow.lang -f plasma_engine_applicationjobs.lang -f plasma_engine_devicenotifications.lang -f plasma_engine_dict.lang -f plasma_engine_hotplug.lang -f plasma_engine_keystate.lang -f plasma_engine_mpris2.lang -f plasma_engine_notifications.lang -f plasma_engine_powermanagement.lang -f plasma_engine_soliddevice.lang -f plasma_engine_time.lang -f plasma_engine_weather.lang -f plasma_lookandfeel_org.kde.lookandfeel.lang -f plasma_package_plasmashell.lang -f plasma_runner_appstream.lang -f plasma_runner_baloosearch5.lang -f plasma_runner_bookmarksrunner.lang -f plasma_runner_calculatorrunner.lang -f plasma_runner_kill.lang -f plasma_runner_locations.lang -f plasma_runner_placesrunner.lang -f plasma_runner_powerdevil.lang -f plasma_runner_recentdocuments.lang -f plasma_runner_services.lang -f plasma_runner_sessions.lang -f plasma_runner_shell.lang -f plasma_runner_webshortcuts.lang -f plasma_runner_windowedwidgets.lang -f plasma_wallpaper_org.kde.color.lang -f plasma_wallpaper_org.kde.image.lang -f plasmashell.lang -f plasmashellprivateplugin.lang -f soliduiserver5.lang -f systemmonitor.lang
+%defattr(-,root,root,-)
+

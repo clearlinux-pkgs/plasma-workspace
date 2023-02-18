@@ -53,3 +53,4 @@ libksysguard-dev
 layer-shell-qt-dev
 qtbase-staticdev
 valgrind-dev
+libqalculate-dev
