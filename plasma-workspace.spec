@@ -6,7 +6,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.1
-Release  : 105
+Release  : 106
 URL      : https://download.kde.org/stable/plasma/5.27.1/plasma-workspace-5.27.1.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.1/plasma-workspace-5.27.1.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.1/plasma-workspace-5.27.1.tar.xz.sig
@@ -24,7 +24,6 @@ Requires: plasma-workspace-locales = %{version}-%{release}
 Requires: plasma-workspace-services = %{version}-%{release}
 BuildRequires : NetworkManager-dev
 BuildRequires : appstream-dev
-BuildRequires : appstream-extras
 BuildRequires : attica-dev
 BuildRequires : baloo-dev
 BuildRequires : breeze
@@ -209,7 +208,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677189892
+export SOURCE_DATE_EPOCH=1677252582
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -225,7 +224,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1677189892
+export SOURCE_DATE_EPOCH=1677252582
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
