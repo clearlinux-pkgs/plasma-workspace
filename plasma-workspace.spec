@@ -7,7 +7,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.4.1
-Release  : 109
+Release  : 110
 URL      : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz.sig
@@ -195,6 +195,7 @@ locales components for the plasma-workspace package.
 %package services
 Summary: services components for the plasma-workspace package.
 Group: Systemd services
+Requires: systemd
 
 %description services
 services components for the plasma-workspace package.
@@ -209,7 +210,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680718807
+export SOURCE_DATE_EPOCH=1683656767
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -223,9 +224,26 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
+mkdir -p clr-build-avx2
+pushd clr-build-avx2
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -Wl,-z,x86-64-v3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
+export FCFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
+export FFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -O3 -Wl,-z,x86-64-v3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
+export CFLAGS="$CFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+%cmake ..
+make  %{?_smp_mflags}
+popd
 
 %install
-export SOURCE_DATE_EPOCH=1680718807
+export SOURCE_DATE_EPOCH=1683656767
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -269,6 +287,9 @@ cp %{_builddir}/plasma-workspace-%{version}/kcms/users/avatars/photos/Sushi.png.
 cp %{_builddir}/plasma-workspace-%{version}/ksmserver/LICENSE %{buildroot}/usr/share/package-licenses/plasma-workspace/67218f86a21c5afe177def300337c7ff8ccf40f9 || :
 cp %{_builddir}/plasma-workspace-%{version}/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/favicons.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f || :
 cp %{_builddir}/plasma-workspace-%{version}/runners/bookmarks/autotests/firefox/firefox-config-home/atnsd8ae.testmekde/places.sqlite.license %{buildroot}/usr/share/package-licenses/plasma-workspace/a028dffb75c61fce4214fd36610c85eabfc43a3f || :
+pushd clr-build-avx2
+%make_install_v3  || :
+popd
 pushd clr-build
 %make_install
 popd
@@ -357,9 +378,19 @@ mkdir -p %{buildroot}/usr/share/pam.d
 install -m644 %{_sourcedir}/kde-np.pam %{buildroot}/usr/share/pam.d/kde-np
 mkdir -p %{buildroot}/usr/share/pam.d
 install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscreensaver
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
+/V3/usr/lib64/kconf_update_bin/krunnerglobalshortcuts
+/V3/usr/lib64/kconf_update_bin/krunnerhistory
+/V3/usr/lib64/kconf_update_bin/plasmashell-5.27-use-panel-thickness-in-default-group
+/V3/usr/lib64/libexec/baloorunner
+/V3/usr/lib64/libexec/kauth/fontinst
+/V3/usr/lib64/libexec/kauth/fontinst_helper
+/V3/usr/lib64/libexec/kfontprint
+/V3/usr/lib64/libexec/ksmserver-logout-greeter
+/V3/usr/lib64/libexec/plasma-changeicons
 /usr/lib64/kconf_update_bin/krunnerglobalshortcuts
 /usr/lib64/kconf_update_bin/krunnerhistory
 /usr/lib64/kconf_update_bin/plasmashell-5.27-use-panel-thickness-in-default-group
@@ -375,6 +406,33 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files bin
 %defattr(-,root,root,-)
+/V3/usr/bin/gmenudbusmenuproxy
+/V3/usr/bin/kcminit
+/V3/usr/bin/kcminit_startup
+/V3/usr/bin/kcolorschemeeditor
+/V3/usr/bin/kde-systemd-start-condition
+/V3/usr/bin/kfontinst
+/V3/usr/bin/kfontview
+/V3/usr/bin/klipper
+/V3/usr/bin/krunner
+/V3/usr/bin/ksmserver
+/V3/usr/bin/ksplashqml
+/V3/usr/bin/plasma-apply-colorscheme
+/V3/usr/bin/plasma-apply-cursortheme
+/V3/usr/bin/plasma-apply-desktoptheme
+/V3/usr/bin/plasma-apply-lookandfeel
+/V3/usr/bin/plasma-apply-wallpaperimage
+/V3/usr/bin/plasma-interactiveconsole
+/V3/usr/bin/plasma-localegen-helper
+/V3/usr/bin/plasma-shutdown
+/V3/usr/bin/plasma_session
+/V3/usr/bin/plasma_waitforname
+/V3/usr/bin/plasmashell
+/V3/usr/bin/plasmawindowed
+/V3/usr/bin/startplasma-wayland
+/V3/usr/bin/startplasma-x11
+/V3/usr/bin/systemmonitor
+/V3/usr/bin/xembedsniproxy
 /usr/bin/gmenudbusmenuproxy
 /usr/bin/kcminit
 /usr/bin/kcminit_startup
@@ -979,6 +1037,15 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files dev
 %defattr(-,root,root,-)
+/V3/usr/lib64/libcolorcorrect.so
+/V3/usr/lib64/libkfontinst.so
+/V3/usr/lib64/libkfontinstui.so
+/V3/usr/lib64/libkrdb.so
+/V3/usr/lib64/libkworkspace5.so
+/V3/usr/lib64/libnotificationmanager.so
+/V3/usr/lib64/libplasma-geolocation-interface.so
+/V3/usr/lib64/libtaskmanager.so
+/V3/usr/lib64/libweather_ion.so
 /usr/include/colorcorrect/colorcorrect_export.h
 /usr/include/colorcorrect/colorcorrectconstants.h
 /usr/include/colorcorrect/compositorcoloradaptor.h
@@ -1449,6 +1516,133 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files lib
 %defattr(-,root,root,-)
+/V3/usr/lib64/libcolorcorrect.so.5
+/V3/usr/lib64/libcolorcorrect.so.5.27.4
+/V3/usr/lib64/libkfontinst.so.5
+/V3/usr/lib64/libkfontinst.so.5.27.4
+/V3/usr/lib64/libkfontinstui.so.5
+/V3/usr/lib64/libkfontinstui.so.5.27.4
+/V3/usr/lib64/libkworkspace5.so.5
+/V3/usr/lib64/libkworkspace5.so.5.27.4
+/V3/usr/lib64/libnotificationmanager.so.1
+/V3/usr/lib64/libnotificationmanager.so.5.27.4
+/V3/usr/lib64/libplasma-geolocation-interface.so.5
+/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.4
+/V3/usr/lib64/libtaskmanager.so.5.27.4
+/V3/usr/lib64/libtaskmanager.so.6
+/V3/usr/lib64/libweather_ion.so.7
+/V3/usr/lib64/libweather_ion.so.7.0.0
+/V3/usr/lib64/qt5/plugins/kf5/kded/appmenu.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/desktopnotifier.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/freespacenotifier.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/ksysguard.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/ktimezoned.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/plasma_accentcolor_service.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/soliduiserver.so
+/V3/usr/lib64/qt5/plugins/kf5/kded/statusnotifierwatcher.so
+/V3/usr/lib64/qt5/plugins/kf5/kio/applications.so
+/V3/usr/lib64/qt5/plugins/kf5/kio/desktop.so
+/V3/usr/lib64/qt5/plugins/kf5/kio/kio_fonts.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/calculator.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/helprunner.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/kcms/kcm_krunner_kill.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_appstream.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_bookmarksrunner.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_kill.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_placesrunner.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_powerdevil.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_recentdocuments.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_services.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_sessions.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_shell.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_webshortcuts.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_windowedwidgets.so
+/V3/usr/lib64/qt5/plugins/kf5/krunner/locations.so
+/V3/usr/lib64/qt5/plugins/kf5/parts/kfontviewpart.so
+/V3/usr/lib64/qt5/plugins/kf5/thumbcreator/fontthumbnail.so
+/V3/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_layouttemplate.so
+/V3/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_lookandfeel.so
+/V3/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_shell.so
+/V3/usr/lib64/qt5/plugins/kpackage/packagestructure/plasma_wallpaper.so
+/V3/usr/lib64/qt5/plugins/kpackage/packagestructure/wallpaper_images.so
+/V3/usr/lib64/qt5/plugins/phonon_platform/kde.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.appmenu.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.calendar.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.icon.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.notifications.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.panelspacer.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.private.systemtray.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.systemmonitor.so
+/V3/usr/lib64/qt5/plugins/plasma/applets/org.kde.plasma.systemtray.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_applauncher.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_contextmenu.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_paste.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchactivity.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchdesktop.so
+/V3/usr/lib64/qt5/plugins/plasma/containmentactions/plasma_containmentactions_switchwindow.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/ion_bbcukmet.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/ion_dwd.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/ion_envcan.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/ion_noaa.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/ion_wettercom.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_activities.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_applicationjobs.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_apps.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_clipboard.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_devicenotifications.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_dict.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_executable.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_favicons.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_filebrowser.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_geolocation.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_hotplug.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_keystate.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_mouse.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_mpris2.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_notifications.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_packagekit.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_places.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_powermanagement.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_soliddevice.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_statusnotifieritem.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_systemmonitor.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_time.so
+/V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_weather.so
+/V3/usr/lib64/qt5/plugins/plasma/geolocationprovider/plasma-geolocation-ip.so
+/V3/usr/lib64/qt5/plugins/plasma/kcminit/kcm_fonts_init.so
+/V3/usr/lib64/qt5/plugins/plasma/kcminit/kcm_style_init.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_autostart.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_colors.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_cursortheme.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_desktoptheme.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_feedback.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_fonts.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_icons.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_lookandfeel.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_nightcolor.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_notifications.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_regionandlang.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_style.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_users.so
+/V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_fontinst.so
+/V3/usr/lib64/qt5/plugins/plasmacalendarplugins/holidaysevents.so
+/V3/usr/lib64/qt5/qml/org/kde/colorcorrect/libcolorcorrectplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/holidayeventshelperplugin/libholidayeventshelperplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/notificationmanager/libnotificationmanagerplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/lookandfeel/liblookandfeelqmlplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/appmenu/libappmenuplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/containmentlayoutmanager/libcontainmentlayoutmanagerplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/digitalclock/libdigitalclockplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/kicker/libkickerplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/mediacontroller/libmediacontrollerplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/sessions/libsessionsprivateplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/private/shell/libplasmashellprivateplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/wallpapers/image/libplasma_wallpaper_imageplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/calendar/libcalendarplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/keyboardlayout/libkeyboardlayoutplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
+/V3/usr/lib64/qt5/qml/org/kde/taskmanager/libtaskmanagerplugin.so
 /usr/lib64/libcolorcorrect.so.5
 /usr/lib64/libcolorcorrect.so.5.27.4
 /usr/lib64/libkfontinst.so.5
