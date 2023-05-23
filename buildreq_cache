@@ -1,4 +1,4 @@
-5.27.4.1
+5.27.5
 gmp-dev
 kactivities-dev
 kactivities-stats-dev
@@ -12,8 +12,7 @@ ktexteditor-dev
 kwayland-dev
 mpfr-dev
 phonon-dev
-pkgconfig(iso-codes)
-pkgconfig(wayland-protocols)
 polkit-qt-dev
 prison-dev
 syntax-highlighting-dev
+wayland-protocols-dev plasma-wayland-protocols-dev

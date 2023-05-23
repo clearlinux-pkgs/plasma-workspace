@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.27.4.1
-Release  : 110
-URL      : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.27.4/plasma-workspace-5.27.4.1.tar.xz.sig
+Version  : 5.27.5
+Release  : 111
+URL      : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -94,10 +94,8 @@ BuildRequires : mpfr-dev
 BuildRequires : networkmanager-qt-dev
 BuildRequires : phonon-dev
 BuildRequires : pkg-config
-BuildRequires : pkgconfig(iso-codes)
 BuildRequires : pkgconfig(libdrm)
 BuildRequires : pkgconfig(libpipewire-0.3)
-BuildRequires : pkgconfig(wayland-protocols)
 BuildRequires : pkgconfig(xkbcommon)
 BuildRequires : plasma-framework-dev
 BuildRequires : plasma-wayland-protocols-dev
@@ -113,6 +111,7 @@ BuildRequires : solid-dev
 BuildRequires : sonnet-dev
 BuildRequires : syntax-highlighting-dev
 BuildRequires : valgrind-dev
+BuildRequires : wayland-protocols-dev plasma-wayland-protocols-dev
 BuildRequires : xcb-util-cursor-dev
 BuildRequires : xcb-util-dev
 BuildRequires : xcb-util-image-dev
@@ -202,15 +201,15 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.27.4.1
-cd %{_builddir}/plasma-workspace-5.27.4.1
+%setup -q -n plasma-workspace-5.27.5
+cd %{_builddir}/plasma-workspace-5.27.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683656767
+export SOURCE_DATE_EPOCH=1684869900
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -243,7 +242,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683656767
+export SOURCE_DATE_EPOCH=1684869900
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1248,6 +1247,8 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/share/doc/HTML/en/klipper/screenshot.png
 /usr/share/doc/HTML/es/kcontrol/autostart/index.cache.bz2
 /usr/share/doc/HTML/es/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/es/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/es/kcontrol/colors/index.docbook
 /usr/share/doc/HTML/es/kcontrol/cursortheme/index.cache.bz2
 /usr/share/doc/HTML/es/kcontrol/cursortheme/index.docbook
 /usr/share/doc/HTML/es/kcontrol/desktopthemedetails/index.cache.bz2
@@ -1479,6 +1480,30 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/share/doc/HTML/sv/kcontrol/screenlocker/index.docbook
 /usr/share/doc/HTML/sv/klipper/index.cache.bz2
 /usr/share/doc/HTML/sv/klipper/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/autostart/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/autostart/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/colors/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/colors/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/cursortheme/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/cursortheme/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/desktopthemedetails/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/desktopthemedetails/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/fontinst/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/fontinst/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/fonts/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/fonts/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/kcmstyle/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/kcmstyle/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/lookandfeel/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/lookandfeel/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/notifications/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/notifications/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/region_language/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/region_language/index.docbook
+/usr/share/doc/HTML/tr/kcontrol/screenlocker/index.cache.bz2
+/usr/share/doc/HTML/tr/kcontrol/screenlocker/index.docbook
+/usr/share/doc/HTML/tr/klipper/index.cache.bz2
+/usr/share/doc/HTML/tr/klipper/index.docbook
 /usr/share/doc/HTML/uk/kcontrol/autostart/index.cache.bz2
 /usr/share/doc/HTML/uk/kcontrol/autostart/index.docbook
 /usr/share/doc/HTML/uk/kcontrol/colors/index.cache.bz2
@@ -1517,18 +1542,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/libcolorcorrect.so.5
-/V3/usr/lib64/libcolorcorrect.so.5.27.4
+/V3/usr/lib64/libcolorcorrect.so.5.27.5
 /V3/usr/lib64/libkfontinst.so.5
-/V3/usr/lib64/libkfontinst.so.5.27.4
+/V3/usr/lib64/libkfontinst.so.5.27.5
 /V3/usr/lib64/libkfontinstui.so.5
-/V3/usr/lib64/libkfontinstui.so.5.27.4
+/V3/usr/lib64/libkfontinstui.so.5.27.5
 /V3/usr/lib64/libkworkspace5.so.5
-/V3/usr/lib64/libkworkspace5.so.5.27.4
+/V3/usr/lib64/libkworkspace5.so.5.27.5
 /V3/usr/lib64/libnotificationmanager.so.1
-/V3/usr/lib64/libnotificationmanager.so.5.27.4
+/V3/usr/lib64/libnotificationmanager.so.5.27.5
 /V3/usr/lib64/libplasma-geolocation-interface.so.5
-/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.4
-/V3/usr/lib64/libtaskmanager.so.5.27.4
+/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.5
+/V3/usr/lib64/libtaskmanager.so.5.27.5
 /V3/usr/lib64/libtaskmanager.so.6
 /V3/usr/lib64/libweather_ion.so.7
 /V3/usr/lib64/libweather_ion.so.7.0.0
@@ -1644,18 +1669,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
 /V3/usr/lib64/qt5/qml/org/kde/taskmanager/libtaskmanagerplugin.so
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.27.4
+/usr/lib64/libcolorcorrect.so.5.27.5
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.27.4
+/usr/lib64/libkfontinst.so.5.27.5
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.27.4
+/usr/lib64/libkfontinstui.so.5.27.5
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.27.4
+/usr/lib64/libkworkspace5.so.5.27.5
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.27.4
+/usr/lib64/libnotificationmanager.so.5.27.5
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.27.4
-/usr/lib64/libtaskmanager.so.5.27.4
+/usr/lib64/libplasma-geolocation-interface.so.5.27.5
+/usr/lib64/libtaskmanager.so.5.27.5
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
