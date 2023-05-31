@@ -53,6 +53,7 @@ libKF5WaylandClient.so.5
 libKF5WidgetsAddons.so.5
 libKF5WindowSystem.so.5
 libKF5XmlGui.so.5
+libKPipeWire.so.5
 libKScreenLocker.so.5
 libKSysGuardSensorFaces.so.1
 libKUserFeedbackCore.so.1

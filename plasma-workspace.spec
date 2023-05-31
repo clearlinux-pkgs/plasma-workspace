@@ -7,7 +7,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.5
-Release  : 111
+Release  : 112
 URL      : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.5/plasma-workspace-5.27.5.tar.xz.sig
@@ -66,6 +66,7 @@ BuildRequires : knotifyconfig-dev
 BuildRequires : kpackage-dev
 BuildRequires : kparts-dev
 BuildRequires : kpeople-dev
+BuildRequires : kpipewire-dev
 BuildRequires : kpty-dev
 BuildRequires : kquickcharts-dev
 BuildRequires : krunner-dev
@@ -209,7 +210,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684869900
+export SOURCE_DATE_EPOCH=1685568107
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -242,7 +243,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684869900
+export SOURCE_DATE_EPOCH=1685568107
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -407,7 +408,6 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 %defattr(-,root,root,-)
 /V3/usr/bin/gmenudbusmenuproxy
 /V3/usr/bin/kcminit
-/V3/usr/bin/kcminit_startup
 /V3/usr/bin/kcolorschemeeditor
 /V3/usr/bin/kde-systemd-start-condition
 /V3/usr/bin/kfontinst
@@ -1036,15 +1036,7 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libcolorcorrect.so
-/V3/usr/lib64/libkfontinst.so
-/V3/usr/lib64/libkfontinstui.so
 /V3/usr/lib64/libkrdb.so
-/V3/usr/lib64/libkworkspace5.so
-/V3/usr/lib64/libnotificationmanager.so
-/V3/usr/lib64/libplasma-geolocation-interface.so
-/V3/usr/lib64/libtaskmanager.so
-/V3/usr/lib64/libweather_ion.so
 /usr/include/colorcorrect/colorcorrect_export.h
 /usr/include/colorcorrect/colorcorrectconstants.h
 /usr/include/colorcorrect/compositorcoloradaptor.h
@@ -1541,21 +1533,13 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libcolorcorrect.so.5
 /V3/usr/lib64/libcolorcorrect.so.5.27.5
-/V3/usr/lib64/libkfontinst.so.5
 /V3/usr/lib64/libkfontinst.so.5.27.5
-/V3/usr/lib64/libkfontinstui.so.5
 /V3/usr/lib64/libkfontinstui.so.5.27.5
-/V3/usr/lib64/libkworkspace5.so.5
 /V3/usr/lib64/libkworkspace5.so.5.27.5
-/V3/usr/lib64/libnotificationmanager.so.1
 /V3/usr/lib64/libnotificationmanager.so.5.27.5
-/V3/usr/lib64/libplasma-geolocation-interface.so.5
 /V3/usr/lib64/libplasma-geolocation-interface.so.5.27.5
 /V3/usr/lib64/libtaskmanager.so.5.27.5
-/V3/usr/lib64/libtaskmanager.so.6
-/V3/usr/lib64/libweather_ion.so.7
 /V3/usr/lib64/libweather_ion.so.7.0.0
 /V3/usr/lib64/qt5/plugins/kf5/kded/appmenu.so
 /V3/usr/lib64/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
@@ -1635,8 +1619,6 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_time.so
 /V3/usr/lib64/qt5/plugins/plasma/dataengine/plasma_engine_weather.so
 /V3/usr/lib64/qt5/plugins/plasma/geolocationprovider/plasma-geolocation-ip.so
-/V3/usr/lib64/qt5/plugins/plasma/kcminit/kcm_fonts_init.so
-/V3/usr/lib64/qt5/plugins/plasma/kcminit/kcm_style_init.so
 /V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_autostart.so
 /V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_colors.so
 /V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings/kcm_cursortheme.so
