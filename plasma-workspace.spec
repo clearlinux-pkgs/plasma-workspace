@@ -7,7 +7,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.6
-Release  : 114
+Release  : 115
 URL      : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz.sig
