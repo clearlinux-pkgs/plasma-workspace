@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.27.6
-Release  : 115
-URL      : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.27.6/plasma-workspace-5.27.6.tar.xz.sig
+Version  : 5.27.7
+Release  : 116
+URL      : https://download.kde.org/stable/plasma/5.27.7/plasma-workspace-5.27.7.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.27.7/plasma-workspace-5.27.7.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.27.7/plasma-workspace-5.27.7.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -206,15 +206,15 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.27.6
-cd %{_builddir}/plasma-workspace-5.27.6
+%setup -q -n plasma-workspace-5.27.7
+cd %{_builddir}/plasma-workspace-5.27.7
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687289570
+export SOURCE_DATE_EPOCH=1690898959
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -247,7 +247,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1687289570
+export SOURCE_DATE_EPOCH=1690898959
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1537,13 +1537,13 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libcolorcorrect.so.5.27.6
-/V3/usr/lib64/libkfontinst.so.5.27.6
-/V3/usr/lib64/libkfontinstui.so.5.27.6
-/V3/usr/lib64/libkworkspace5.so.5.27.6
-/V3/usr/lib64/libnotificationmanager.so.5.27.6
-/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.6
-/V3/usr/lib64/libtaskmanager.so.5.27.6
+/V3/usr/lib64/libcolorcorrect.so.5.27.7
+/V3/usr/lib64/libkfontinst.so.5.27.7
+/V3/usr/lib64/libkfontinstui.so.5.27.7
+/V3/usr/lib64/libkworkspace5.so.5.27.7
+/V3/usr/lib64/libnotificationmanager.so.5.27.7
+/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.7
+/V3/usr/lib64/libtaskmanager.so.5.27.7
 /V3/usr/lib64/libweather_ion.so.7.0.0
 /V3/usr/lib64/qt5/plugins/kf5/kded/appmenu.so
 /V3/usr/lib64/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
@@ -1655,18 +1655,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
 /V3/usr/lib64/qt5/qml/org/kde/taskmanager/libtaskmanagerplugin.so
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.27.6
+/usr/lib64/libcolorcorrect.so.5.27.7
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.27.6
+/usr/lib64/libkfontinst.so.5.27.7
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.27.6
+/usr/lib64/libkfontinstui.so.5.27.7
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.27.6
+/usr/lib64/libkworkspace5.so.5.27.7
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.27.6
+/usr/lib64/libnotificationmanager.so.5.27.7
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.27.6
-/usr/lib64/libtaskmanager.so.5.27.6
+/usr/lib64/libplasma-geolocation-interface.so.5.27.7
+/usr/lib64/libtaskmanager.so.5.27.7
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
