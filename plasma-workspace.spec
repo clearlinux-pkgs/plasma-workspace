@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 5.27.9.1
-Release  : 121
-URL      : https://download.kde.org/stable/plasma/5.27.9/plasma-workspace-5.27.9.1.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.27.9/plasma-workspace-5.27.9.1.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.27.9/plasma-workspace-5.27.9.1.tar.xz.sig
+Version  : 5.27.10
+Release  : 122
+URL      : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz.sig
 Source2  : kde.pam
 Source3  : kde-np.pam
 Source4  : kscreensaver.pam
@@ -209,8 +209,8 @@ services components for the plasma-workspace package.
 
 
 %prep
-%setup -q -n plasma-workspace-5.27.9.1
-cd %{_builddir}/plasma-workspace-5.27.9.1
+%setup -q -n plasma-workspace-5.27.10
+cd %{_builddir}/plasma-workspace-5.27.10
 %patch -P 1 -p1
 
 %build
@@ -218,7 +218,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702059864
+export SOURCE_DATE_EPOCH=1702989789
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -277,7 +277,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1702059864
+export SOURCE_DATE_EPOCH=1702989789
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1567,13 +1567,13 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libcolorcorrect.so.5.27.9
-/V3/usr/lib64/libkfontinst.so.5.27.9
-/V3/usr/lib64/libkfontinstui.so.5.27.9
-/V3/usr/lib64/libkworkspace5.so.5.27.9
-/V3/usr/lib64/libnotificationmanager.so.5.27.9
-/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.9
-/V3/usr/lib64/libtaskmanager.so.5.27.9
+/V3/usr/lib64/libcolorcorrect.so.5.27.10
+/V3/usr/lib64/libkfontinst.so.5.27.10
+/V3/usr/lib64/libkfontinstui.so.5.27.10
+/V3/usr/lib64/libkworkspace5.so.5.27.10
+/V3/usr/lib64/libnotificationmanager.so.5.27.10
+/V3/usr/lib64/libplasma-geolocation-interface.so.5.27.10
+/V3/usr/lib64/libtaskmanager.so.5.27.10
 /V3/usr/lib64/libweather_ion.so.7.0.0
 /V3/usr/lib64/qt5/plugins/kf5/kded/appmenu.so
 /V3/usr/lib64/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
@@ -1685,18 +1685,18 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /V3/usr/lib64/qt5/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
 /V3/usr/lib64/qt5/qml/org/kde/taskmanager/libtaskmanagerplugin.so
 /usr/lib64/libcolorcorrect.so.5
-/usr/lib64/libcolorcorrect.so.5.27.9
+/usr/lib64/libcolorcorrect.so.5.27.10
 /usr/lib64/libkfontinst.so.5
-/usr/lib64/libkfontinst.so.5.27.9
+/usr/lib64/libkfontinst.so.5.27.10
 /usr/lib64/libkfontinstui.so.5
-/usr/lib64/libkfontinstui.so.5.27.9
+/usr/lib64/libkfontinstui.so.5.27.10
 /usr/lib64/libkworkspace5.so.5
-/usr/lib64/libkworkspace5.so.5.27.9
+/usr/lib64/libkworkspace5.so.5.27.10
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.5.27.9
+/usr/lib64/libnotificationmanager.so.5.27.10
 /usr/lib64/libplasma-geolocation-interface.so.5
-/usr/lib64/libplasma-geolocation-interface.so.5.27.9
-/usr/lib64/libtaskmanager.so.5.27.9
+/usr/lib64/libplasma-geolocation-interface.so.5.27.10
+/usr/lib64/libtaskmanager.so.5.27.10
 /usr/lib64/libtaskmanager.so.6
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
