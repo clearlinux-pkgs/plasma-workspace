@@ -9,7 +9,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.10
-Release  : 122
+Release  : 123
 URL      : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz.sig
