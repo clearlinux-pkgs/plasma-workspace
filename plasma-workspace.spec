@@ -9,7 +9,7 @@
 #
 Name     : plasma-workspace
 Version  : 5.27.10
-Release  : 123
+Release  : 124
 URL      : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.10/plasma-workspace-5.27.10.tar.xz.sig
@@ -126,12 +126,9 @@ BuildRequires : zlib-dev
 Patch1: 0001-Don-t-really-install-this-test.patch
 
 %description
-StartKDE
-Startup script used on X
-StartPlasmaCompositor + StartPlasma
-Startup script used on Wayland.
-StartPlasmaCompostior is run before kwin and sets up kwin's env
-StartPlasma is then invoked by kwin
+This is a small KDED module that monitors free disk space on the home dir
+partition and shows a warning dialog when it runs too low,
+with a configurable limit and the possibility to postpone.
 
 %package bin
 Summary: bin components for the plasma-workspace package.
@@ -218,7 +215,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702989789
+export SOURCE_DATE_EPOCH=1703106063
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -277,7 +274,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1702989789
+export SOURCE_DATE_EPOCH=1703106063
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1590,7 +1587,6 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /V3/usr/lib64/qt5/plugins/kf5/krunner/calculator.so
 /V3/usr/lib64/qt5/plugins/kf5/krunner/helprunner.so
 /V3/usr/lib64/qt5/plugins/kf5/krunner/kcms/kcm_krunner_kill.so
-/V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_appstream.so
 /V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_bookmarksrunner.so
 /V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_kill.so
 /V3/usr/lib64/qt5/plugins/kf5/krunner/krunner_placesrunner.so
@@ -1715,7 +1711,6 @@ install -m644 %{_sourcedir}/kscreensaver.pam %{buildroot}/usr/share/pam.d/kscree
 /usr/lib64/qt5/plugins/kf5/krunner/calculator.so
 /usr/lib64/qt5/plugins/kf5/krunner/helprunner.so
 /usr/lib64/qt5/plugins/kf5/krunner/kcms/kcm_krunner_kill.so
-/usr/lib64/qt5/plugins/kf5/krunner/krunner_appstream.so
 /usr/lib64/qt5/plugins/kf5/krunner/krunner_bookmarksrunner.so
 /usr/lib64/qt5/plugins/kf5/krunner/krunner_kill.so
 /usr/lib64/qt5/plugins/kf5/krunner/krunner_placesrunner.so
