@@ -1,19 +1,15 @@
-5.27.10
+6.0.2
 gmp-dev
-kactivities-dev
-kactivities-stats-dev
-kfilemetadata-dev
 kglobalaccel-dev
+kholidays-dev
 kidletime-dev
-knotifyconfig-dev
-kpeople-dev
+knotifyconfig
 kpipewire-dev
 krunner-dev
+kstatusnotifieritem-dev
 ktexteditor-dev
-kwayland-dev
+libcanberra-dev
+libkscreen-dev
 mpfr-dev
-phonon-dev
-polkit-qt-dev
-prison-dev
 syntax-highlighting-dev
 wayland-protocols-dev plasma-wayland-protocols-dev
