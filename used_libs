@@ -2,6 +2,7 @@ ld-linux-x86-64.so.2
 libAppStreamQt.so.3
 libKF6Archive.so.6
 libKF6AuthCore.so.6
+libKF6Baloo.so.6
 libKF6Bookmarks.so.6
 libKF6CalendarEvents.so.6
 libKF6ColorScheme.so.6
@@ -30,6 +31,7 @@ libKF6KIOCore.so.6
 libKF6KIOFileWidgets.so.6
 libKF6KIOGui.so.6
 libKF6KIOWidgets.so.6
+libKF6NetworkManagerQt.so.6
 libKF6NewStuffCore.so.6
 libKF6NewStuffWidgets.so.6
 libKF6Notifications.so.6
