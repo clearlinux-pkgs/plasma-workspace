@@ -55,3 +55,4 @@ qt6base-staticdev
 qt6wayland-dev
 valgrind-dev
 libqalculate-dev
+libkexiv2-dev
