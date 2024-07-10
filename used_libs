@@ -3,6 +3,7 @@ libAppStreamQt.so.3
 libKExiv2Qt6.so.0
 libKF6Archive.so.6
 libKF6AuthCore.so.6
+libKF6Baloo.so.6
 libKF6Bookmarks.so.6
 libKF6CalendarEvents.so.6
 libKF6ColorScheme.so.6
@@ -12,6 +13,7 @@ libKF6ConfigGui.so.6
 libKF6ConfigQml.so.6
 libKF6ConfigWidgets.so.6
 libKF6CoreAddons.so.6
+libKF6Crash.so.6
 libKF6DBusAddons.so.6
 libKF6GlobalAccel.so.6
 libKF6GuiAddons.so.6
@@ -41,15 +43,19 @@ libKF6Prison.so.6
 libKF6Runner.so.6
 libKF6Service.so.6
 libKF6Solid.so.6
+libKF6StatusNotifierItem.so.6
 libKF6Svg.so.6
+libKF6TextEditor.so.6
 libKF6TextWidgets.so.6
 libKF6Wallet.so.6
 libKF6WidgetsAddons.so.6
 libKF6WindowSystem.so.6
 libKF6XmlGui.so.6
 libKPipeWire.so.6
+libKScreenLocker.so.6
 libKSysGuardSensorFaces.so.2
 libKWaylandClient.so.6
+libLayerShellQtInterface.so.6
 libPlasma.so.6
 libPlasma5Support.so.6
 libPlasmaActivities.so.6
@@ -60,6 +66,7 @@ libQt6Core.so.6
 libQt6DBus.so.6
 libQt6Gui.so.6
 libQt6Network.so.6
+libQt6PrintSupport.so.6
 libQt6Qml.so.6
 libQt6Quick.so.6
 libQt6Sql.so.6
@@ -70,6 +77,7 @@ libQt6Xml.so.6
 libX11.so.6
 libXcursor.so.1
 libXft.so.2
+libXtst.so.6
 libc.so.6
 libcanberra.so.0
 libcrypt.so.1
@@ -80,8 +88,9 @@ libicui18n.so.73
 libicuuc.so.73
 libm.so.6
 libphonon4qt6.so.4
+libpolkit-qt6-core-1.so.1
 libprocesscore.so.10
-libqalculate.so.22
+libqalculate.so.23
 libstdc++.so.6
 libsystemd.so.0
 libudev.so.1
