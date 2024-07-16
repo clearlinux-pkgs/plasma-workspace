@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-workspace
-Version  : 6.1.2
-Release  : 136
-URL      : https://download.kde.org/stable/plasma/6.1.2/plasma-workspace-6.1.2.tar.xz
-Source0  : https://download.kde.org/stable/plasma/6.1.2/plasma-workspace-6.1.2.tar.xz
-Source1  : https://download.kde.org/stable/plasma/6.1.2/plasma-workspace-6.1.2.tar.xz.sig
+Version  : 6.1.3
+Release  : 137
+URL      : https://download.kde.org/stable/plasma/6.1.3/plasma-workspace-6.1.3.tar.xz
+Source0  : https://download.kde.org/stable/plasma/6.1.3/plasma-workspace-6.1.3.tar.xz
+Source1  : https://download.kde.org/stable/plasma/6.1.3/plasma-workspace-6.1.3.tar.xz.sig
 Source2  : D7574483BB57B18D.pkey
 Source3  : kde.pam
 Source4  : kde-np.pam
@@ -213,10 +213,10 @@ chmod 700 .gnupg
 gpg --homedir .gnupg --import %{SOURCE2}
 gpg --homedir .gnupg --status-fd 1 --verify %{SOURCE1} %{SOURCE0} > gpg.status
 grep -E '^\[GNUPG:\] (GOODSIG|EXPKEYSIG) D7574483BB57B18D' gpg.status
-%setup -q -n plasma-workspace-6.1.2
-cd %{_builddir}/plasma-workspace-6.1.2
+%setup -q -n plasma-workspace-6.1.3
+cd %{_builddir}/plasma-workspace-6.1.3
 pushd ..
-cp -a plasma-workspace-6.1.2 buildavx2
+cp -a plasma-workspace-6.1.3 buildavx2
 popd
 
 %build
@@ -224,7 +224,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1720625738
+export SOURCE_DATE_EPOCH=1721166080
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -287,7 +287,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1720625738
+export SOURCE_DATE_EPOCH=1721166080
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-workspace
 cp %{_builddir}/'plasma-workspace-%{version}/kcms/users/avatars/photos/Air Balloon.png.license' %{buildroot}/usr/share/package-licenses/plasma-workspace/adabd116af64401b76dd0583f403226df139a955 || :
@@ -1495,15 +1495,15 @@ mv %{buildroot}/etc/xdg/menus %{buildroot}/usr/share/xdg/. && rmdir %{buildroot}
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libbatterycontrol.so.6.1.2
-/V3/usr/lib64/libcolorcorrect.so.6.1.2
-/V3/usr/lib64/libkfontinst.so.6.1.2
-/V3/usr/lib64/libkfontinstui.so.6.1.2
-/V3/usr/lib64/libkmpris.so.6.1.2
-/V3/usr/lib64/libkworkspace6.so.6.1.2
-/V3/usr/lib64/libnotificationmanager.so.6.1.2
-/V3/usr/lib64/libplasma-geolocation-interface.so.6.1.2
-/V3/usr/lib64/libtaskmanager.so.6.1.2
+/V3/usr/lib64/libbatterycontrol.so.6.1.3
+/V3/usr/lib64/libcolorcorrect.so.6.1.3
+/V3/usr/lib64/libkfontinst.so.6.1.3
+/V3/usr/lib64/libkfontinstui.so.6.1.3
+/V3/usr/lib64/libkmpris.so.6.1.3
+/V3/usr/lib64/libkworkspace6.so.6.1.3
+/V3/usr/lib64/libnotificationmanager.so.6.1.3
+/V3/usr/lib64/libplasma-geolocation-interface.so.6.1.3
+/V3/usr/lib64/libtaskmanager.so.6.1.3
 /V3/usr/lib64/libweather_ion.so.7.0.0
 /V3/usr/lib64/qt6/plugins/kf6/kded/appmenu.so
 /V3/usr/lib64/qt6/plugins/kf6/kded/colorcorrectlocationupdater.so
@@ -1620,23 +1620,23 @@ mv %{buildroot}/etc/xdg/menus %{buildroot}/usr/share/xdg/. && rmdir %{buildroot}
 /V3/usr/lib64/qt6/qml/org/kde/plasma/workspace/trianglemousefilter/libtrianglemousefilterplugin.so
 /V3/usr/lib64/qt6/qml/org/kde/taskmanager/libtaskmanagerplugin.so
 /usr/lib64/libbatterycontrol.so.6
-/usr/lib64/libbatterycontrol.so.6.1.2
+/usr/lib64/libbatterycontrol.so.6.1.3
 /usr/lib64/libcolorcorrect.so.6
-/usr/lib64/libcolorcorrect.so.6.1.2
+/usr/lib64/libcolorcorrect.so.6.1.3
 /usr/lib64/libkfontinst.so.6
-/usr/lib64/libkfontinst.so.6.1.2
+/usr/lib64/libkfontinst.so.6.1.3
 /usr/lib64/libkfontinstui.so.6
-/usr/lib64/libkfontinstui.so.6.1.2
+/usr/lib64/libkfontinstui.so.6.1.3
 /usr/lib64/libkmpris.so.6
-/usr/lib64/libkmpris.so.6.1.2
+/usr/lib64/libkmpris.so.6.1.3
 /usr/lib64/libkworkspace6.so.6
-/usr/lib64/libkworkspace6.so.6.1.2
+/usr/lib64/libkworkspace6.so.6.1.3
 /usr/lib64/libnotificationmanager.so.1
-/usr/lib64/libnotificationmanager.so.6.1.2
+/usr/lib64/libnotificationmanager.so.6.1.3
 /usr/lib64/libplasma-geolocation-interface.so.6
-/usr/lib64/libplasma-geolocation-interface.so.6.1.2
+/usr/lib64/libplasma-geolocation-interface.so.6.1.3
 /usr/lib64/libtaskmanager.so.6
-/usr/lib64/libtaskmanager.so.6.1.2
+/usr/lib64/libtaskmanager.so.6.1.3
 /usr/lib64/libweather_ion.so.7
 /usr/lib64/libweather_ion.so.7.0.0
 /usr/lib64/qt6/plugins/kf6/kded/appmenu.so
