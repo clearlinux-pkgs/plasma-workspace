@@ -1,1557 +1,433 @@
 libbatterycontrol.so.6:qml_register_types_org_kde_plasma_private_battery()
-libcolorcorrect.so.6:qml_register_types_org_kde_colorcorrect()
-libcolorcorrect.so.6:ColorCorrect::Geolocator::dataUpdated(QString const&, QMap<QString, QVariant> const&)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::qt_metacall(QMetaObject::Call, int, void**)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::qt_metacast(char const*)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::latitudeChanged()
-libcolorcorrect.so.6:ColorCorrect::Geolocator::locationChanged(double, double)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::longitudeChanged()
-libcolorcorrect.so.6:ColorCorrect::Geolocator::Geolocator(QObject*)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::Geolocator(QObject*)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::qt_metacall(QMetaObject::Call, int, void**)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::qt_metacast(char const*)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::stopPreview()
+libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::CompositorAdaptor(QObject*)
 libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::errorChanged()
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::runningChanged()
 libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::errorTextChanged()
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::updateProperties(QMap<QString, QVariant> const&)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::sendAutoLocationUpdate(double, double)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::handlePropertiesChanged(QString const&, QMap<QString, QVariant> const&, QList<QString> const&)
 libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::preview(int)
+libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::runningChanged()
 libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::setError(ColorCorrect::CompositorAdaptor::ErrorCode)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::CompositorAdaptor(QObject*)
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::CompositorAdaptor(QObject*)
-libcolorcorrect.so.6:ColorCorrect::SunCalc::qt_metacall(QMetaObject::Call, int, void**)
-libcolorcorrect.so.6:ColorCorrect::SunCalc::qt_metacast(char const*)
-libcolorcorrect.so.6:ColorCorrect::SunCalc::getEveningTimings(double, double)
-libcolorcorrect.so.6:ColorCorrect::SunCalc::getMorningTimings(double, double)
-libcolorcorrect.so.6:ColorCorrect::Geolocator::metaObject() const
-libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::metaObject() const
-libcolorcorrect.so.6:ColorCorrect::SunCalc::metaObject() const
-libkfontinst.so.6:KFI::WritingSystems::instance()
-libkfontinst.so.6:KFI::WritingSystems::WritingSystems()
-libkfontinst.so.6:KFI::WritingSystems::WritingSystems()
-libkfontinst.so.6:KFI::FC::createName(_FcPattern*)
-libkfontinst.so.6:KFI::FC::createName(QString const&, int, int, int)
-libkfontinst.so.6:KFI::FC::createName(QString const&, unsigned int)
-libkfontinst.so.6:KFI::FC::getDetails(_FcPattern*, QString&, unsigned int&, int&, QString&)
-libkfontinst.so.6:KFI::FC::spacingStr(int)
-libkfontinst.so.6:KFI::FC::strToSlant(QString const&)
-libkfontinst.so.6:KFI::FC::strToWidth(QString const&, QString&)
-libkfontinst.so.6:KFI::FC::getFcString(_FcPattern*, char const*, int)
-libkfontinst.so.6:KFI::FC::strToWeight(QString const&, QString&)
-libkfontinst.so.6:KFI::FC::styleValToStr(unsigned int)
+libcolorcorrect.so.6:ColorCorrect::CompositorAdaptor::stopPreview()
+libcolorcorrect.so.6:ColorCorrect::Geolocator::Geolocator(QObject*)
+libcolorcorrect.so.6:ColorCorrect::Geolocator::latitudeChanged()
+libcolorcorrect.so.6:ColorCorrect::Geolocator::longitudeChanged()
+libcolorcorrect.so.6:qml_register_types_org_kde_colorcorrect()
 libkfontinst.so.6:KFI::FC::bitmapsEnabled()
-libkfontinst.so.6:KFI::FC::createStyleVal(QString const&)
-libkfontinst.so.6:KFI::FC::createStyleName(int, int, int)
-libkfontinst.so.6:KFI::FC::createStyleName(unsigned int)
-libkfontinst.so.6:KFI::FC::styleValFromStr(QString const&)
-libkfontinst.so.6:KFI::FC::decomposeStyleVal(unsigned int, int&, int&, int&)
+libkfontinst.so.6:KFI::FC::createName(_FcPattern*)
 libkfontinst.so.6:KFI::FC::slant(int)
-libkfontinst.so.6:KFI::FC::width(int)
-libkfontinst.so.6:KFI::FC::decode(QUrl const&)
-libkfontinst.so.6:KFI::FC::encode(QString const&, unsigned int, QString const&, int)
-libkfontinst.so.6:KFI::FC::weight(int)
-libkfontinst.so.6:KFI::FC::getFile(QUrl const&)
-libkfontinst.so.6:KFI::FC::getName(QString const&)
 libkfontinst.so.6:KFI::FC::spacing(int)
-libkfontinst.so.6:KFI::FC::getFcInt(_FcPattern*, char const*, int, int)
-libkfontinst.so.6:KFI::FC::getIndex(QUrl const&)
-libkfontinst.so.6:KFI::FC::slantStr(int, bool)
-libkfontinst.so.6:KFI::FC::widthStr(int, bool)
-libkfontinst.so.6:KFI::FC::weightStr(int, bool)
-libkfontinst.so.6:KFI::File::File(QDomElement const&, bool)
-libkfontinst.so.6:KFI::File::File(QDomElement const&, bool)
-libkfontinst.so.6:KFI::Misc::encodeText(QString const&)
-libkfontinst.so.6:KFI::Misc::expandHome(QString)
-libkfontinst.so.6:KFI::Misc::fileSyntax(QString const&)
-libkfontinst.so.6:KFI::Misc::modifyName(QString const&)
+libkfontinst.so.6:KFI::FC::spacingStr(int)
+libkfontinst.so.6:KFI::FC::weight(int)
+libkfontinst.so.6:KFI::FC::width(int)
 libkfontinst.so.6:KFI::Misc::contractHome(QString)
-libkfontinst.so.6:KFI::Misc::getTimeStamp(QString const&)
-libkfontinst.so.6:KFI::Misc::setFilePerms(QByteArray const&)
-libkfontinst.so.6:KFI::Misc::getFontFileMap(QSet<QString> const&)
-libkfontinst.so.6:KFI::Misc::getIntQueryVal(QUrl const&, char const*, int)
-libkfontinst.so.6:KFI::Misc::getAssociatedFiles(QString const&, QList<QString>&, bool)
-libkfontinst.so.6:KFI::Misc::app(QString const&, char const*)
-libkfontinst.so.6:KFI::Misc::check(QString const&, bool, bool)
-libkfontinst.so.6:KFI::Misc::doCmd(QString const&, QString const&, QString const&, QString const&)
-libkfontinst.so.6:KFI::Misc::qHash(KFI::Misc::TFont const&)
-libkfontinst.so.6:KFI::Misc::getDir(QString const&)
-libkfontinst.so.6:KFI::Misc::getFile(QString const&)
-libkfontinst.so.6:KFI::Misc::checkExt(QString const&, QString const&)
-libkfontinst.so.6:KFI::Misc::isBitmap(QString const&)
-libkfontinst.so.6:KFI::Misc::changeExt(QString const&, QString const&)
-libkfontinst.so.6:KFI::Misc::createDir(QString const&)
-libkfontinst.so.6:KFI::Misc::dirSyntax(QString const&)
-libkfontinst.so.6:KFI::Misc::getFolder(QString const&, QString const&, QList<QString>&)
-libkfontinst.so.6:KFI::Misc::isMetrics(QString const&)
-libkfontinst.so.6:KFI::Misc::prettyUrl(QUrl const&)
-libkfontinst.so.6:KFI::Misc::printable(QString const&)
-libkfontinst.so.6:KFI::Style::Style(QDomElement const&, bool)
-libkfontinst.so.6:KFI::Style::Style(QDomElement const&, bool)
-libkfontinst.so.6:KFI::Family::Family(QDomElement const&, bool)
-libkfontinst.so.6:KFI::Family::Family(QDomElement const&, bool)
-libkfontinst.so.6:KFI::WritingSystems::get(_FcPattern*) const
-libkfontinst.so.6:KFI::WritingSystems::get(QList<QString> const&) const
-libkfontinst.so.6:KFI::WritingSystems::getLangs(unsigned long long) const
-libkfontinst.so.6:KFI::File::toXml(bool) const
-libkfontinst.so.6:KFI::Style::toXml(bool, QString const&) const
-libkfontinst.so.6:KFI::Family::toXml(bool, QTextStream&) const
-libkfontinst.so.6:operator<<(QDBusArgument&, KFI::File const&)
-libkfontinst.so.6:operator<<(QDBusArgument&, KFI::Style const&)
-libkfontinst.so.6:operator<<(QDBusArgument&, KFI::Family const&)
-libkfontinst.so.6:operator<<(QDBusArgument&, KFI::Families const&)
-libkfontinst.so.6:operator>>(QDBusArgument const&, KFI::File&)
-libkfontinst.so.6:operator>>(QDBusArgument const&, KFI::Style&)
-libkfontinst.so.6:operator>>(QDBusArgument const&, KFI::Family&)
-libkfontinst.so.6:operator>>(QDBusArgument const&, KFI::Families&)
-libkfontinstui.so.6:KFI::CFcEngine::readConfig(KConfig&)
-libkfontinstui.so.6:KFI::CFcEngine::addFontFile(QString const&)
-libkfontinstui.so.6:KFI::CFcEngine::drawPreview(QString const&, unsigned int, int, QColor const&, QColor const&, int)
-libkfontinstui.so.6:KFI::CFcEngine::writeConfig(KConfig&)
-libkfontinstui.so.6:KFI::CFcEngine::getPunctuation()
-libkfontinstui.so.6:KFI::CFcEngine::getLowercaseLetters()
-libkfontinstui.so.6:KFI::CFcEngine::getUppercaseLetters()
-libkfontinstui.so.6:KFI::CFcEngine::getDefaultPreviewString()
+libkfontinst.so.6:KFI::Misc::expandHome(QString)
+libkfontinst.so.6:KFI::WritingSystems::WritingSystems()
+libkfontinst.so.6:KFI::WritingSystems::instance()
+libkfontinstui.so.6:KFI::CFcEngine::CFcEngine(bool)
+libkfontinstui.so.6:KFI::CFcEngine::Xft::Xft()
 libkfontinstui.so.6:KFI::CFcEngine::Xft::freeColors()
-libkfontinstui.so.6:KFI::CFcEngine::Xft::init(QColor const&, QColor const&, int, int)
-libkfontinstui.so.6:KFI::CFcEngine::Xft::Xft()
-libkfontinstui.so.6:KFI::CFcEngine::Xft::Xft()
 libkfontinstui.so.6:KFI::CFcEngine::Xft::~Xft()
-libkfontinstui.so.6:KFI::CFcEngine::Xft::~Xft()
-libkfontinstui.so.6:KFI::CFcEngine::xft()
-libkfontinstui.so.6:KFI::CFcEngine::draw(QString const&, unsigned int, int, QColor const&, QColor const&, int, QString const&)
-libkfontinstui.so.6:KFI::CFcEngine::draw(QString const&, unsigned int, int, QColor const&, QColor const&, int, int, bool, QList<KFI::CFcEngine::TRange> const&, QList<KFI::CFcEngine::TChar>*)
-libkfontinstui.so.6:KFI::CFcEngine::parse(QString const&, unsigned int, int)
-libkfontinstui.so.6:KFI::CFcEngine::reinit()
+libkfontinstui.so.6:KFI::CFcEngine::getDefaultPreviewString()
 libkfontinstui.so.6:KFI::CFcEngine::getFont(int)
-libkfontinstui.so.6:KFI::CFcEngine::drawName(int, int&, int)
-libkfontinstui.so.6:KFI::CFcEngine::getQFont(QString const&, unsigned int, int)
+libkfontinstui.so.6:KFI::CFcEngine::getLowercaseLetters()
+libkfontinstui.so.6:KFI::CFcEngine::getPunctuation()
 libkfontinstui.so.6:KFI::CFcEngine::getSizes()
-libkfontinstui.so.6:KFI::CFcEngine::isCorrect(_XftFont*, bool)
+libkfontinstui.so.6:KFI::CFcEngine::getUppercaseLetters()
 libkfontinstui.so.6:KFI::CFcEngine::queryFont()
-libkfontinstui.so.6:KFI::CFcEngine::CFcEngine(bool)
-libkfontinstui.so.6:KFI::CFcEngine::CFcEngine(bool)
+libkfontinstui.so.6:KFI::CFcEngine::readConfig(KConfig&)
+libkfontinstui.so.6:KFI::CFcEngine::reinit()
+libkfontinstui.so.6:KFI::CFcEngine::writeConfig(KConfig&)
+libkfontinstui.so.6:KFI::CFcEngine::xft()
 libkfontinstui.so.6:KFI::CFcEngine::~CFcEngine()
-libkfontinstui.so.6:KFI::CFcEngine::~CFcEngine()
-libkfontinstui.so.6:KFI::CFcEngine::~CFcEngine()
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawChar32(_XftFont*, unsigned int, int&, int&, int, int, int, QRect&) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawString(_XftFont*, QString const&, int, int&, int) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawString(QString const&, int, int&, int) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawAllChars(_XftFont*, int, int&, int&, int, int, bool, int, QRect*) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawAllGlyphs(_XftFont*, int, int&, int&, int, int, bool, int, QRect*) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawChar32Centre(_XftFont*, unsigned int, int, int) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::toImage(int, int) const
-libkfontinstui.so.6:KFI::CFcEngine::Xft::drawGlyph(_XftFont*, unsigned int, int&, int&, int, int, int, bool, QRect&) const
-libkmpris.so.6:qml_register_types_org_kde_plasma_private_mpris()
-libkmpris.so.6:Mpris2Model::qt_metacall(QMetaObject::Call, int, void**)
-libkmpris.so.6:Mpris2Model::qt_metacast(char const*)
-libkmpris.so.6:Mpris2Model::onDataChanged(QModelIndex const&, QModelIndex const&, QList<int> const&)
-libkmpris.so.6:Mpris2Model::onRowsRemoved(QModelIndex const&, int, int)
-libkmpris.so.6:Mpris2Model::onRowsInserted(QModelIndex const&, int, int)
-libkmpris.so.6:Mpris2Model::setCurrentIndex(unsigned int)
-libkmpris.so.6:Mpris2Model::currentIndexChanged()
-libkmpris.so.6:Mpris2Model::currentPlayerChanged()
-libkmpris.so.6:Mpris2Model::onRowsAboutToBeRemoved(QModelIndex const&, int, int)
-libkmpris.so.6:Mpris2Model::Mpris2Model(QObject*)
-libkmpris.so.6:Mpris2Model::Mpris2Model(QObject*)
-libkmpris.so.6:Mpris2Model::~Mpris2Model()
-libkmpris.so.6:Mpris2Model::~Mpris2Model()
-libkmpris.so.6:Mpris2Model::~Mpris2Model()
-libkmpris.so.6:Multiplexer::qt_metacall(QMetaObject::Call, int, void**)
-libkmpris.so.6:Multiplexer::qt_metacast(char const*)
-libkmpris.so.6:Multiplexer::updateIndex()
-libkmpris.so.6:Multiplexer::onRowsRemoved(QModelIndex const&, int, int)
-libkmpris.so.6:Multiplexer::onRowsInserted(QModelIndex const&, int, int)
-libkmpris.so.6:Multiplexer::evaluatePlayers()
-libkmpris.so.6:Multiplexer::onRowsAboutToBeRemoved(QModelIndex const&, int, int)
-libkmpris.so.6:Multiplexer::onPlaybackStatusChanged()
-libkmpris.so.6:Multiplexer::activePlayerIndexChanged(int)
-libkmpris.so.6:Multiplexer::self()
-libkmpris.so.6:Multiplexer::Multiplexer(QObject*)
-libkmpris.so.6:Multiplexer::Multiplexer(QObject*)
-libkmpris.so.6:Multiplexer::~Multiplexer()
-libkmpris.so.6:Multiplexer::~Multiplexer()
-libkmpris.so.6:Multiplexer::~Multiplexer()
-libkmpris.so.6:PlayerContainer::setShuffle(ShuffleStatus::Status)
-libkmpris.so.6:PlayerContainer::qt_metacall(QMetaObject::Call, int, void**)
-libkmpris.so.6:PlayerContainer::qt_metacast(char const*)
-libkmpris.so.6:PlayerContainer::setPosition(long long)
-libkmpris.so.6:PlayerContainer::changeVolume(double, bool)
-libkmpris.so.6:PlayerContainer::initBindings()
-libkmpris.so.6:PlayerContainer::setFullscreen(bool)
-libkmpris.so.6:PlayerContainer::setLoopStatus(LoopStatus::Status)
-libkmpris.so.6:PlayerContainer::updateFromMap(QMap<QString, QVariant> const&)
-libkmpris.so.6:PlayerContainer::updatePosition()
-libkmpris.so.6:PlayerContainer::setPlaybackStatus(PlaybackStatus::Status)
-libkmpris.so.6:PlayerContainer::initialFetchFailed(PlayerContainer*)
-libkmpris.so.6:PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher*)
-libkmpris.so.6:PlayerContainer::onPropertiesChanged(QString const&, QMap<QString, QVariant> const&, QList<QString> const&)
-libkmpris.so.6:PlayerContainer::initialFetchFinished(PlayerContainer*)
-libkmpris.so.6:PlayerContainer::Next()
-libkmpris.so.6:PlayerContainer::Play()
-libkmpris.so.6:PlayerContainer::Quit()
-libkmpris.so.6:PlayerContainer::Seek(long long)
-libkmpris.so.6:PlayerContainer::Stop()
-libkmpris.so.6:PlayerContainer::Pause()
-libkmpris.so.6:PlayerContainer::Raise()
-libkmpris.so.6:PlayerContainer::OpenUri(QString const&)
-libkmpris.so.6:PlayerContainer::refresh()
-libkmpris.so.6:PlayerContainer::setRate(double)
-libkmpris.so.6:PlayerContainer::Previous()
-libkmpris.so.6:PlayerContainer::onSeeked(long long)
-libkmpris.so.6:PlayerContainer::PlayPause()
-libkmpris.so.6:PlayerContainer::setVolume(double)
-libkmpris.so.6:PlayerContainer::PlayerContainer(QString const&, QObject*)
-libkmpris.so.6:PlayerContainer::PlayerContainer(QString const&, QObject*)
-libkmpris.so.6:PlayerContainer::~PlayerContainer()
-libkmpris.so.6:PlayerContainer::~PlayerContainer()
-libkmpris.so.6:PlayerContainer::~PlayerContainer()
-libkmpris.so.6:MultiplexerModel::qt_metacall(QMetaObject::Call, int, void**)
-libkmpris.so.6:MultiplexerModel::qt_metacast(char const*)
-libkmpris.so.6:MultiplexerModel::updateActivePlayer()
-libkmpris.so.6:MultiplexerModel::self()
-libkmpris.so.6:MultiplexerModel::MultiplexerModel(QObject*)
-libkmpris.so.6:MultiplexerModel::MultiplexerModel(QObject*)
-libkmpris.so.6:MultiplexerModel::~MultiplexerModel()
-libkmpris.so.6:MultiplexerModel::~MultiplexerModel()
-libkmpris.so.6:MultiplexerModel::~MultiplexerModel()
-libkmpris.so.6:AbstractPlayerContainer::qt_metacall(QMetaObject::Call, int, void**)
-libkmpris.so.6:AbstractPlayerContainer::qt_metacast(char const*)
-libkmpris.so.6:AbstractPlayerContainer::rateChanged()
+libkmpris.so.6:AbstractPlayerContainer::AbstractPlayerContainer(QObject*)
 libkmpris.so.6:AbstractPlayerContainer::albumChanged()
-libkmpris.so.6:AbstractPlayerContainer::trackChanged()
 libkmpris.so.6:AbstractPlayerContainer::artUrlChanged()
 libkmpris.so.6:AbstractPlayerContainer::artistChanged()
-libkmpris.so.6:AbstractPlayerContainer::kdePidChanged()
-libkmpris.so.6:AbstractPlayerContainer::lengthChanged()
-libkmpris.so.6:AbstractPlayerContainer::volumeChanged()
+libkmpris.so.6:AbstractPlayerContainer::canControlChanged()
+libkmpris.so.6:AbstractPlayerContainer::canGoNextChanged()
+libkmpris.so.6:AbstractPlayerContainer::canGoPreviousChanged()
+libkmpris.so.6:AbstractPlayerContainer::canPauseChanged()
 libkmpris.so.6:AbstractPlayerContainer::canPlayChanged()
 libkmpris.so.6:AbstractPlayerContainer::canQuitChanged()
-libkmpris.so.6:AbstractPlayerContainer::canSeekChanged()
-libkmpris.so.6:AbstractPlayerContainer::canStopChanged()
-libkmpris.so.6:AbstractPlayerContainer::shuffleChanged()
-libkmpris.so.6:AbstractPlayerContainer::canPauseChanged()
 libkmpris.so.6:AbstractPlayerContainer::canRaiseChanged()
-libkmpris.so.6:AbstractPlayerContainer::identityChanged()
-libkmpris.so.6:AbstractPlayerContainer::metadataChanged()
-libkmpris.so.6:AbstractPlayerContainer::positionChanged()
-libkmpris.so.6:AbstractPlayerContainer::canGoNextChanged()
-libkmpris.so.6:AbstractPlayerContainer::canControlChanged()
+libkmpris.so.6:AbstractPlayerContainer::canSeekChanged()
+libkmpris.so.6:AbstractPlayerContainer::canSetFullscreenChanged()
+libkmpris.so.6:AbstractPlayerContainer::canStopChanged()
+libkmpris.so.6:AbstractPlayerContainer::desktopEntryChanged()
 libkmpris.so.6:AbstractPlayerContainer::fullscreenChanged()
+libkmpris.so.6:AbstractPlayerContainer::hasTrackListChanged()
+libkmpris.so.6:AbstractPlayerContainer::identityChanged()
+libkmpris.so.6:AbstractPlayerContainer::kdePidChanged()
+libkmpris.so.6:AbstractPlayerContainer::lengthChanged()
 libkmpris.so.6:AbstractPlayerContainer::loopStatusChanged()
 libkmpris.so.6:AbstractPlayerContainer::maximumRateChanged()
+libkmpris.so.6:AbstractPlayerContainer::metadataChanged()
 libkmpris.so.6:AbstractPlayerContainer::minimumRateChanged()
-libkmpris.so.6:AbstractPlayerContainer::desktopEntryChanged()
-libkmpris.so.6:AbstractPlayerContainer::hasTrackListChanged()
-libkmpris.so.6:AbstractPlayerContainer::canGoPreviousChanged()
 libkmpris.so.6:AbstractPlayerContainer::playbackStatusChanged()
-libkmpris.so.6:AbstractPlayerContainer::canSetFullscreenChanged()
+libkmpris.so.6:AbstractPlayerContainer::positionChanged()
+libkmpris.so.6:AbstractPlayerContainer::rateChanged()
+libkmpris.so.6:AbstractPlayerContainer::shuffleChanged()
 libkmpris.so.6:AbstractPlayerContainer::supportedMimeTypesChanged()
 libkmpris.so.6:AbstractPlayerContainer::supportedUriSchemesChanged()
-libkmpris.so.6:AbstractPlayerContainer::AbstractPlayerContainer(QObject*)
-libkmpris.so.6:AbstractPlayerContainer::AbstractPlayerContainer(QObject*)
+libkmpris.so.6:AbstractPlayerContainer::trackChanged()
+libkmpris.so.6:AbstractPlayerContainer::volumeChanged()
 libkmpris.so.6:AbstractPlayerContainer::~AbstractPlayerContainer()
-libkmpris.so.6:AbstractPlayerContainer::~AbstractPlayerContainer()
-libkmpris.so.6:AbstractPlayerContainer::~AbstractPlayerContainer()
-libkmpris.so.6:Mpris2Model::metaObject() const
-libkmpris.so.6:Mpris2Model::currentIndex() const
-libkmpris.so.6:Mpris2Model::currentPlayer() const
-libkmpris.so.6:Mpris2Model::playerForLauncherUrl(QUrl const&, unsigned int) const
-libkmpris.so.6:Mpris2Model::roleNames() const
-libkmpris.so.6:Multiplexer::metaObject() const
-libkmpris.so.6:Multiplexer::activePlayer() const
-libkmpris.so.6:Multiplexer::activePlayerIndex() const
-libkmpris.so.6:PlayerContainer::metaObject() const
-libkmpris.so.6:MultiplexerModel::metaObject() const
-libkmpris.so.6:MultiplexerModel::data(QModelIndex const&, int) const
-libkmpris.so.6:MultiplexerModel::rowCount(QModelIndex const&) const
-libkmpris.so.6:MultiplexerModel::roleNames() const
-libkmpris.so.6:AbstractPlayerContainer::canControl() const
-libkmpris.so.6:AbstractPlayerContainer::fullscreen() const
-libkmpris.so.6:AbstractPlayerContainer::loopStatus() const
-libkmpris.so.6:AbstractPlayerContainer::metaObject() const
-libkmpris.so.6:AbstractPlayerContainer::instancePid() const
-libkmpris.so.6:AbstractPlayerContainer::maximumRate() const
-libkmpris.so.6:AbstractPlayerContainer::minimumRate() const
-libkmpris.so.6:AbstractPlayerContainer::desktopEntry() const
-libkmpris.so.6:AbstractPlayerContainer::hasTrackList() const
-libkmpris.so.6:AbstractPlayerContainer::canGoPrevious() const
-libkmpris.so.6:AbstractPlayerContainer::playbackStatus() const
-libkmpris.so.6:AbstractPlayerContainer::canSetFullscreen() const
-libkmpris.so.6:AbstractPlayerContainer::supportedMimeTypes() const
-libkmpris.so.6:AbstractPlayerContainer::supportedUriSchemes() const
-libkmpris.so.6:AbstractPlayerContainer::rate() const
-libkmpris.so.6:AbstractPlayerContainer::album() const
-libkmpris.so.6:AbstractPlayerContainer::track() const
-libkmpris.so.6:AbstractPlayerContainer::artUrl() const
-libkmpris.so.6:AbstractPlayerContainer::artist() const
-libkmpris.so.6:AbstractPlayerContainer::kdePid() const
-libkmpris.so.6:AbstractPlayerContainer::length() const
-libkmpris.so.6:AbstractPlayerContainer::volume() const
-libkmpris.so.6:AbstractPlayerContainer::canPlay() const
-libkmpris.so.6:AbstractPlayerContainer::canQuit() const
-libkmpris.so.6:AbstractPlayerContainer::canSeek() const
-libkmpris.so.6:AbstractPlayerContainer::canStop() const
-libkmpris.so.6:AbstractPlayerContainer::shuffle() const
-libkmpris.so.6:AbstractPlayerContainer::canPause() const
-libkmpris.so.6:AbstractPlayerContainer::canRaise() const
-libkmpris.so.6:AbstractPlayerContainer::iconName() const
-libkmpris.so.6:AbstractPlayerContainer::identity() const
-libkmpris.so.6:AbstractPlayerContainer::position() const
-libkmpris.so.6:AbstractPlayerContainer::canGoNext() const
-libkrdb.so:runRdb(unsigned int)
+libkmpris.so.6:Mpris2Model::Mpris2Model(QObject*)
+libkmpris.so.6:Mpris2Model::currentIndexChanged()
+libkmpris.so.6:Mpris2Model::currentPlayerChanged()
+libkmpris.so.6:Mpris2Model::~Mpris2Model()
+libkmpris.so.6:Multiplexer::Multiplexer(QObject*)
+libkmpris.so.6:Multiplexer::activePlayerIndexChanged(int)
+libkmpris.so.6:Multiplexer::evaluatePlayers()
+libkmpris.so.6:Multiplexer::onPlaybackStatusChanged()
+libkmpris.so.6:Multiplexer::self()
+libkmpris.so.6:Multiplexer::updateIndex()
+libkmpris.so.6:Multiplexer::~Multiplexer()
+libkmpris.so.6:MultiplexerModel::MultiplexerModel(QObject*)
+libkmpris.so.6:MultiplexerModel::self()
+libkmpris.so.6:MultiplexerModel::updateActivePlayer()
+libkmpris.so.6:MultiplexerModel::~MultiplexerModel()
+libkmpris.so.6:PlayerContainer::Next()
+libkmpris.so.6:PlayerContainer::Pause()
+libkmpris.so.6:PlayerContainer::Play()
+libkmpris.so.6:PlayerContainer::PlayPause()
+libkmpris.so.6:PlayerContainer::Previous()
+libkmpris.so.6:PlayerContainer::Quit()
+libkmpris.so.6:PlayerContainer::Raise()
+libkmpris.so.6:PlayerContainer::Stop()
+libkmpris.so.6:PlayerContainer::initBindings()
+libkmpris.so.6:PlayerContainer::initialFetchFailed(PlayerContainer*)
+libkmpris.so.6:PlayerContainer::initialFetchFinished(PlayerContainer*)
+libkmpris.so.6:PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher*)
+libkmpris.so.6:PlayerContainer::refresh()
+libkmpris.so.6:PlayerContainer::setFullscreen(bool)
+libkmpris.so.6:PlayerContainer::setLoopStatus(LoopStatus::Status)
+libkmpris.so.6:PlayerContainer::setPlaybackStatus(PlaybackStatus::Status)
+libkmpris.so.6:PlayerContainer::setRate(double)
+libkmpris.so.6:PlayerContainer::setShuffle(ShuffleStatus::Status)
+libkmpris.so.6:PlayerContainer::setVolume(double)
+libkmpris.so.6:PlayerContainer::updatePosition()
+libkmpris.so.6:PlayerContainer::~PlayerContainer()
+libkmpris.so.6:qml_register_types_org_kde_plasma_private_mpris()
 libkrdb.so:xftDpi()
-libkworkspace6.so.6:DefaultService::legacyBrowserExec()
+libkworkspace6.so.6:AutostartScriptDesktopFile::autostartLocation()
 libkworkspace6.so.6:DefaultService::browser()
-libkworkspace6.so.6:SessionBackend::qt_metacall(QMetaObject::Call, int, void**)
-libkworkspace6.so.6:SessionBackend::qt_metacast(char const*)
-libkworkspace6.so.6:SessionBackend::stateChanged()
-libkworkspace6.so.6:SessionBackend::aboutToSuspend()
-libkworkspace6.so.6:SessionBackend::canRebootChanged()
-libkworkspace6.so.6:SessionBackend::canSuspendChanged()
-libkworkspace6.so.6:SessionBackend::canShutdownChanged()
-libkworkspace6.so.6:SessionBackend::canHibernateChanged()
-libkworkspace6.so.6:SessionBackend::resumingFromSuspend()
-libkworkspace6.so.6:SessionBackend::canHybridSuspendChanged()
-libkworkspace6.so.6:SessionBackend::canSuspendThenHibernateChanged()
-libkworkspace6.so.6:SessionBackend::self()
-libkworkspace6.so.6:SessionBackend::SessionBackend()
-libkworkspace6.so.6:SessionBackend::SessionBackend()
-libkworkspace6.so.6:KDisplayManager::numReserve()
-libkworkspace6.so.6:KDisplayManager::bootOptions(QList<QString>&, int&, int&)
+libkworkspace6.so.6:DefaultService::legacyBrowserExec()
+libkworkspace6.so.6:DefaultWallpaper::defaultWallpaperPackage()
+libkworkspace6.so.6:KDisplayManager::GDMAuthenticate()
+libkworkspace6.so.6:KDisplayManager::KDisplayManager()
 libkworkspace6.so.6:KDisplayManager::canShutdown()
 libkworkspace6.so.6:KDisplayManager::isSwitchable()
-libkworkspace6.so.6:KDisplayManager::lockSwitchVT(int)
-libkworkspace6.so.6:KDisplayManager::startReserve()
 libkworkspace6.so.6:KDisplayManager::localSessions(QList<SessEnt>&)
-libkworkspace6.so.6:KDisplayManager::GDMAuthenticate()
-libkworkspace6.so.6:KDisplayManager::exec(char const*)
-libkworkspace6.so.6:KDisplayManager::exec(char const*, QByteArray&)
-libkworkspace6.so.6:KDisplayManager::sess2Str(SessEnt const&)
-libkworkspace6.so.6:KDisplayManager::shutdown(KWorkSpace::ShutdownType, KWorkSpace::ShutdownMode, QString const&)
+libkworkspace6.so.6:KDisplayManager::lockSwitchVT(int)
+libkworkspace6.so.6:KDisplayManager::numReserve()
+libkworkspace6.so.6:KDisplayManager::startReserve()
 libkworkspace6.so.6:KDisplayManager::switchVT(int)
-libkworkspace6.so.6:KDisplayManager::sess2Str2(SessEnt const&, QString&, QString&)
-libkworkspace6.so.6:KDisplayManager::KDisplayManager()
-libkworkspace6.so.6:KDisplayManager::KDisplayManager()
 libkworkspace6.so.6:KDisplayManager::~KDisplayManager()
-libkworkspace6.so.6:KDisplayManager::~KDisplayManager()
-libkworkspace6.so.6:DefaultWallpaper::defaultWallpaperPackage()
-libkworkspace6.so.6:SessionManagement::switchUser()
-libkworkspace6.so.6:SessionManagement::qt_metacall(QMetaObject::Call, int, void**)
-libkworkspace6.so.6:SessionManagement::qt_metacast(char const*)
-libkworkspace6.so.6:SessionManagement::saveSession()
-libkworkspace6.so.6:SessionManagement::stateChanged()
-libkworkspace6.so.6:SessionManagement::hybridSuspend()
-libkworkspace6.so.6:SessionManagement::requestLogout(SessionManagement::ConfirmationMode)
-libkworkspace6.so.6:SessionManagement::requestReboot(SessionManagement::ConfirmationMode)
+libkworkspace6.so.6:OutputOrderWatcher::OutputOrderWatcher(QObject*)
+libkworkspace6.so.6:OutputOrderWatcher::instance(QObject*)
+libkworkspace6.so.6:OutputOrderWatcher::refresh()
+libkworkspace6.so.6:OutputOrderWatcher::useFallback(bool)
+libkworkspace6.so.6:SessionBackend::SessionBackend()
+libkworkspace6.so.6:SessionBackend::aboutToSuspend()
+libkworkspace6.so.6:SessionBackend::canHibernateChanged()
+libkworkspace6.so.6:SessionBackend::canHybridSuspendChanged()
+libkworkspace6.so.6:SessionBackend::canRebootChanged()
+libkworkspace6.so.6:SessionBackend::canShutdownChanged()
+libkworkspace6.so.6:SessionBackend::canSuspendChanged()
+libkworkspace6.so.6:SessionBackend::canSuspendThenHibernateChanged()
+libkworkspace6.so.6:SessionBackend::resumingFromSuspend()
+libkworkspace6.so.6:SessionBackend::self()
+libkworkspace6.so.6:SessionBackend::stateChanged()
+libkworkspace6.so.6:SessionManagement::SessionManagement(QObject*)
 libkworkspace6.so.6:SessionManagement::aboutToSuspend()
+libkworkspace6.so.6:SessionManagement::canHibernateChanged()
+libkworkspace6.so.6:SessionManagement::canHybridSuspendChanged()
 libkworkspace6.so.6:SessionManagement::canLockChanged()
-libkworkspace6.so.6:SessionManagement::requestShutdown(SessionManagement::ConfirmationMode)
 libkworkspace6.so.6:SessionManagement::canLogoutChanged()
 libkworkspace6.so.6:SessionManagement::canRebootChanged()
-libkworkspace6.so.6:SessionManagement::canSuspendChanged()
-libkworkspace6.so.6:SessionManagement::canShutdownChanged()
-libkworkspace6.so.6:SessionManagement::canHibernateChanged()
-libkworkspace6.so.6:SessionManagement::requestLogoutPrompt()
-libkworkspace6.so.6:SessionManagement::resumingFromSuspend()
-libkworkspace6.so.6:SessionManagement::canSwitchUserChanged()
-libkworkspace6.so.6:SessionManagement::suspendThenHibernate()
 libkworkspace6.so.6:SessionManagement::canSaveSessionChanged()
-libkworkspace6.so.6:SessionManagement::canHybridSuspendChanged()
+libkworkspace6.so.6:SessionManagement::canShutdownChanged()
+libkworkspace6.so.6:SessionManagement::canSuspendChanged()
 libkworkspace6.so.6:SessionManagement::canSuspendThenHibernateChanged()
-libkworkspace6.so.6:SessionManagement::lock()
-libkworkspace6.so.6:SessionManagement::suspend()
+libkworkspace6.so.6:SessionManagement::canSwitchUserChanged()
 libkworkspace6.so.6:SessionManagement::hibernate()
-libkworkspace6.so.6:SessionManagement::SessionManagement(QObject*)
-libkworkspace6.so.6:SessionManagement::SessionManagement(QObject*)
-libkworkspace6.so.6:OutputOrderWatcher::qt_metacall(QMetaObject::Call, int, void**)
-libkworkspace6.so.6:OutputOrderWatcher::qt_metacast(char const*)
-libkworkspace6.so.6:OutputOrderWatcher::useFallback(bool)
-libkworkspace6.so.6:OutputOrderWatcher::outputOrderChanged(QList<QString> const&)
-libkworkspace6.so.6:OutputOrderWatcher::refresh()
-libkworkspace6.so.6:OutputOrderWatcher::instance(QObject*)
-libkworkspace6.so.6:OutputOrderWatcher::OutputOrderWatcher(QObject*)
-libkworkspace6.so.6:OutputOrderWatcher::OutputOrderWatcher(QObject*)
-libkworkspace6.so.6:AutostartScriptDesktopFile::autostartLocation()
-libkworkspace6.so.6:AutostartScriptDesktopFile::isAutostartScript(KDesktopFile const&)
-libkworkspace6.so.6:AutostartScriptDesktopFile::AutostartScriptDesktopFile(QString const&, QString const&, QString const&)
-libkworkspace6.so.6:AutostartScriptDesktopFile::AutostartScriptDesktopFile(QString const&, QString const&, QString const&)
-libkworkspace6.so.6:SessionBackend::metaObject() const
-libkworkspace6.so.6:SessionBackend::canSwitchUser() const
-libkworkspace6.so.6:SessionBackend::confirmLogout() const
-libkworkspace6.so.6:SessionManagement::canSuspend() const
-libkworkspace6.so.6:SessionManagement::metaObject() const
-libkworkspace6.so.6:SessionManagement::canShutdown() const
-libkworkspace6.so.6:SessionManagement::canHibernate() const
-libkworkspace6.so.6:SessionManagement::canSwitchUser() const
-libkworkspace6.so.6:SessionManagement::canSaveSession() const
-libkworkspace6.so.6:SessionManagement::canHybridSuspend() const
-libkworkspace6.so.6:SessionManagement::canSuspendThenHibernate() const
-libkworkspace6.so.6:SessionManagement::state() const
-libkworkspace6.so.6:SessionManagement::canLock() const
-libkworkspace6.so.6:SessionManagement::canLogout() const
-libkworkspace6.so.6:SessionManagement::canReboot() const
-libkworkspace6.so.6:OutputOrderWatcher::metaObject() const
-libkworkspace6.so.6:OutputOrderWatcher::outputOrder() const
-libnotificationmanager.so.1:qml_register_types_org_kde_notificationmanager()
-libnotificationmanager.so.1:NotificationManager::ServerInfo::nameChanged(QString const&)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::statusChanged(NotificationManager::ServerInfo::Status)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::vendorChanged(QString const&)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::versionChanged(QString const&)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::specVersionChanged(QString const&)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::ServerInfo(QObject*)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::ServerInfo(QObject*)
-libnotificationmanager.so.1:NotificationManager::ServerInfo::~ServerInfo()
-libnotificationmanager.so.1:NotificationManager::ServerInfo::~ServerInfo()
-libnotificationmanager.so.1:NotificationManager::ServerInfo::~ServerInfo()
-libnotificationmanager.so.1:NotificationManager::JobSettings::itemChanged(unsigned long long)
-libnotificationmanager.so.1:NotificationManager::JobSettings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::JobSettings::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::JobSettings::InNotificationsChanged()
-libnotificationmanager.so.1:NotificationManager::JobSettings::PermanentPopupsChanged()
-libnotificationmanager.so.1:NotificationManager::JobSettings::JobSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::JobSettings::JobSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::JobSettings::~JobSettings()
-libnotificationmanager.so.1:NotificationManager::JobSettings::~JobSettings()
-libnotificationmanager.so.1:NotificationManager::JobSettings::~JobSettings()
-libnotificationmanager.so.1:NotificationManager::Notification::setActions(QList<QString> const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setCreated(QDateTime const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setExpired(bool)
-libnotificationmanager.so.1:NotificationManager::Notification::setSummary(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setTimeout(int)
-libnotificationmanager.so.1:NotificationManager::Notification::setResident(bool)
-libnotificationmanager.so.1:NotificationManager::Notification::processHints(QMap<QString, QVariant> const&)
-libnotificationmanager.so.1:NotificationManager::Notification::resetUpdated()
-libnotificationmanager.so.1:NotificationManager::Notification::setDismissed(bool)
-libnotificationmanager.so.1:NotificationManager::Notification::setTransient(bool)
-libnotificationmanager.so.1:NotificationManager::Notification::setDBusService(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setDesktopEntry(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setApplicationName(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setApplicationIconName(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setBody(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setIcon(QString const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setRead(bool)
-libnotificationmanager.so.1:NotificationManager::Notification::setUrls(QList<QUrl> const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setHints(QMap<QString, QVariant> const&)
-libnotificationmanager.so.1:NotificationManager::Notification::setImage(QImage const&)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(NotificationManager::Notification&&)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(unsigned int)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(NotificationManager::Notification&&)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::Notification::Notification(unsigned int)
-libnotificationmanager.so.1:NotificationManager::Notification::~Notification()
-libnotificationmanager.so.1:NotificationManager::Notification::~Notification()
-libnotificationmanager.so.1:NotificationManager::Notification::~Notification()
-libnotificationmanager.so.1:NotificationManager::Notification::operator=(NotificationManager::Notification&&)
-libnotificationmanager.so.1:NotificationManager::Notification::operator=(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::itemChanged(unsigned long long)
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::qt_metacast(char const*)
+libkworkspace6.so.6:SessionManagement::hybridSuspend()
+libkworkspace6.so.6:SessionManagement::lock()
+libkworkspace6.so.6:SessionManagement::requestLogout(SessionManagement::ConfirmationMode)
+libkworkspace6.so.6:SessionManagement::requestLogoutPrompt()
+libkworkspace6.so.6:SessionManagement::requestReboot(SessionManagement::ConfirmationMode)
+libkworkspace6.so.6:SessionManagement::requestShutdown(SessionManagement::ConfirmationMode)
+libkworkspace6.so.6:SessionManagement::resumingFromSuspend()
+libkworkspace6.so.6:SessionManagement::saveSession()
+libkworkspace6.so.6:SessionManagement::stateChanged()
+libkworkspace6.so.6:SessionManagement::suspend()
+libkworkspace6.so.6:SessionManagement::suspendThenHibernate()
+libkworkspace6.so.6:SessionManagement::switchUser()
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::AbstractNotificationsModel()
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::lastReadChanged()
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::notifications()
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::setWindow(QWindow*)
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::windowChanged(QWindow*)
+libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::~AbstractNotificationsModel()
+libnotificationmanager.so.1:NotificationManager::BadgeSettings::BadgeSettings(QObject*)
 libnotificationmanager.so.1:NotificationManager::BadgeSettings::InTaskManagerChanged()
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::BadgeSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::BadgeSettings(QObject*)
 libnotificationmanager.so.1:NotificationManager::BadgeSettings::~BadgeSettings()
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::~BadgeSettings()
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::~BadgeSettings()
-libnotificationmanager.so.1:NotificationManager::EventSettings::EventSettings(QExplicitlySharedDataPointer<KSharedConfig>, QString const&, QObject*)
-libnotificationmanager.so.1:NotificationManager::EventSettings::EventSettings(QExplicitlySharedDataPointer<KSharedConfig>, QString const&, QObject*)
-libnotificationmanager.so.1:NotificationManager::EventSettings::~EventSettings()
-libnotificationmanager.so.1:NotificationManager::EventSettings::~EventSettings()
-libnotificationmanager.so.1:NotificationManager::EventSettings::~EventSettings()
-libnotificationmanager.so.1:NotificationManager::Notifications::classBegin()
-libnotificationmanager.so.1:NotificationManager::Notifications::suspendJob(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::Notifications::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::Notifications::setLastRead(QDateTime const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setShowJobs(bool)
-libnotificationmanager.so.1:NotificationManager::Notifications::setSortMode(NotificationManager::Notifications::SortMode)
-libnotificationmanager.so.1:NotificationManager::Notifications::stopTimeout(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::countChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::invokeAction(QModelIndex const&, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::Notifications::limitChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::setGroupMode(NotificationManager::Notifications::GroupMode)
-libnotificationmanager.so.1:NotificationManager::Notifications::setSortOrder(Qt::SortOrder)
-libnotificationmanager.so.1:NotificationManager::Notifications::setUrgencies(QFlags<NotificationManager::Notifications::Urgency>)
-libnotificationmanager.so.1:NotificationManager::Notifications::startTimeout(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::startTimeout(unsigned int)
-libnotificationmanager.so.1:NotificationManager::Notifications::resetLastRead()
-libnotificationmanager.so.1:NotificationManager::Notifications::setGroupLimit(int)
-libnotificationmanager.so.1:NotificationManager::Notifications::windowChanged(QWindow*)
-libnotificationmanager.so.1:NotificationManager::Notifications::setShowExpired(bool)
-libnotificationmanager.so.1:NotificationManager::Notifications::lastReadChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::setExpandUnread(bool)
-libnotificationmanager.so.1:NotificationManager::Notifications::showJobsChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::sortModeChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::groupModeChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::setShowDismissed(bool)
-libnotificationmanager.so.1:NotificationManager::Notifications::sortOrderChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::urgenciesChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::collapseAllGroups()
-libnotificationmanager.so.1:NotificationManager::Notifications::componentComplete()
-libnotificationmanager.so.1:NotificationManager::Notifications::groupLimitChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::showExpiredChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::expandUnreadChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::invokeDefaultAction(QModelIndex const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::Notifications::setShowNotifications(bool)
-libnotificationmanager.so.1:NotificationManager::Notifications::showDismissedChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::jobsPercentageChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::activeJobsCountChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::showNotificationsChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::setBlacklistedNotifyRcNames(QList<QString> const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setWhitelistedNotifyRcNames(QList<QString> const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setBlacklistedDesktopEntries(QList<QString> const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setWhitelistedDesktopEntries(QList<QString> const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::activeNotificationsCountChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedNotifyRcNamesChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::unreadNotificationsCountChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedNotifyRcNamesChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedDesktopEntriesChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::expiredNotificationsCountChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedDesktopEntriesChanged()
-libnotificationmanager.so.1:NotificationManager::Notifications::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
-libnotificationmanager.so.1:NotificationManager::Notifications::close(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::reply(QModelIndex const&, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::Notifications::expire(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::killJob(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setData(QModelIndex const&, QVariant const&, int)
-libnotificationmanager.so.1:NotificationManager::Notifications::setLimit(int)
-libnotificationmanager.so.1:NotificationManager::Notifications::configure(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::resumeJob(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::Notifications::setWindow(QWindow*)
-libnotificationmanager.so.1:NotificationManager::Notifications::Notifications(QObject*)
-libnotificationmanager.so.1:NotificationManager::Notifications::Notifications(QObject*)
-libnotificationmanager.so.1:NotificationManager::Notifications::~Notifications()
-libnotificationmanager.so.1:NotificationManager::Notifications::~Notifications()
-libnotificationmanager.so.1:NotificationManager::Notifications::~Notifications()
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::itemChanged(unsigned long long)
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::qt_metacast(char const*)
 libnotificationmanager.so.1:NotificationManager::BehaviorSettings::ShowBadgesChanged()
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::ShowPopupsChanged()
 libnotificationmanager.so.1:NotificationManager::BehaviorSettings::ShowInHistoryChanged()
+libnotificationmanager.so.1:NotificationManager::BehaviorSettings::ShowPopupsChanged()
 libnotificationmanager.so.1:NotificationManager::BehaviorSettings::ShowPopupsInDndModeChanged()
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::BehaviorSettings(QString const&, QString const&, QObject*)
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::BehaviorSettings(QString const&, QString const&, QObject*)
 libnotificationmanager.so.1:NotificationManager::BehaviorSettings::~BehaviorSettings()
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::~BehaviorSettings()
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::~BehaviorSettings()
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::invokeAction(unsigned int, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::invokeDefaultAction(unsigned int, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::createNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::close(unsigned int)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::reply(unsigned int, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::expire(unsigned int)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::configure(QString const&, QString const&, QString const&)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::configure(unsigned int)
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::NotificationsModel()
-libnotificationmanager.so.1:NotificationManager::NotificationsModel::NotificationsModel()
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::itemChanged(unsigned long long)
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::qt_metacast(char const*)
+libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::DoNotDisturbSettings(QObject*)
+libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::NotificationSoundsMutedChanged()
 libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::UntilChanged()
 libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::WhenScreenSharingChanged()
 libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::WhenScreensMirroredChanged()
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::NotificationSoundsMutedChanged()
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::DoNotDisturbSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::DoNotDisturbSettings(QObject*)
 libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::~DoNotDisturbSettings()
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::~DoNotDisturbSettings()
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::~DoNotDisturbSettings()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::itemChanged(unsigned long long)
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::PopupTimeoutChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::PopupPositionChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::CriticalInDndModeChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::LowPriorityPopupsChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::NormalAlwaysOnTopChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::LowPriorityHistoryChanged()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::NotificationSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::NotificationSettings(QObject*)
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::~NotificationSettings()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::~NotificationSettings()
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::~NotificationSettings()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::invokeAction(unsigned int, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::validChanged(bool)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::invokeDefaultAction(unsigned int, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::close(unsigned int)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::reply(unsigned int, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::valid()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::expire(unsigned int)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::CloseNotification(unsigned int)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::NotificationClosed(unsigned int, unsigned int)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::Notify(unsigned int, QString const&, unsigned int, QString const&, QString const&, QString const&, QList<QString> const&, QMap<QString, QVariant> const&, int)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::Private(NotificationManager::WatchedNotificationsModel*, QObject*)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::Private(NotificationManager::WatchedNotificationsModel*, QObject*)
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::~Private()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::~Private()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::~Private()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::WatchedNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::WatchedNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::~WatchedNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::~WatchedNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::~WatchedNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::setLastRead(QDateTime const&)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::stopTimeout(unsigned int)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::startTimeout(unsigned int)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::notifications()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::windowChanged(QWindow*)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::lastReadChanged()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::onNotificationAdded(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::onNotificationRemoved(unsigned int, NotificationManager::Server::CloseReason)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::onNotificationReplaced(unsigned int, NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::setupNotificationTimeout(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::setData(QModelIndex const&, QVariant const&, int)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::setWindow(QWindow*)
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::AbstractNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::AbstractNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::~AbstractNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::~AbstractNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::~AbstractNotificationsModel()
-libnotificationmanager.so.1:NotificationManager::Job::setExpired(bool)
-libnotificationmanager.so.1:NotificationManager::Job::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::Job::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::Job::setKillable(bool)
-libnotificationmanager.so.1:NotificationManager::Job::textChanged()
+libnotificationmanager.so.1:NotificationManager::EventSettings::~EventSettings()
+libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel1Changed()
+libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel2Changed()
+libnotificationmanager.so.1:NotificationManager::Job::descriptionUrlChanged()
+libnotificationmanager.so.1:NotificationManager::Job::descriptionValue1Changed()
+libnotificationmanager.so.1:NotificationManager::Job::descriptionValue2Changed()
+libnotificationmanager.so.1:NotificationManager::Job::destUrlChanged()
+libnotificationmanager.so.1:NotificationManager::Job::dismissedChanged()
 libnotificationmanager.so.1:NotificationManager::Job::errorChanged(int)
+libnotificationmanager.so.1:NotificationManager::Job::expiredChanged()
+libnotificationmanager.so.1:NotificationManager::Job::hasDetailsChanged()
+libnotificationmanager.so.1:NotificationManager::Job::kill()
+libnotificationmanager.so.1:NotificationManager::Job::percentageChanged(int)
+libnotificationmanager.so.1:NotificationManager::Job::processedAmountChanged()
+libnotificationmanager.so.1:NotificationManager::Job::processedBytesChanged()
+libnotificationmanager.so.1:NotificationManager::Job::processedDirectoriesChanged()
+libnotificationmanager.so.1:NotificationManager::Job::processedFilesChanged()
+libnotificationmanager.so.1:NotificationManager::Job::processedItemsChanged()
 libnotificationmanager.so.1:NotificationManager::Job::resetUpdated()
+libnotificationmanager.so.1:NotificationManager::Job::resume()
 libnotificationmanager.so.1:NotificationManager::Job::setDismissed(bool)
-libnotificationmanager.so.1:NotificationManager::Job::setErrorText(QString const&)
+libnotificationmanager.so.1:NotificationManager::Job::setError(int)
+libnotificationmanager.so.1:NotificationManager::Job::setExpired(bool)
+libnotificationmanager.so.1:NotificationManager::Job::setKillable(bool)
+libnotificationmanager.so.1:NotificationManager::Job::setState(NotificationManager::Notifications::JobState)
+libnotificationmanager.so.1:NotificationManager::Job::setSuspendable(bool)
 libnotificationmanager.so.1:NotificationManager::Job::setTransient(bool)
 libnotificationmanager.so.1:NotificationManager::Job::speedChanged()
 libnotificationmanager.so.1:NotificationManager::Job::stateChanged(NotificationManager::Notifications::JobState)
-libnotificationmanager.so.1:NotificationManager::Job::destUrlChanged()
-libnotificationmanager.so.1:NotificationManager::Job::expiredChanged()
-libnotificationmanager.so.1:NotificationManager::Job::setSuspendable(bool)
 libnotificationmanager.so.1:NotificationManager::Job::summaryChanged()
-libnotificationmanager.so.1:NotificationManager::Job::updatedChanged()
-libnotificationmanager.so.1:NotificationManager::Job::setDesktopEntry(QString const&)
-libnotificationmanager.so.1:NotificationManager::Job::dismissedChanged()
-libnotificationmanager.so.1:NotificationManager::Job::errorTextChanged(QString const&)
-libnotificationmanager.so.1:NotificationManager::Job::hasDetailsChanged()
-libnotificationmanager.so.1:NotificationManager::Job::percentageChanged(int)
+libnotificationmanager.so.1:NotificationManager::Job::suspend()
+libnotificationmanager.so.1:NotificationManager::Job::textChanged()
+libnotificationmanager.so.1:NotificationManager::Job::totalAmountChanged()
 libnotificationmanager.so.1:NotificationManager::Job::totalBytesChanged()
+libnotificationmanager.so.1:NotificationManager::Job::totalDirectoriesChanged()
 libnotificationmanager.so.1:NotificationManager::Job::totalFilesChanged()
 libnotificationmanager.so.1:NotificationManager::Job::totalItemsChanged()
-libnotificationmanager.so.1:NotificationManager::Job::setApplicationName(QString const&)
-libnotificationmanager.so.1:NotificationManager::Job::totalAmountChanged()
-libnotificationmanager.so.1:NotificationManager::Job::descriptionUrlChanged()
-libnotificationmanager.so.1:NotificationManager::Job::processedBytesChanged()
-libnotificationmanager.so.1:NotificationManager::Job::processedFilesChanged()
-libnotificationmanager.so.1:NotificationManager::Job::processedItemsChanged()
-libnotificationmanager.so.1:NotificationManager::Job::processedAmountChanged()
-libnotificationmanager.so.1:NotificationManager::Job::setApplicationIconName(QString const&)
-libnotificationmanager.so.1:NotificationManager::Job::totalDirectoriesChanged()
-libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel1Changed()
-libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel2Changed()
-libnotificationmanager.so.1:NotificationManager::Job::descriptionValue1Changed()
-libnotificationmanager.so.1:NotificationManager::Job::descriptionValue2Changed()
-libnotificationmanager.so.1:NotificationManager::Job::processedDirectoriesChanged()
-libnotificationmanager.so.1:NotificationManager::Job::kill()
-libnotificationmanager.so.1:NotificationManager::Job::resume()
-libnotificationmanager.so.1:NotificationManager::Job::suspend()
-libnotificationmanager.so.1:NotificationManager::Job::setError(int)
-libnotificationmanager.so.1:NotificationManager::Job::setState(NotificationManager::Notifications::JobState)
-libnotificationmanager.so.1:NotificationManager::Job::Job(unsigned int, QObject*)
-libnotificationmanager.so.1:NotificationManager::Job::Job(unsigned int, QObject*)
+libnotificationmanager.so.1:NotificationManager::Job::updatedChanged()
 libnotificationmanager.so.1:NotificationManager::Job::~Job()
-libnotificationmanager.so.1:NotificationManager::Job::~Job()
-libnotificationmanager.so.1:NotificationManager::Job::~Job()
-libnotificationmanager.so.1:NotificationManager::Server::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::Server::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::Server::invokeAction(unsigned int, QString const&, QString const&, NotificationManager::Notifications::InvokeBehavior, QWindow*)
-libnotificationmanager.so.1:NotificationManager::Server::setInhibited(bool)
-libnotificationmanager.so.1:NotificationManager::Server::validChanged()
+libnotificationmanager.so.1:NotificationManager::JobSettings::InNotificationsChanged()
+libnotificationmanager.so.1:NotificationManager::JobSettings::JobSettings(QObject*)
+libnotificationmanager.so.1:NotificationManager::JobSettings::PermanentPopupsChanged()
+libnotificationmanager.so.1:NotificationManager::JobSettings::~JobSettings()
+libnotificationmanager.so.1:NotificationManager::JobsModel::JobsModel()
+libnotificationmanager.so.1:NotificationManager::JobsModel::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
+libnotificationmanager.so.1:NotificationManager::JobsModel::createJobsModel()
+libnotificationmanager.so.1:NotificationManager::JobsModel::init()
+libnotificationmanager.so.1:NotificationManager::JobsModel::serviceOwnershipLost()
+libnotificationmanager.so.1:NotificationManager::JobsModel::~JobsModel()
+libnotificationmanager.so.1:NotificationManager::Notification::Notification(NotificationManager::Notification&&)
+libnotificationmanager.so.1:NotificationManager::Notification::operator=(NotificationManager::Notification&&)
+libnotificationmanager.so.1:NotificationManager::Notification::resetUpdated()
+libnotificationmanager.so.1:NotificationManager::Notification::setDismissed(bool)
+libnotificationmanager.so.1:NotificationManager::Notification::setExpired(bool)
+libnotificationmanager.so.1:NotificationManager::Notification::setRead(bool)
+libnotificationmanager.so.1:NotificationManager::Notification::setResident(bool)
+libnotificationmanager.so.1:NotificationManager::Notification::setTimeout(int)
+libnotificationmanager.so.1:NotificationManager::Notification::setTransient(bool)
+libnotificationmanager.so.1:NotificationManager::Notification::~Notification()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::CriticalInDndModeChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::LowPriorityHistoryChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::LowPriorityPopupsChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::NormalAlwaysOnTopChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::NotificationSettings(QObject*)
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::PopupPositionChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::PopupTimeoutChanged()
+libnotificationmanager.so.1:NotificationManager::NotificationSettings::~NotificationSettings()
+libnotificationmanager.so.1:NotificationManager::Notifications::Notifications(QObject*)
+libnotificationmanager.so.1:NotificationManager::Notifications::activeJobsCountChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::activeNotificationsCountChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedDesktopEntriesChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedNotifyRcNamesChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::classBegin()
+libnotificationmanager.so.1:NotificationManager::Notifications::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
+libnotificationmanager.so.1:NotificationManager::Notifications::collapseAllGroups()
+libnotificationmanager.so.1:NotificationManager::Notifications::componentComplete()
+libnotificationmanager.so.1:NotificationManager::Notifications::countChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::expandUnreadChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::expiredNotificationsCountChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::groupLimitChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::groupModeChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::jobsPercentageChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::lastReadChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::limitChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::resetLastRead()
+libnotificationmanager.so.1:NotificationManager::Notifications::setExpandUnread(bool)
+libnotificationmanager.so.1:NotificationManager::Notifications::setGroupLimit(int)
+libnotificationmanager.so.1:NotificationManager::Notifications::setGroupMode(NotificationManager::Notifications::GroupMode)
+libnotificationmanager.so.1:NotificationManager::Notifications::setLimit(int)
+libnotificationmanager.so.1:NotificationManager::Notifications::setShowDismissed(bool)
+libnotificationmanager.so.1:NotificationManager::Notifications::setShowExpired(bool)
+libnotificationmanager.so.1:NotificationManager::Notifications::setShowJobs(bool)
+libnotificationmanager.so.1:NotificationManager::Notifications::setShowNotifications(bool)
+libnotificationmanager.so.1:NotificationManager::Notifications::setSortMode(NotificationManager::Notifications::SortMode)
+libnotificationmanager.so.1:NotificationManager::Notifications::setSortOrder(Qt::SortOrder)
+libnotificationmanager.so.1:NotificationManager::Notifications::setUrgencies(QFlags<NotificationManager::Notifications::Urgency>)
+libnotificationmanager.so.1:NotificationManager::Notifications::setWindow(QWindow*)
+libnotificationmanager.so.1:NotificationManager::Notifications::showDismissedChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::showExpiredChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::showJobsChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::showNotificationsChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::sortModeChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::sortOrderChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::unreadNotificationsCountChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::urgenciesChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedDesktopEntriesChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedNotifyRcNamesChanged()
+libnotificationmanager.so.1:NotificationManager::Notifications::windowChanged(QWindow*)
+libnotificationmanager.so.1:NotificationManager::Notifications::~Notifications()
+libnotificationmanager.so.1:NotificationManager::NotificationsModel::NotificationsModel()
+libnotificationmanager.so.1:NotificationManager::NotificationsModel::createNotificationsModel()
+libnotificationmanager.so.1:NotificationManager::Server::Server(QObject*)
 libnotificationmanager.so.1:NotificationManager::Server::clearInhibitions()
-libnotificationmanager.so.1:NotificationManager::Server::inhibitedChanged(bool)
-libnotificationmanager.so.1:NotificationManager::Server::closeNotification(unsigned int, NotificationManager::Server::CloseReason)
-libnotificationmanager.so.1:NotificationManager::Server::notificationAdded(NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::Server::notificationRemoved(unsigned int, NotificationManager::Server::CloseReason)
-libnotificationmanager.so.1:NotificationManager::Server::notificationReplaced(unsigned int, NotificationManager::Notification const&)
-libnotificationmanager.so.1:NotificationManager::Server::serviceOwnershipLost()
 libnotificationmanager.so.1:NotificationManager::Server::inhibitedByApplicationChanged(bool)
+libnotificationmanager.so.1:NotificationManager::Server::inhibitedChanged(bool)
 libnotificationmanager.so.1:NotificationManager::Server::inhibitionApplicationsChanged()
-libnotificationmanager.so.1:NotificationManager::Server::add(NotificationManager::Notification const&)
 libnotificationmanager.so.1:NotificationManager::Server::init()
 libnotificationmanager.so.1:NotificationManager::Server::self()
-libnotificationmanager.so.1:NotificationManager::Server::reply(QString const&, unsigned int, QString const&, NotificationManager::Notifications::InvokeBehavior)
-libnotificationmanager.so.1:NotificationManager::Server::create(QQmlEngine*, QJSEngine*)
-libnotificationmanager.so.1:NotificationManager::Server::Server(QObject*)
-libnotificationmanager.so.1:NotificationManager::Server::Server(QObject*)
+libnotificationmanager.so.1:NotificationManager::Server::serviceOwnershipLost()
+libnotificationmanager.so.1:NotificationManager::Server::setInhibited(bool)
+libnotificationmanager.so.1:NotificationManager::Server::validChanged()
 libnotificationmanager.so.1:NotificationManager::Server::~Server()
-libnotificationmanager.so.1:NotificationManager::Server::~Server()
-libnotificationmanager.so.1:NotificationManager::Server::~Server()
-libnotificationmanager.so.1:NotificationManager::Settings::liveChanged()
-libnotificationmanager.so.1:NotificationManager::Settings::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::Settings::qt_metacast(char const*)
+libnotificationmanager.so.1:NotificationManager::ServerInfo::ServerInfo(QObject*)
+libnotificationmanager.so.1:NotificationManager::ServerInfo::statusChanged(NotificationManager::ServerInfo::Status)
+libnotificationmanager.so.1:NotificationManager::ServerInfo::~ServerInfo()
+libnotificationmanager.so.1:NotificationManager::Settings::Settings(QObject*)
+libnotificationmanager.so.1:NotificationManager::Settings::defaults()
 libnotificationmanager.so.1:NotificationManager::Settings::dirtyChanged()
-libnotificationmanager.so.1:NotificationManager::Settings::setPopupTimeout(int)
-libnotificationmanager.so.1:NotificationManager::Settings::settingsChanged()
-libnotificationmanager.so.1:NotificationManager::Settings::setPopupPosition(NotificationManager::Settings::PopupPosition)
-libnotificationmanager.so.1:NotificationManager::Settings::resetPopupTimeout()
-libnotificationmanager.so.1:NotificationManager::Settings::setScreensMirrored(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setServiceBehavior(QString const&, QFlags<NotificationManager::Settings::NotificationBehavior>)
-libnotificationmanager.so.1:NotificationManager::Settings::setLowPriorityPopups(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setLowPriorityHistory(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setPermanentJobPopups(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::forgetKnownApplication(QString const&)
-libnotificationmanager.so.1:NotificationManager::Settings::screensMirroredChanged()
-libnotificationmanager.so.1:NotificationManager::Settings::setApplicationBehavior(QString const&, QFlags<NotificationManager::Settings::NotificationBehavior>)
-libnotificationmanager.so.1:NotificationManager::Settings::setBadgesInTaskManager(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setJobsInNotifications(bool)
 libnotificationmanager.so.1:NotificationManager::Settings::knownApplicationsChanged()
-libnotificationmanager.so.1:NotificationManager::Settings::registerKnownApplication(QString const&)
-libnotificationmanager.so.1:NotificationManager::Settings::setKeepNormalAlwaysOnTop(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::revokeApplicationInhibitions()
-libnotificationmanager.so.1:NotificationManager::Settings::setNotificationSoundsInhibited(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setNotificationsInhibitedUntil(QDateTime const&)
-libnotificationmanager.so.1:NotificationManager::Settings::resetNotificationsInhibitedUntil()
-libnotificationmanager.so.1:NotificationManager::Settings::setCriticalPopupsInDoNotDisturbMode(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setInhibitNotificationsWhenScreenSharing(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::liveChanged()
+libnotificationmanager.so.1:NotificationManager::Settings::load()
 libnotificationmanager.so.1:NotificationManager::Settings::notificationInhibitionApplicationsChanged()
 libnotificationmanager.so.1:NotificationManager::Settings::notificationsInhibitedByApplicationChanged(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::setInhibitNotificationsWhenScreensMirrored(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::load()
+libnotificationmanager.so.1:NotificationManager::Settings::resetNotificationsInhibitedUntil()
+libnotificationmanager.so.1:NotificationManager::Settings::resetPopupTimeout()
+libnotificationmanager.so.1:NotificationManager::Settings::revokeApplicationInhibitions()
 libnotificationmanager.so.1:NotificationManager::Settings::save()
+libnotificationmanager.so.1:NotificationManager::Settings::screensMirroredChanged()
+libnotificationmanager.so.1:NotificationManager::Settings::setBadgesInTaskManager(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setCriticalPopupsInDoNotDisturbMode(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setInhibitNotificationsWhenScreenSharing(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setInhibitNotificationsWhenScreensMirrored(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setJobsInNotifications(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setKeepNormalAlwaysOnTop(bool)
 libnotificationmanager.so.1:NotificationManager::Settings::setLive(bool)
-libnotificationmanager.so.1:NotificationManager::Settings::defaults()
-libnotificationmanager.so.1:NotificationManager::Settings::Settings(QObject*)
-libnotificationmanager.so.1:NotificationManager::Settings::Settings(QExplicitlySharedDataPointer<KSharedConfig> const&, QObject*)
-libnotificationmanager.so.1:NotificationManager::Settings::Settings(QObject*)
-libnotificationmanager.so.1:NotificationManager::Settings::Settings(QExplicitlySharedDataPointer<KSharedConfig> const&, QObject*)
+libnotificationmanager.so.1:NotificationManager::Settings::setLowPriorityHistory(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setLowPriorityPopups(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setNotificationSoundsInhibited(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setPermanentJobPopups(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::setPopupPosition(NotificationManager::Settings::PopupPosition)
+libnotificationmanager.so.1:NotificationManager::Settings::setPopupTimeout(int)
+libnotificationmanager.so.1:NotificationManager::Settings::setScreensMirrored(bool)
+libnotificationmanager.so.1:NotificationManager::Settings::settingsChanged()
 libnotificationmanager.so.1:NotificationManager::Settings::~Settings()
-libnotificationmanager.so.1:NotificationManager::Settings::~Settings()
-libnotificationmanager.so.1:NotificationManager::Settings::~Settings()
-libnotificationmanager.so.1:NotificationManager::JobsModel::qt_metacall(QMetaObject::Call, int, void**)
-libnotificationmanager.so.1:NotificationManager::JobsModel::qt_metacast(char const*)
-libnotificationmanager.so.1:NotificationManager::JobsModel::createJobsModel()
-libnotificationmanager.so.1:NotificationManager::JobsModel::serviceOwnershipLost()
-libnotificationmanager.so.1:NotificationManager::JobsModel::init()
-libnotificationmanager.so.1:NotificationManager::JobsModel::kill(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::JobsModel::clear(QFlags<NotificationManager::Notifications::ClearFlag>)
-libnotificationmanager.so.1:NotificationManager::JobsModel::close(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::JobsModel::expire(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::JobsModel::resume(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::JobsModel::setData(QModelIndex const&, QVariant const&, int)
-libnotificationmanager.so.1:NotificationManager::JobsModel::suspend(QModelIndex const&)
-libnotificationmanager.so.1:NotificationManager::JobsModel::JobsModel()
-libnotificationmanager.so.1:NotificationManager::JobsModel::JobsModel()
-libnotificationmanager.so.1:NotificationManager::JobsModel::~JobsModel()
-libnotificationmanager.so.1:NotificationManager::JobsModel::~JobsModel()
-libnotificationmanager.so.1:NotificationManager::JobsModel::~JobsModel()
-libnotificationmanager.so.1:NotificationManager::ServerInfo::metaObject() const
-libnotificationmanager.so.1:NotificationManager::ServerInfo::specVersion() const
-libnotificationmanager.so.1:NotificationManager::ServerInfo::name() const
-libnotificationmanager.so.1:NotificationManager::ServerInfo::status() const
-libnotificationmanager.so.1:NotificationManager::ServerInfo::vendor() const
-libnotificationmanager.so.1:NotificationManager::ServerInfo::version() const
-libnotificationmanager.so.1:NotificationManager::JobSettings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::JobSettings::defaultInNotificationsValue_helper() const
-libnotificationmanager.so.1:NotificationManager::JobSettings::defaultPermanentPopupsValue_helper() const
-libnotificationmanager.so.1:NotificationManager::Notification::originName() const
-libnotificationmanager.so.1:NotificationManager::Notification::actionNames() const
-libnotificationmanager.so.1:NotificationManager::Notification::dBusService() const
-libnotificationmanager.so.1:NotificationManager::Notification::actionLabels() const
-libnotificationmanager.so.1:NotificationManager::Notification::configurable() const
-libnotificationmanager.so.1:NotificationManager::Notification::desktopEntry() const
-libnotificationmanager.so.1:NotificationManager::Notification::notifyRcName() const
-libnotificationmanager.so.1:NotificationManager::Notification::hasReplyAction() const
-libnotificationmanager.so.1:NotificationManager::Notification::applicationName() const
-libnotificationmanager.so.1:NotificationManager::Notification::hasDefaultAction() const
-libnotificationmanager.so.1:NotificationManager::Notification::replyActionLabel() const
-libnotificationmanager.so.1:NotificationManager::Notification::defaultActionLabel() const
-libnotificationmanager.so.1:NotificationManager::Notification::userActionFeedback() const
-libnotificationmanager.so.1:NotificationManager::Notification::applicationIconName() const
-libnotificationmanager.so.1:NotificationManager::Notification::configureActionLabel() const
-libnotificationmanager.so.1:NotificationManager::Notification::replyPlaceholderText() const
-libnotificationmanager.so.1:NotificationManager::Notification::replySubmitButtonText() const
-libnotificationmanager.so.1:NotificationManager::Notification::replySubmitButtonIconName() const
-libnotificationmanager.so.1:NotificationManager::Notification::id() const
-libnotificationmanager.so.1:NotificationManager::Notification::body() const
-libnotificationmanager.so.1:NotificationManager::Notification::icon() const
-libnotificationmanager.so.1:NotificationManager::Notification::read() const
-libnotificationmanager.so.1:NotificationManager::Notification::urls() const
-libnotificationmanager.so.1:NotificationManager::Notification::hints() const
-libnotificationmanager.so.1:NotificationManager::Notification::image() const
-libnotificationmanager.so.1:NotificationManager::Notification::created() const
-libnotificationmanager.so.1:NotificationManager::Notification::eventId() const
-libnotificationmanager.so.1:NotificationManager::Notification::expired() const
-libnotificationmanager.so.1:NotificationManager::Notification::rawBody() const
-libnotificationmanager.so.1:NotificationManager::Notification::summary() const
-libnotificationmanager.so.1:NotificationManager::Notification::timeout() const
-libnotificationmanager.so.1:NotificationManager::Notification::updated() const
-libnotificationmanager.so.1:NotificationManager::Notification::urgency() const
-libnotificationmanager.so.1:NotificationManager::Notification::category() const
-libnotificationmanager.so.1:NotificationManager::Notification::resident() const
-libnotificationmanager.so.1:NotificationManager::Notification::dismissed() const
-libnotificationmanager.so.1:NotificationManager::Notification::transient() const
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::BadgeSettings::defaultInTaskManagerValue_helper() const
-libnotificationmanager.so.1:NotificationManager::Notifications::groupIndex(QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::Notifications::groupLimit() const
-libnotificationmanager.so.1:NotificationManager::Notifications::metaObject() const
-libnotificationmanager.so.1:NotificationManager::Notifications::showExpired() const
-libnotificationmanager.so.1:NotificationManager::Notifications::expandUnread() const
-libnotificationmanager.so.1:NotificationManager::Notifications::showDismissed() const
-libnotificationmanager.so.1:NotificationManager::Notifications::jobsPercentage() const
-libnotificationmanager.so.1:NotificationManager::Notifications::activeJobsCount() const
-libnotificationmanager.so.1:NotificationManager::Notifications::filterAcceptsRow(int, QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::Notifications::showNotifications() const
-libnotificationmanager.so.1:NotificationManager::Notifications::activeNotificationsCount() const
-libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedNotifyRcNames() const
-libnotificationmanager.so.1:NotificationManager::Notifications::makePersistentModelIndex(QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::Notifications::unreadNotificationsCount() const
-libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedNotifyRcNames() const
-libnotificationmanager.so.1:NotificationManager::Notifications::blacklistedDesktopEntries() const
-libnotificationmanager.so.1:NotificationManager::Notifications::expiredNotificationsCount() const
-libnotificationmanager.so.1:NotificationManager::Notifications::whitelistedDesktopEntries() const
-libnotificationmanager.so.1:NotificationManager::Notifications::data(QModelIndex const&, int) const
-libnotificationmanager.so.1:NotificationManager::Notifications::count() const
-libnotificationmanager.so.1:NotificationManager::Notifications::limit() const
-libnotificationmanager.so.1:NotificationManager::Notifications::window() const
-libnotificationmanager.so.1:NotificationManager::Notifications::lastRead() const
-libnotificationmanager.so.1:NotificationManager::Notifications::lessThan(QModelIndex const&, QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::Notifications::rowCount(QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::Notifications::showJobs() const
-libnotificationmanager.so.1:NotificationManager::Notifications::sortMode() const
-libnotificationmanager.so.1:NotificationManager::Notifications::groupMode() const
-libnotificationmanager.so.1:NotificationManager::Notifications::roleNames() const
-libnotificationmanager.so.1:NotificationManager::Notifications::sortOrder() const
-libnotificationmanager.so.1:NotificationManager::Notifications::urgencies() const
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::defaultShowBadgesValue_helper() const
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::defaultShowPopupsValue_helper() const
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::defaultShowInHistoryValue_helper() const
-libnotificationmanager.so.1:NotificationManager::BehaviorSettings::defaultShowPopupsInDndModeValue_helper() const
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::defaultWhenScreenSharingValue_helper() const
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::defaultWhenScreensMirroredValue_helper() const
-libnotificationmanager.so.1:NotificationManager::DoNotDisturbSettings::defaultNotificationSoundsMutedValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultPopupTimeoutValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultPopupPositionValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultCriticalInDndModeValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultLowPriorityPopupsValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultNormalAlwaysOnTopValue_helper() const
-libnotificationmanager.so.1:NotificationManager::NotificationSettings::defaultLowPriorityHistoryValue_helper() const
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::metaObject() const
-libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::metaObject() const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::metaObject() const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::rowOfNotification(unsigned int) const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::data(QModelIndex const&, int) const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::window() const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::lastRead() const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::rowCount(QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::AbstractNotificationsModel::roleNames() const
-libnotificationmanager.so.1:NotificationManager::Job::hasDetails() const
-libnotificationmanager.so.1:NotificationManager::Job::metaObject() const
-libnotificationmanager.so.1:NotificationManager::Job::percentage() const
-libnotificationmanager.so.1:NotificationManager::Job::totalBytes() const
-libnotificationmanager.so.1:NotificationManager::Job::totalFiles() const
-libnotificationmanager.so.1:NotificationManager::Job::totalItems() const
-libnotificationmanager.so.1:NotificationManager::Job::suspendable() const
-libnotificationmanager.so.1:NotificationManager::Job::desktopEntry() const
-libnotificationmanager.so.1:NotificationManager::Job::descriptionUrl() const
-libnotificationmanager.so.1:NotificationManager::Job::processedBytes() const
-libnotificationmanager.so.1:NotificationManager::Job::processedFiles() const
-libnotificationmanager.so.1:NotificationManager::Job::processedItems() const
-libnotificationmanager.so.1:NotificationManager::Job::applicationName() const
-libnotificationmanager.so.1:NotificationManager::Job::totalDirectories() const
-libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel1() const
-libnotificationmanager.so.1:NotificationManager::Job::descriptionLabel2() const
-libnotificationmanager.so.1:NotificationManager::Job::descriptionValue1() const
-libnotificationmanager.so.1:NotificationManager::Job::descriptionValue2() const
-libnotificationmanager.so.1:NotificationManager::Job::applicationIconName() const
-libnotificationmanager.so.1:NotificationManager::Job::processedDirectories() const
-libnotificationmanager.so.1:NotificationManager::Job::id() const
-libnotificationmanager.so.1:NotificationManager::Job::text() const
-libnotificationmanager.so.1:NotificationManager::Job::error() const
-libnotificationmanager.so.1:NotificationManager::Job::speed() const
-libnotificationmanager.so.1:NotificationManager::Job::state() const
-libnotificationmanager.so.1:NotificationManager::Job::created() const
-libnotificationmanager.so.1:NotificationManager::Job::destUrl() const
-libnotificationmanager.so.1:NotificationManager::Job::expired() const
-libnotificationmanager.so.1:NotificationManager::Job::summary() const
-libnotificationmanager.so.1:NotificationManager::Job::updated() const
-libnotificationmanager.so.1:NotificationManager::Job::killable() const
-libnotificationmanager.so.1:NotificationManager::Job::dismissed() const
-libnotificationmanager.so.1:NotificationManager::Job::errorText() const
-libnotificationmanager.so.1:NotificationManager::Job::transient() const
-libnotificationmanager.so.1:NotificationManager::Server::metaObject() const
-libnotificationmanager.so.1:NotificationManager::Server::currentOwner() const
-libnotificationmanager.so.1:NotificationManager::Server::inhibitionReasons() const
-libnotificationmanager.so.1:NotificationManager::Server::inhibitedByApplication() const
-libnotificationmanager.so.1:NotificationManager::Server::inhibitionApplications() const
-libnotificationmanager.so.1:NotificationManager::Server::isValid() const
-libnotificationmanager.so.1:NotificationManager::Server::inhibited() const
-libnotificationmanager.so.1:NotificationManager::Settings::metaObject() const
-libnotificationmanager.so.1:NotificationManager::Settings::popupTimeout() const
-libnotificationmanager.so.1:NotificationManager::Settings::popupPosition() const
-libnotificationmanager.so.1:NotificationManager::Settings::screensMirrored() const
-libnotificationmanager.so.1:NotificationManager::Settings::serviceBehavior(QString const&) const
-libnotificationmanager.so.1:NotificationManager::Settings::knownApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::lowPriorityPopups() const
-libnotificationmanager.so.1:NotificationManager::Settings::lowPriorityHistory() const
-libnotificationmanager.so.1:NotificationManager::Settings::permanentJobPopups() const
-libnotificationmanager.so.1:NotificationManager::Settings::applicationBehavior(QString const&) const
-libnotificationmanager.so.1:NotificationManager::Settings::badgesInTaskManager() const
-libnotificationmanager.so.1:NotificationManager::Settings::jobsInNotifications() const
-libnotificationmanager.so.1:NotificationManager::Settings::keepNormalAlwaysOnTop() const
-libnotificationmanager.so.1:NotificationManager::Settings::popupBlacklistedServices() const
-libnotificationmanager.so.1:NotificationManager::Settings::historyBlacklistedServices() const
-libnotificationmanager.so.1:NotificationManager::Settings::notificationSoundsInhibited() const
-libnotificationmanager.so.1:NotificationManager::Settings::notificationsInhibitedUntil() const
-libnotificationmanager.so.1:NotificationManager::Settings::badgeBlacklistedApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::popupBlacklistedApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::notificationInhibitionReasons() const
-libnotificationmanager.so.1:NotificationManager::Settings::historyBlacklistedApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::criticalPopupsInDoNotDisturbMode() const
-libnotificationmanager.so.1:NotificationManager::Settings::notificationInhibitionApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::notificationsInhibitedByApplication() const
-libnotificationmanager.so.1:NotificationManager::Settings::doNotDisturbPopupWhitelistedServices() const
-libnotificationmanager.so.1:NotificationManager::Settings::inhibitNotificationsWhenScreenSharing() const
-libnotificationmanager.so.1:NotificationManager::Settings::inhibitNotificationsWhenScreensMirrored() const
-libnotificationmanager.so.1:NotificationManager::Settings::doNotDisturbPopupWhitelistedApplications() const
-libnotificationmanager.so.1:NotificationManager::Settings::live() const
-libnotificationmanager.so.1:NotificationManager::Settings::dirty() const
-libnotificationmanager.so.1:NotificationManager::JobsModel::metaObject() const
-libnotificationmanager.so.1:NotificationManager::JobsModel::data(QModelIndex const&, int) const
-libnotificationmanager.so.1:NotificationManager::JobsModel::isValid() const
-libnotificationmanager.so.1:NotificationManager::JobsModel::rowCount(QModelIndex const&) const
-libnotificationmanager.so.1:NotificationManager::JobsModel::roleNames() const
-libnotificationmanager.so.1:non-virtual thunk to NotificationManager::Notifications::classBegin()
-libnotificationmanager.so.1:non-virtual thunk to NotificationManager::Notifications::componentComplete()
-libnotificationmanager.so.1:non-virtual thunk to NotificationManager::Notifications::~Notifications()
-libnotificationmanager.so.1:non-virtual thunk to NotificationManager::Notifications::~Notifications()
-libplasma-geolocation-interface.so.6:GeolocationProvider::qt_metacall(QMetaObject::Call, int, void**)
-libplasma-geolocation-interface.so.6:GeolocationProvider::qt_metacast(char const*)
-libplasma-geolocation-interface.so.6:GeolocationProvider::setAccuracy(int)
+libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::Private::~Private()
+libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::WatchedNotificationsModel()
+libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::valid()
+libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::validChanged(bool)
+libnotificationmanager.so.1:NotificationManager::WatchedNotificationsModel::~WatchedNotificationsModel()
+libnotificationmanager.so.1:qml_register_types_org_kde_notificationmanager()
+libplasma-geolocation-interface.so.6:GeolocationProvider::GeolocationProvider(QObject*)
+libplasma-geolocation-interface.so.6:GeolocationProvider::availabilityChanged(GeolocationProvider*)
+libplasma-geolocation-interface.so.6:GeolocationProvider::init()
+libplasma-geolocation-interface.so.6:GeolocationProvider::populateSharedData()
 libplasma-geolocation-interface.so.6:GeolocationProvider::requestUpdate(QFlags<GeolocationProvider::UpdateTrigger>)
+libplasma-geolocation-interface.so.6:GeolocationProvider::setAccuracy(int)
 libplasma-geolocation-interface.so.6:GeolocationProvider::setIsAvailable(bool)
 libplasma-geolocation-interface.so.6:GeolocationProvider::setUpdateTriggers(QFlags<GeolocationProvider::UpdateTrigger>)
-libplasma-geolocation-interface.so.6:GeolocationProvider::populateSharedData()
-libplasma-geolocation-interface.so.6:GeolocationProvider::availabilityChanged(GeolocationProvider*)
-libplasma-geolocation-interface.so.6:GeolocationProvider::init(QMap<QString, QVariant>*, QHash<QString, int>*)
-libplasma-geolocation-interface.so.6:GeolocationProvider::init()
 libplasma-geolocation-interface.so.6:GeolocationProvider::update()
-libplasma-geolocation-interface.so.6:GeolocationProvider::setData(QMap<QString, QVariant> const&)
-libplasma-geolocation-interface.so.6:GeolocationProvider::setData(QString const&, QVariant const&)
 libplasma-geolocation-interface.so.6:GeolocationProvider::updated()
-libplasma-geolocation-interface.so.6:GeolocationProvider::GeolocationProvider(QObject*)
-libplasma-geolocation-interface.so.6:GeolocationProvider::GeolocationProvider(QObject*)
-libplasma-geolocation-interface.so.6:GeolocationProvider::metaObject() const
-libplasma-geolocation-interface.so.6:GeolocationProvider::isAvailable() const
-libplasma-geolocation-interface.so.6:GeolocationProvider::updateTriggers() const
-libplasma-geolocation-interface.so.6:GeolocationProvider::accuracy() const
-libtaskmanager.so.6:TaskManager::TasksModel::classBegin()
-libtaskmanager.so.6:TaskManager::TasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::TasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::TasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setActivity(QString const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setSortMode(TaskManager::TasksModel::SortMode)
-libtaskmanager.so.6:TaskManager::TasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setGroupMode(TaskManager::TasksModel::GroupMode)
-libtaskmanager.so.6:TaskManager::TasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::syncLaunchers()
-libtaskmanager.so.6:TaskManager::TasksModel::setGroupInline(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterHidden(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::setLauncherList(QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setLaunchInPlace(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::componentComplete()
-libtaskmanager.so.6:TaskManager::TasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterByRegion(RegionFilterMode::Mode)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterByScreen(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::setRegionGeometry(QRect const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setScreenGeometry(QRect const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setVirtualDesktop(QVariant const&)
-libtaskmanager.so.6:TaskManager::TasksModel::launcherActivities(QUrl const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestAddLauncher(QUrl const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterMinimized(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterByActivity(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::updateLauncherCount()
-libtaskmanager.so.6:TaskManager::TasksModel::setSeparateLaunchers(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::filterByRegionChanged()
-libtaskmanager.so.6:TaskManager::TasksModel::regionGeometryChanged()
-libtaskmanager.so.6:TaskManager::TasksModel::requestRemoveLauncher(QUrl const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleGrouping(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterNotMaximized(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterNotMinimized(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::filterMinimizedChanged()
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setTaskReorderingEnabled(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::setFilterByVirtualDesktop(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::setGroupingAppIdBlacklist(QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setHideActivatedLaunchers(bool)
-libtaskmanager.so.6:TaskManager::TasksModel::requestAddLauncherToActivity(QUrl const&, QString const&)
-libtaskmanager.so.6:TaskManager::TasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::TasksModel::setGroupingLauncherUrlBlacklist(QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TasksModel::setGroupingWindowTasksThreshold(int)
-libtaskmanager.so.6:TaskManager::TasksModel::requestRemoveLauncherFromActivity(QUrl const&, QString const&)
-libtaskmanager.so.6:TaskManager::TasksModel::move(int, int, QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::TasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::TasksModel::TasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:TaskManager::ActivityInfo::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::ActivityInfo::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::ActivityInfo::activityIcon(QString const&)
-libtaskmanager.so.6:TaskManager::ActivityInfo::activityName(QString const&)
-libtaskmanager.so.6:TaskManager::ActivityInfo::ActivityInfo(QObject*)
-libtaskmanager.so.6:TaskManager::ActivityInfo::ActivityInfo(QObject*)
-libtaskmanager.so.6:TaskManager::ActivityInfo::~ActivityInfo()
-libtaskmanager.so.6:TaskManager::ActivityInfo::~ActivityInfo()
-libtaskmanager.so.6:TaskManager::ActivityInfo::~ActivityInfo()
-libtaskmanager.so.6:TaskManager::appDataFromUrl(QUrl const&, QIcon const&)
-libtaskmanager.so.6:TaskManager::screenGeometry(QPoint const&)
-libtaskmanager.so.6:TaskManager::servicesFromPid(unsigned int, QExplicitlySharedDataPointer<KSharedConfig> const&)
-libtaskmanager.so.6:TaskManager::WindowTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::WindowTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::WindowTasksModel::WindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::WindowTasksModel::WindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::WindowTasksModel::~WindowTasksModel()
-libtaskmanager.so.6:TaskManager::WindowTasksModel::~WindowTasksModel()
-libtaskmanager.so.6:TaskManager::WindowTasksModel::~WindowTasksModel()
-libtaskmanager.so.6:TaskManager::StartupTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::StartupTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::StartupTasksModel::StartupTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::StartupTasksModel::StartupTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::StartupTasksModel::~StartupTasksModel()
-libtaskmanager.so.6:TaskManager::StartupTasksModel::~StartupTasksModel()
-libtaskmanager.so.6:TaskManager::StartupTasksModel::~StartupTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::winIdFromMimeData(QMimeData const*, bool*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::winIdsFromMimeData(QMimeData const*, bool*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::WaylandTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::WaylandTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::~WaylandTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::~WaylandTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::~WaylandTasksModel()
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::winIdFromMimeData(QMimeData const*, bool*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::winIdsFromMimeData(QMimeData const*, bool*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::XWindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::XWindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::~XWindowTasksModel()
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::~XWindowTasksModel()
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::~XWindowTasksModel()
-libtaskmanager.so.6:TaskManager::launcherUrlsMatch(QUrl const&, QUrl const&, TaskManager::UrlComparisonMode)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::AbstractTasksModel(QObject*)
 libtaskmanager.so.6:TaskManager::AbstractTasksModel::AbstractTasksModel(QObject*)
 libtaskmanager.so.6:TaskManager::AbstractTasksModel::~AbstractTasksModel()
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::~AbstractTasksModel()
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::~AbstractTasksModel()
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::setLauncherList(QList<QString> const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestAddLauncher(QUrl const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestRemoveLauncher(QUrl const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestAddLauncherToActivity(QUrl const&, QString const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::requestRemoveLauncherFromActivity(QUrl const&, QString const&)
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::LauncherTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::AbstractWindowTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
+libtaskmanager.so.6:TaskManager::ActivityInfo::ActivityInfo(QObject*)
+libtaskmanager.so.6:TaskManager::ActivityInfo::~ActivityInfo()
+libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::ConcatenateTasksProxyModel(QObject*)
+libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
+libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::FlattenTaskGroupsProxyModel(QObject*)
+libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::setSourceModel(QAbstractItemModel*)
+libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
 libtaskmanager.so.6:TaskManager::LauncherTasksModel::LauncherTasksModel(QObject*)
 libtaskmanager.so.6:TaskManager::LauncherTasksModel::~LauncherTasksModel()
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::~LauncherTasksModel()
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::~LauncherTasksModel()
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::requestActivate(QVariant const&)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::requestCreateDesktop(unsigned int)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::requestRemoveDesktop(unsigned int)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::VirtualDesktopInfo(QObject*)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::VirtualDesktopInfo(QObject*)
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::~VirtualDesktopInfo()
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::~VirtualDesktopInfo()
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::~VirtualDesktopInfo()
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::XStartupTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::XStartupTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::~XStartupTasksModel()
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::~XStartupTasksModel()
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::~XStartupTasksModel()
-libtaskmanager.so.6:TaskManager::defaultApplication(QUrl const&)
-libtaskmanager.so.6:TaskManager::servicesFromCmdLine(QString const&, QString const&, QExplicitlySharedDataPointer<KSharedConfig> const&)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setActivity(QString const&)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setSourceModel(QAbstractItemModel*)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterHidden(bool)
+libtaskmanager.so.6:TaskManager::StartupTasksModel::StartupTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::StartupTasksModel::~StartupTasksModel()
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::TaskFilterProxyModel(QObject*)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByRegionChanged()
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterMinimizedChanged()
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::regionGeometryChanged()
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setDemandingAttentionSkipsFilters(bool)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByActivity(bool)
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByRegion(RegionFilterMode::Mode)
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByScreen(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setRegionGeometry(QRect const&)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setScreenGeometry(QRect const&)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setVirtualDesktop(QVariant const&)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByVirtualDesktop(bool)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterHidden(bool)
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterMinimized(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterSkipPager(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByActivity(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterSkipTaskbar(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByRegionChanged()
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::regionGeometryChanged()
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterNotMaximized(bool)
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterNotMinimized(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterMinimizedChanged()
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterByVirtualDesktop(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setDemandingAttentionSkipsFilters(bool)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::TaskFilterProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::TaskFilterProxyModel(QObject*)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterSkipPager(bool)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setFilterSkipTaskbar(bool)
+libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::setSourceModel(QAbstractItemModel*)
 libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::~TaskFilterProxyModel()
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::~TaskFilterProxyModel()
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::~TaskFilterProxyModel()
-libtaskmanager.so.6:TaskManager::windowUrlFromMetadata(QString const&, unsigned int, QExplicitlySharedDataPointer<KSharedConfig> const&, QString const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setGroupMode(TaskManager::TasksModel::GroupMode)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setSourceModel(QAbstractItemModel*)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setBlacklistedAppIds(QList<QString> const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleGrouping(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setWindowTasksThreshold(int)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setBlacklistedLauncherUrls(QList<QString> const&)
+libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::TaskGroupingProxyModel(QObject*)
 libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setGroupDemandingAttention(bool)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::TaskGroupingProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::TaskGroupingProxyModel(QObject*)
+libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setGroupMode(TaskManager::TasksModel::GroupMode)
+libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setSourceModel(QAbstractItemModel*)
+libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::setWindowTasksThreshold(int)
 libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::~TaskGroupingProxyModel()
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::~TaskGroupingProxyModel()
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::~TaskGroupingProxyModel()
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::AbstractWindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::AbstractWindowTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::qt_metacast(char const*)
+libtaskmanager.so.6:TaskManager::TasksModel::TasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::TasksModel::classBegin()
+libtaskmanager.so.6:TaskManager::TasksModel::componentComplete()
+libtaskmanager.so.6:TaskManager::TasksModel::filterByRegionChanged()
+libtaskmanager.so.6:TaskManager::TasksModel::filterMinimizedChanged()
+libtaskmanager.so.6:TaskManager::TasksModel::regionGeometryChanged()
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterByActivity(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterByRegion(RegionFilterMode::Mode)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterByScreen(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterByVirtualDesktop(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterHidden(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterMinimized(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterNotMaximized(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setFilterNotMinimized(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setGroupInline(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setGroupMode(TaskManager::TasksModel::GroupMode)
+libtaskmanager.so.6:TaskManager::TasksModel::setGroupingWindowTasksThreshold(int)
+libtaskmanager.so.6:TaskManager::TasksModel::setHideActivatedLaunchers(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setLaunchInPlace(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setSeparateLaunchers(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::setSortMode(TaskManager::TasksModel::SortMode)
+libtaskmanager.so.6:TaskManager::TasksModel::setTaskReorderingEnabled(bool)
+libtaskmanager.so.6:TaskManager::TasksModel::syncLaunchers()
+libtaskmanager.so.6:TaskManager::TasksModel::updateLauncherCount()
+libtaskmanager.so.6:TaskManager::TasksModel::~TasksModel()
+libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::VirtualDesktopInfo(QObject*)
+libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::~VirtualDesktopInfo()
 libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::WaylandStartupTasksModel(QObject*)
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::WaylandStartupTasksModel(QObject*)
 libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::~WaylandStartupTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::~WaylandStartupTasksModel()
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::~WaylandStartupTasksModel()
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::ConcatenateTasksProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::ConcatenateTasksProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::qt_metacall(QMetaObject::Call, int, void**)
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::qt_metacast(char const*)
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::setSourceModel(QAbstractItemModel*)
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::FlattenTaskGroupsProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::FlattenTaskGroupsProxyModel(QObject*)
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestMove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestClose(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestResize(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:TaskManager::AbstractTasksProxyModelIface::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:TaskManager::runApp(TaskManager::AppData const&, QList<QUrl> const&)
-libtaskmanager.so.6:TaskManager::appsMatch(QModelIndex const&, QModelIndex const&)
-libtaskmanager.so.6:TaskManager::TasksModel::activeTask() const
-libtaskmanager.so.6:TaskManager::TasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupInline() const
-libtaskmanager.so.6:TaskManager::TasksModel::activityInfo() const
-libtaskmanager.so.6:TaskManager::TasksModel::countChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterHidden() const
-libtaskmanager.so.6:TaskManager::TasksModel::launcherList() const
-libtaskmanager.so.6:TaskManager::TasksModel::launchInPlace() const
-libtaskmanager.so.6:TaskManager::TasksModel::launcherCount() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByRegion() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByScreen() const
-libtaskmanager.so.6:TaskManager::TasksModel::makeModelIndex(int, int) const
-libtaskmanager.so.6:TaskManager::TasksModel::regionGeometry() const
-libtaskmanager.so.6:TaskManager::TasksModel::screenGeometry() const
-libtaskmanager.so.6:TaskManager::TasksModel::virtualDesktop() const
-libtaskmanager.so.6:TaskManager::TasksModel::activityChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterMinimized() const
-libtaskmanager.so.6:TaskManager::TasksModel::sortModeChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterAcceptsRow(int, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByActivity() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupModeChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::launcherPosition(QUrl const&) const
-libtaskmanager.so.6:TaskManager::TasksModel::activeTaskChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::separateLaunchers() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterNotMaximized() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterNotMinimized() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupInlineChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::virtualDesktopInfo() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterHiddenChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::launcherListChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::launchInPlaceChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::launcherCountChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByScreenChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::screenGeometryChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::taskReorderingEnabled() const
-libtaskmanager.so.6:TaskManager::TasksModel::virtualDesktopChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByVirtualDesktop() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingAppIdBlacklist() const
-libtaskmanager.so.6:TaskManager::TasksModel::hideActivatedLaunchers() const
-libtaskmanager.so.6:TaskManager::TasksModel::anyTaskDemandsAttention() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByActivityChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::makePersistentModelIndex(int, int) const
-libtaskmanager.so.6:TaskManager::TasksModel::separateLaunchersChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterNotMaximizedChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterNotMinimizedChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingLauncherUrlBlacklist() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingWindowTasksThreshold() const
-libtaskmanager.so.6:TaskManager::TasksModel::taskReorderingEnabledChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::filterByVirtualDesktopChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingAppIdBlacklistChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::hideActivatedLaunchersChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::anyTaskDemandsAttentionChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingLauncherUrlBlacklistChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupingWindowTasksThresholdChanged() const
-libtaskmanager.so.6:TaskManager::TasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::TasksModel::activity() const
-libtaskmanager.so.6:TaskManager::TasksModel::lessThan(QModelIndex const&, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TasksModel::sortMode() const
-libtaskmanager.so.6:TaskManager::TasksModel::groupMode() const
-libtaskmanager.so.6:TaskManager::TasksModel::roleNames() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::metaObject() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::currentActivity() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::runningActivities() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::currentActivityChanged() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::numberOfRunningActivities() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::namesOfRunningActivitiesChanged() const
-libtaskmanager.so.6:TaskManager::ActivityInfo::numberOfRunningActivitiesChanged() const
-libtaskmanager.so.6:TaskManager::WindowTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::WindowTasksModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::WindowTasksModel::roleNames() const
-libtaskmanager.so.6:TaskManager::StartupTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::StartupTasksModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::StartupTasksModel::roleNames() const
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::index(int, int, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::WaylandTasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::XWindowTasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::index(int, int, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::AbstractTasksModel::roleNames() const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::launcherList() const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::launcherPosition(QUrl const&) const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::launcherActivities(QUrl const&) const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::launcherListChanged() const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::rowCountForActivity(QString const&) const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::LauncherTasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopIds() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::metaObject() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopNames() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::currentDesktop() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::numberOfDesktops() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopIdsChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopLayoutRows() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopNamesChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::currentDesktopChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::numberOfDesktopsChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::desktopLayoutRowsChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::navigationWrappingAround() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::navigationWrappingAroundChanged() const
-libtaskmanager.so.6:TaskManager::VirtualDesktopInfo::position(QVariant const&) const
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::XStartupTasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::acceptsRow(int) const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::metaObject() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterHidden() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByRegion() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByScreen() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::regionGeometry() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::screenGeometry() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::virtualDesktop() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::activityChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterMinimized() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterSkipPager() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterAcceptsRow(int, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByActivity() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterSkipTaskbar() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterNotMaximized() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterNotMinimized() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterHiddenChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByScreenChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::screenGeometryChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::virtualDesktopChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByVirtualDesktop() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterSkipPagerChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByActivityChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterSkipTaskbarChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterNotMaximizedChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterNotMinimizedChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::filterByVirtualDesktopChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::demandingAttentionSkipsFilters() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::demandingAttentionSkipsFiltersChanged() const
-libtaskmanager.so.6:TaskManager::TaskFilterProxyModel::activity() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::metaObject() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::columnCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::hasChildren(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::mapToSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::mapFromSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::groupModeChanged() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::blacklistedAppIds() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::windowTasksThreshold() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::blacklistedLauncherUrls() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::groupDemandingAttention() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::blacklistedAppIdsChanged() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::windowTasksThresholdChanged() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::blacklistedLauncherUrlsChanged() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::groupDemandingAttentionChanged() const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::index(int, int, QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::parent(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::TaskGroupingProxyModel::groupMode() const
-libtaskmanager.so.6:TaskManager::AbstractWindowTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::metaObject() const
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::data(QModelIndex const&, int) const
-libtaskmanager.so.6:TaskManager::WaylandStartupTasksModel::rowCount(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::metaObject() const
-libtaskmanager.so.6:TaskManager::ConcatenateTasksProxyModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::metaObject() const
-libtaskmanager.so.6:TaskManager::FlattenTaskGroupsProxyModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WindowTasksModel::~WindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WindowTasksModel::~WindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::StartupTasksModel::~StartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::StartupTasksModel::~StartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::~WaylandTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandTasksModel::~WaylandTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::~XWindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XWindowTasksModel::~XWindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::~AbstractTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractTasksModel::~AbstractTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::LauncherTasksModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::LauncherTasksModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::LauncherTasksModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::LauncherTasksModel::~LauncherTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::LauncherTasksModel::~LauncherTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XStartupTasksModel::~XStartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::XStartupTasksModel::~XStartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskFilterProxyModel::~TaskFilterProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskFilterProxyModel::~TaskFilterProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestMove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestClose(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestResize(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestActivate(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestOpenUrls(QModelIndex const&, QList<QUrl> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestActivities(QModelIndex const&, QList<QString> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestNewInstance(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleShaded(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleKeepAbove(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleKeepBelow(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleMaximized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleMinimized(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestVirtualDesktops(QModelIndex const&, QList<QVariant> const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestToggleFullScreen(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestNewVirtualDesktop(QModelIndex const&)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::requestPublishDelegateGeometry(QModelIndex const&, QRect const&, QObject*)
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::~TaskGroupingProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskGroupingProxyModel::~TaskGroupingProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::AbstractWindowTasksModel::~AbstractWindowTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandStartupTasksModel::~WaylandStartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WaylandStartupTasksModel::~WaylandStartupTasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::WindowTasksModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:non-virtual thunk to TaskManager::StartupTasksModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TaskFilterProxyModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:non-virtual thunk to TaskManager::ConcatenateTasksProxyModel::mapIfaceToSource(QModelIndex const&) const
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::classBegin()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::componentComplete()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::TasksModel::~TasksModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-libtaskmanager.so.6:non-virtual thunk to TaskManager::FlattenTaskGroupsProxyModel::mapIfaceToSource(QModelIndex const&) const
-libweather_ion.so.7:IonInterface::forceUpdate(IonInterface*, QString const&)
-libweather_ion.so.7:IonInterface::qt_metacall(QMetaObject::Call, int, void**)
-libweather_ion.so.7:IonInterface::qt_metacast(char const*)
+libtaskmanager.so.6:TaskManager::WaylandTasksModel::WaylandTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::WaylandTasksModel::~WaylandTasksModel()
+libtaskmanager.so.6:TaskManager::WindowTasksModel::WindowTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::WindowTasksModel::~WindowTasksModel()
+libtaskmanager.so.6:TaskManager::XStartupTasksModel::XStartupTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::XStartupTasksModel::~XStartupTasksModel()
+libtaskmanager.so.6:TaskManager::XWindowTasksModel::XWindowTasksModel(QObject*)
+libtaskmanager.so.6:TaskManager::XWindowTasksModel::~XWindowTasksModel()
+libweather_ion.so.7:IonInterface::IonInterface(QObject*)
 libweather_ion.so.7:IonInterface::setInitialized(bool)
-libweather_ion.so.7:IonInterface::updateSourceEvent(QString const&)
-libweather_ion.so.7:IonInterface::sourceRequestEvent(QString const&)
-libweather_ion.so.7:IonInterface::IonInterface(QObject*)
-libweather_ion.so.7:IonInterface::IonInterface(QObject*)
 libweather_ion.so.7:IonInterface::~IonInterface()
-libweather_ion.so.7:IonInterface::~IonInterface()
-libweather_ion.so.7:IonInterface::~IonInterface()
-libweather_ion.so.7:IonInterface::metaObject() const
-libweather_ion.so.7:IonInterface::getWeatherIcon(IonInterface::ConditionIcons) const
-libweather_ion.so.7:IonInterface::getWeatherIcon(QMap<QString, IonInterface::ConditionIcons> const&, QString const&) const
-libweather_ion.so.7:IonInterface::getWindDirectionIcon(QMap<QString, IonInterface::WindDirections> const&, QString const&) const
