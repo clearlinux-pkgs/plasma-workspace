@@ -20,7 +20,6 @@ libKF6I18n.so.6
 libKF6I18nLocaleData.so.6
 libKF6IconThemes.so.6
 libKF6IconWidgets.so.6
-libKF6IdleTime.so.6
 libKF6ItemModels.so.6
 libKF6JobWidgets.so.6
 libKF6KCMUtils.so.6
@@ -42,7 +41,6 @@ libKF6Runner.so.6
 libKF6Service.so.6
 libKF6Solid.so.6
 libKF6Svg.so.6
-libKF6TextWidgets.so.6
 libKF6UnitConversion.so.6
 libKF6Wallet.so.6
 libKF6WidgetsAddons.so.6
@@ -87,4 +85,4 @@ libstdc++.so.6
 libsystemd.so.0
 libudev.so.1
 libwayland-client.so.0
-libz.so.1
+libxcb-cursor.so.0
